@@ -1,0 +1,9 @@
+C:\Users\Vicen\source\repos\BB2Stats\BB2Stats\bin\Debug\BB2Stats.exe.config
+C:\Users\Vicen\source\repos\BB2Stats\BB2Stats\bin\Debug\BB2Stats.exe
+C:\Users\Vicen\source\repos\BB2Stats\BB2Stats\bin\Debug\BB2Stats.pdb
+C:\Users\Vicen\source\repos\BB2Stats\BB2Stats\obj\Debug\BB2Stats.Properties.Resources.resources
+C:\Users\Vicen\source\repos\BB2Stats\BB2Stats\obj\Debug\BB2Stats.csproj.GenerateResource.cache
+C:\Users\Vicen\source\repos\BB2Stats\BB2Stats\obj\Debug\BB2Stats.csproj.CoreCompileInputs.cache
+C:\Users\Vicen\source\repos\BB2Stats\BB2Stats\obj\Debug\BB2Stats.exe
+C:\Users\Vicen\source\repos\BB2Stats\BB2Stats\obj\Debug\BB2Stats.pdb
+C:\Users\Vicen\source\repos\BB2Stats\BB2Stats\obj\Debug\BB2Stats.BB2StatsForm.resources
