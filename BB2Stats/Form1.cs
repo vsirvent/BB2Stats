@@ -27,7 +27,7 @@ namespace BB2Stats
         int nkos = 0;
         int ninjuries = 0;
         int nbreaks = 0;
-        int total_pass = 0;
+        int total_dodge = 0;
         int total_catch = 0;
         int total_ap = 0;
 
@@ -199,11 +199,11 @@ namespace BB2Stats
         }
         private void pass_ValueChanged(object sender, EventArgs e)
         {
-            total_pass = (int)(failPass.Value + okPass.Value);
-            totalPass.Text = total_pass.ToString();
-            if (total_pass > 0)
+            total_dodge = (int)(failDodge.Value + okDodge.Value);
+            totalDodge.Text = total_dodge.ToString();
+            if (total_dodge > 0)
             {
-                percentPass.Text = (((int)okPass.Value * 100) / total_pass).ToString();
+                percentDodge.Text = (((int)okDodge.Value * 100) / total_dodge).ToString();
             }
         }
         private void catch_ValueChanged(object sender, EventArgs e)
@@ -223,6 +223,218 @@ namespace BB2Stats
             {
                 percentAp.Text = (((int)okAp.Value * 100) / total_ap).ToString();
             }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            stun.Value++;
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            ko.Value++;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void negTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void oneTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void twoTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void threeTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void totalDice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            injury.Value++;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            negDiceSkull.Value++;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            oneDiceSkull.Value++;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            twoDiceSkull.Value++;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            threeDiceSkull.Value++;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            negDicePush.Value++;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            oneDicePush.Value++;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            twoDicePush.Value++;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            threeDicePush.Value++;
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            negDiceDodge.Value++;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            oneDiceDodge.Value++;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            twoDiceDodge.Value++;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            threeDiceDodge.Value++;
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            negDiceDodge.Value++;
+            pows.Value++;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            oneDiceDodge.Value++;
+            pows.Value++;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            twoDiceDodge.Value++;
+            pows.Value++;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            threeDiceDodge.Value++;
+            pows.Value++;
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            negDiceBlock.Value++;
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            oneDiceBlock.Value++;
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            twoDiceBlock.Value++;
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            threeDiceBlock.Value++;
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            negDiceBlock.Value++;
+            pows.Value++;
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            oneDiceBlock.Value++;
+            pows.Value++;
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            twoDiceBlock.Value++;
+            pows.Value++;
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            threeDiceBlock.Value++;
+            pows.Value++;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            negDicePow.Value++;
+            pows.Value++;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            oneDicePow.Value++;
+            pows.Value++;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            twoDicePow.Value++;
+            pows.Value++;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            threeDicePow.Value++;
+            pows.Value++;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            okDodge.Value++;
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            okCatch.Value++;
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            okAp.Value++;
         }
     }
 }

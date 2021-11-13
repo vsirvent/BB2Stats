@@ -18,3 +18,14 @@ C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.c
 C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.exe
 C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.pdb
 C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.BBStatsMain.resources
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\bin\Debug\BB2Stats.exe.config
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\bin\Debug\BB2Stats.exe
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\bin\Debug\BB2Stats.pdb
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\obj\Debug\BB2Stats.csprojAssemblyReference.cache
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\obj\Debug\BB2Stats.BB2StatsForm.resources
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\obj\Debug\BB2Stats.BBStatsMain.resources
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\obj\Debug\BB2Stats.Properties.Resources.resources
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\obj\Debug\BB2Stats.csproj.GenerateResource.cache
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\obj\Debug\BB2Stats.csproj.CoreCompileInputs.cache
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\obj\Debug\BB2Stats.exe
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\obj\Debug\BB2Stats.pdb
