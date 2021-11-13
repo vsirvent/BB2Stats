@@ -116,28 +116,39 @@ namespace BB2Stats
         {
             skull_total = (int)(negDiceSkull.Value + oneDiceSkull.Value + twoDiceSkull.Value + threeDiceSkull.Value);
             skullTotal.Text = skull_total.ToString();
-            skullPercent.Text = ((int)(((double)skull_total * 100.0) / (double)dices_total)).ToString();
+            if (dices_total > 0)
+            {
+                skullPercent.Text = ((int)(((double)skull_total * 100.0) / (double)dices_total)).ToString();
+            }
         }
 
         private void updatePushValues()
         {
             push_total = (int)(negDicePush.Value + oneDicePush.Value + twoDicePush.Value + threeDicePush.Value);
             pushTotal.Text = push_total.ToString();
-            pushPercent.Text = ((int)(((double)push_total * 100.0) / (double)dices_total)).ToString();
+            if (dices_total > 0)
+            {
+                pushPercent.Text = ((int)(((double)push_total * 100.0) / (double)dices_total)).ToString();
+            }
         }
-
         private void updateDodgeValues()
         {
             dodge_total = (int)(negDiceDodge.Value + oneDiceDodge.Value + twoDiceDodge.Value + threeDiceDodge.Value);
             dodgeTotal.Text = dodge_total.ToString();
-            dodgePercent.Text = ((int)(((double)dodge_total * 100.0) / (double)dices_total)).ToString();
+            if (dices_total > 0)
+            {
+                dodgePercent.Text = ((int)(((double)dodge_total * 100.0) / (double)dices_total)).ToString();
+            }
         }
 
         private void updateBlockValues()
         {
             block_total = (int)(negDiceBlock.Value + oneDiceBlock.Value + twoDiceBlock.Value + threeDiceBlock.Value);
             blockTotal.Text = block_total.ToString();
-            blockPercent.Text = ((int)(((double)block_total * 100.0) / (double)dices_total)).ToString();
+            if (dices_total > 0)
+            {
+                blockPercent.Text = ((int)(((double)block_total * 100.0) / (double)dices_total)).ToString();
+            }
         }
 
         private void updatePowValues()
@@ -149,12 +160,6 @@ namespace BB2Stats
                 powPercent.Text = ((int)(((double)pow_total * 100.0) / (double)dices_total)).ToString();
             }
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void updateBreaks()
         {
             nbreaks = nstuns + nkos + ninjuries;
@@ -196,19 +201,28 @@ namespace BB2Stats
         {
             total_pass = (int)(failPass.Value + okPass.Value);
             totalPass.Text = total_pass.ToString();
-            percentPass.Text = (((int)okPass.Value * 100) / total_pass).ToString();
+            if (total_pass > 0)
+            {
+                percentPass.Text = (((int)okPass.Value * 100) / total_pass).ToString();
+            }
         }
         private void catch_ValueChanged(object sender, EventArgs e)
         {
             total_catch = (int)(failCatch.Value + okCatch.Value);
             totalCatch.Text = total_catch.ToString();
-            percentCatch.Text = (((int)okCatch.Value * 100) / total_catch).ToString();
+            if (total_catch > 0)
+            {
+                percentCatch.Text = (((int)okCatch.Value * 100) / total_catch).ToString();
+            }
         }
         private void ap_ValueChanged(object sender, EventArgs e)
         {
             total_ap = (int)(failAp.Value + okAp.Value);
             totalAp.Text = total_ap.ToString();
-            percentAp.Text = (((int)okAp.Value * 100) / total_ap).ToString();
+            if (total_ap > 0)
+            {
+                percentAp.Text = (((int)okAp.Value * 100) / total_ap).ToString();
+            }
         }
     }
 }

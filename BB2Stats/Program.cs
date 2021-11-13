@@ -16,7 +16,7 @@ namespace BB2Stats
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BB2StatsForm());
+            Application.Run(new BBStatsMain());
         }
     }
 }

@@ -17,3 +17,4 @@ C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.c
 C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.csproj.CoreCompileInputs.cache
 C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.exe
 C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.pdb
+C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.BBStatsMain.resources

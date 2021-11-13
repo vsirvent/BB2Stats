@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BB2StatsForm));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.powsPercent = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.threePercentSkull = new System.Windows.Forms.TextBox();
@@ -137,9 +134,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okAp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.failAp)).BeginInit();
@@ -183,149 +177,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(91, 23);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 22);
-            this.textBox1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(32, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.powsPercent);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.threePercentSkull);
-            this.groupBox1.Controls.Add(this.twoPercentSkull);
-            this.groupBox1.Controls.Add(this.onePercentSkull);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.negPercentSkull);
-            this.groupBox1.Controls.Add(this.threePercentPush);
-            this.groupBox1.Controls.Add(this.twoPercentPush);
-            this.groupBox1.Controls.Add(this.onePercentPush);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.negPercentPush);
-            this.groupBox1.Controls.Add(this.threePercentDodge);
-            this.groupBox1.Controls.Add(this.twoPercentDodge);
-            this.groupBox1.Controls.Add(this.onePercentDodge);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.negPercentDodge);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.threePercentPow);
-            this.groupBox1.Controls.Add(this.twoPercentPow);
-            this.groupBox1.Controls.Add(this.onePercentPow);
-            this.groupBox1.Controls.Add(this.negPercentPow);
-            this.groupBox1.Controls.Add(this.threePercentBlock);
-            this.groupBox1.Controls.Add(this.twoPercentBlock);
-            this.groupBox1.Controls.Add(this.onePercentBlock);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.negPercentBlock);
-            this.groupBox1.Controls.Add(this.totalDice);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.pows);
-            this.groupBox1.Controls.Add(this.percentAp);
-            this.groupBox1.Controls.Add(this.totalAp);
-            this.groupBox1.Controls.Add(this.okAp);
-            this.groupBox1.Controls.Add(this.failAp);
-            this.groupBox1.Controls.Add(this.pictureBox11);
-            this.groupBox1.Controls.Add(this.percentBreak);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.totalBreak);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.injury);
-            this.groupBox1.Controls.Add(this.pictureBox10);
-            this.groupBox1.Controls.Add(this.ko);
-            this.groupBox1.Controls.Add(this.stun);
-            this.groupBox1.Controls.Add(this.pictureBox9);
-            this.groupBox1.Controls.Add(this.pictureBox8);
-            this.groupBox1.Controls.Add(this.percentCatch);
-            this.groupBox1.Controls.Add(this.totalCatch);
-            this.groupBox1.Controls.Add(this.percentPass);
-            this.groupBox1.Controls.Add(this.totalPass);
-            this.groupBox1.Controls.Add(this.okCatch);
-            this.groupBox1.Controls.Add(this.failCatch);
-            this.groupBox1.Controls.Add(this.okPass);
-            this.groupBox1.Controls.Add(this.failPass);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.pictureBox7);
-            this.groupBox1.Controls.Add(this.pictureBox6);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.threeTotal);
-            this.groupBox1.Controls.Add(this.twoTotal);
-            this.groupBox1.Controls.Add(this.oneTotal);
-            this.groupBox1.Controls.Add(this.negTotal);
-            this.groupBox1.Controls.Add(this.powPercent);
-            this.groupBox1.Controls.Add(this.blockPercent);
-            this.groupBox1.Controls.Add(this.dodgePercent);
-            this.groupBox1.Controls.Add(this.pushPercent);
-            this.groupBox1.Controls.Add(this.skullPercent);
-            this.groupBox1.Controls.Add(this.powTotal);
-            this.groupBox1.Controls.Add(this.blockTotal);
-            this.groupBox1.Controls.Add(this.dodgeTotal);
-            this.groupBox1.Controls.Add(this.pushTotal);
-            this.groupBox1.Controls.Add(this.skullTotal);
-            this.groupBox1.Controls.Add(this.threeDicePow);
-            this.groupBox1.Controls.Add(this.twoDicePow);
-            this.groupBox1.Controls.Add(this.oneDicePow);
-            this.groupBox1.Controls.Add(this.negDicePow);
-            this.groupBox1.Controls.Add(this.threeDiceBlock);
-            this.groupBox1.Controls.Add(this.twoDiceBlock);
-            this.groupBox1.Controls.Add(this.oneDiceBlock);
-            this.groupBox1.Controls.Add(this.negDiceBlock);
-            this.groupBox1.Controls.Add(this.threeDiceDodge);
-            this.groupBox1.Controls.Add(this.twoDiceDodge);
-            this.groupBox1.Controls.Add(this.oneDiceDodge);
-            this.groupBox1.Controls.Add(this.negDiceDodge);
-            this.groupBox1.Controls.Add(this.threeDicePush);
-            this.groupBox1.Controls.Add(this.twoDicePush);
-            this.groupBox1.Controls.Add(this.oneDicePush);
-            this.groupBox1.Controls.Add(this.negDicePush);
-            this.groupBox1.Controls.Add(this.threeDiceSkull);
-            this.groupBox1.Controls.Add(this.twoDiceSkull);
-            this.groupBox1.Controls.Add(this.oneDiceSkull);
-            this.groupBox1.Controls.Add(this.negDiceSkull);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.pictureBox5);
-            this.groupBox1.Controls.Add(this.pictureBox4);
-            this.groupBox1.Controls.Add(this.pictureBox3);
-            this.groupBox1.Controls.Add(this.pictureBox2);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(709, 683);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "TEAM 1";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
             // powsPercent
             // 
             this.powsPercent.BackColor = System.Drawing.Color.White;
-            this.powsPercent.Location = new System.Drawing.Point(409, 639);
+            this.powsPercent.Location = new System.Drawing.Point(404, 567);
             this.powsPercent.Margin = new System.Windows.Forms.Padding(4);
             this.powsPercent.Name = "powsPercent";
             this.powsPercent.ReadOnly = true;
@@ -335,7 +190,7 @@
             // 
             // label22
             // 
-            this.label22.Location = new System.Drawing.Point(413, 617);
+            this.label22.Location = new System.Drawing.Point(408, 545);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 16);
@@ -346,7 +201,7 @@
             // threePercentSkull
             // 
             this.threePercentSkull.BackColor = System.Drawing.Color.White;
-            this.threePercentSkull.Location = new System.Drawing.Point(141, 247);
+            this.threePercentSkull.Location = new System.Drawing.Point(136, 175);
             this.threePercentSkull.Margin = new System.Windows.Forms.Padding(4);
             this.threePercentSkull.Name = "threePercentSkull";
             this.threePercentSkull.ReadOnly = true;
@@ -357,7 +212,7 @@
             // twoPercentSkull
             // 
             this.twoPercentSkull.BackColor = System.Drawing.Color.White;
-            this.twoPercentSkull.Location = new System.Drawing.Point(141, 215);
+            this.twoPercentSkull.Location = new System.Drawing.Point(136, 143);
             this.twoPercentSkull.Margin = new System.Windows.Forms.Padding(4);
             this.twoPercentSkull.Name = "twoPercentSkull";
             this.twoPercentSkull.ReadOnly = true;
@@ -368,7 +223,7 @@
             // onePercentSkull
             // 
             this.onePercentSkull.BackColor = System.Drawing.Color.White;
-            this.onePercentSkull.Location = new System.Drawing.Point(141, 185);
+            this.onePercentSkull.Location = new System.Drawing.Point(136, 113);
             this.onePercentSkull.Margin = new System.Windows.Forms.Padding(4);
             this.onePercentSkull.Name = "onePercentSkull";
             this.onePercentSkull.ReadOnly = true;
@@ -378,7 +233,7 @@
             // 
             // label21
             // 
-            this.label21.Location = new System.Drawing.Point(143, 132);
+            this.label21.Location = new System.Drawing.Point(138, 60);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(33, 17);
@@ -389,7 +244,7 @@
             // negPercentSkull
             // 
             this.negPercentSkull.BackColor = System.Drawing.Color.White;
-            this.negPercentSkull.Location = new System.Drawing.Point(141, 153);
+            this.negPercentSkull.Location = new System.Drawing.Point(136, 81);
             this.negPercentSkull.Margin = new System.Windows.Forms.Padding(4);
             this.negPercentSkull.Name = "negPercentSkull";
             this.negPercentSkull.ReadOnly = true;
@@ -400,7 +255,7 @@
             // threePercentPush
             // 
             this.threePercentPush.BackColor = System.Drawing.Color.White;
-            this.threePercentPush.Location = new System.Drawing.Point(252, 247);
+            this.threePercentPush.Location = new System.Drawing.Point(247, 175);
             this.threePercentPush.Margin = new System.Windows.Forms.Padding(4);
             this.threePercentPush.Name = "threePercentPush";
             this.threePercentPush.ReadOnly = true;
@@ -411,7 +266,7 @@
             // twoPercentPush
             // 
             this.twoPercentPush.BackColor = System.Drawing.Color.White;
-            this.twoPercentPush.Location = new System.Drawing.Point(252, 215);
+            this.twoPercentPush.Location = new System.Drawing.Point(247, 143);
             this.twoPercentPush.Margin = new System.Windows.Forms.Padding(4);
             this.twoPercentPush.Name = "twoPercentPush";
             this.twoPercentPush.ReadOnly = true;
@@ -422,7 +277,7 @@
             // onePercentPush
             // 
             this.onePercentPush.BackColor = System.Drawing.Color.White;
-            this.onePercentPush.Location = new System.Drawing.Point(252, 185);
+            this.onePercentPush.Location = new System.Drawing.Point(247, 113);
             this.onePercentPush.Margin = new System.Windows.Forms.Padding(4);
             this.onePercentPush.Name = "onePercentPush";
             this.onePercentPush.ReadOnly = true;
@@ -432,7 +287,7 @@
             // 
             // label20
             // 
-            this.label20.Location = new System.Drawing.Point(253, 132);
+            this.label20.Location = new System.Drawing.Point(248, 60);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(33, 17);
@@ -443,7 +298,7 @@
             // negPercentPush
             // 
             this.negPercentPush.BackColor = System.Drawing.Color.White;
-            this.negPercentPush.Location = new System.Drawing.Point(252, 153);
+            this.negPercentPush.Location = new System.Drawing.Point(247, 81);
             this.negPercentPush.Margin = new System.Windows.Forms.Padding(4);
             this.negPercentPush.Name = "negPercentPush";
             this.negPercentPush.ReadOnly = true;
@@ -454,7 +309,7 @@
             // threePercentDodge
             // 
             this.threePercentDodge.BackColor = System.Drawing.Color.White;
-            this.threePercentDodge.Location = new System.Drawing.Point(363, 247);
+            this.threePercentDodge.Location = new System.Drawing.Point(358, 175);
             this.threePercentDodge.Margin = new System.Windows.Forms.Padding(4);
             this.threePercentDodge.Name = "threePercentDodge";
             this.threePercentDodge.ReadOnly = true;
@@ -465,7 +320,7 @@
             // twoPercentDodge
             // 
             this.twoPercentDodge.BackColor = System.Drawing.Color.White;
-            this.twoPercentDodge.Location = new System.Drawing.Point(363, 215);
+            this.twoPercentDodge.Location = new System.Drawing.Point(358, 143);
             this.twoPercentDodge.Margin = new System.Windows.Forms.Padding(4);
             this.twoPercentDodge.Name = "twoPercentDodge";
             this.twoPercentDodge.ReadOnly = true;
@@ -476,7 +331,7 @@
             // onePercentDodge
             // 
             this.onePercentDodge.BackColor = System.Drawing.Color.White;
-            this.onePercentDodge.Location = new System.Drawing.Point(363, 185);
+            this.onePercentDodge.Location = new System.Drawing.Point(358, 113);
             this.onePercentDodge.Margin = new System.Windows.Forms.Padding(4);
             this.onePercentDodge.Name = "onePercentDodge";
             this.onePercentDodge.ReadOnly = true;
@@ -486,7 +341,7 @@
             // 
             // label19
             // 
-            this.label19.Location = new System.Drawing.Point(364, 130);
+            this.label19.Location = new System.Drawing.Point(359, 58);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(33, 17);
@@ -497,7 +352,7 @@
             // negPercentDodge
             // 
             this.negPercentDodge.BackColor = System.Drawing.Color.White;
-            this.negPercentDodge.Location = new System.Drawing.Point(363, 153);
+            this.negPercentDodge.Location = new System.Drawing.Point(358, 81);
             this.negPercentDodge.Margin = new System.Windows.Forms.Padding(4);
             this.negPercentDodge.Name = "negPercentDodge";
             this.negPercentDodge.ReadOnly = true;
@@ -507,7 +362,7 @@
             // 
             // label18
             // 
-            this.label18.Location = new System.Drawing.Point(584, 128);
+            this.label18.Location = new System.Drawing.Point(579, 56);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(33, 17);
@@ -518,7 +373,7 @@
             // threePercentPow
             // 
             this.threePercentPow.BackColor = System.Drawing.Color.White;
-            this.threePercentPow.Location = new System.Drawing.Point(579, 247);
+            this.threePercentPow.Location = new System.Drawing.Point(574, 175);
             this.threePercentPow.Margin = new System.Windows.Forms.Padding(4);
             this.threePercentPow.Name = "threePercentPow";
             this.threePercentPow.ReadOnly = true;
@@ -529,7 +384,7 @@
             // twoPercentPow
             // 
             this.twoPercentPow.BackColor = System.Drawing.Color.White;
-            this.twoPercentPow.Location = new System.Drawing.Point(579, 215);
+            this.twoPercentPow.Location = new System.Drawing.Point(574, 143);
             this.twoPercentPow.Margin = new System.Windows.Forms.Padding(4);
             this.twoPercentPow.Name = "twoPercentPow";
             this.twoPercentPow.ReadOnly = true;
@@ -540,7 +395,7 @@
             // onePercentPow
             // 
             this.onePercentPow.BackColor = System.Drawing.Color.White;
-            this.onePercentPow.Location = new System.Drawing.Point(579, 185);
+            this.onePercentPow.Location = new System.Drawing.Point(574, 113);
             this.onePercentPow.Margin = new System.Windows.Forms.Padding(4);
             this.onePercentPow.Name = "onePercentPow";
             this.onePercentPow.ReadOnly = true;
@@ -551,7 +406,7 @@
             // negPercentPow
             // 
             this.negPercentPow.BackColor = System.Drawing.Color.White;
-            this.negPercentPow.Location = new System.Drawing.Point(579, 153);
+            this.negPercentPow.Location = new System.Drawing.Point(574, 81);
             this.negPercentPow.Margin = new System.Windows.Forms.Padding(4);
             this.negPercentPow.Name = "negPercentPow";
             this.negPercentPow.ReadOnly = true;
@@ -562,7 +417,7 @@
             // threePercentBlock
             // 
             this.threePercentBlock.BackColor = System.Drawing.Color.White;
-            this.threePercentBlock.Location = new System.Drawing.Point(471, 247);
+            this.threePercentBlock.Location = new System.Drawing.Point(466, 175);
             this.threePercentBlock.Margin = new System.Windows.Forms.Padding(4);
             this.threePercentBlock.Name = "threePercentBlock";
             this.threePercentBlock.ReadOnly = true;
@@ -573,7 +428,7 @@
             // twoPercentBlock
             // 
             this.twoPercentBlock.BackColor = System.Drawing.Color.White;
-            this.twoPercentBlock.Location = new System.Drawing.Point(471, 215);
+            this.twoPercentBlock.Location = new System.Drawing.Point(466, 143);
             this.twoPercentBlock.Margin = new System.Windows.Forms.Padding(4);
             this.twoPercentBlock.Name = "twoPercentBlock";
             this.twoPercentBlock.ReadOnly = true;
@@ -584,7 +439,7 @@
             // onePercentBlock
             // 
             this.onePercentBlock.BackColor = System.Drawing.Color.White;
-            this.onePercentBlock.Location = new System.Drawing.Point(471, 185);
+            this.onePercentBlock.Location = new System.Drawing.Point(466, 113);
             this.onePercentBlock.Margin = new System.Windows.Forms.Padding(4);
             this.onePercentBlock.Name = "onePercentBlock";
             this.onePercentBlock.ReadOnly = true;
@@ -594,7 +449,7 @@
             // 
             // label17
             // 
-            this.label17.Location = new System.Drawing.Point(472, 129);
+            this.label17.Location = new System.Drawing.Point(467, 57);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(33, 17);
@@ -605,7 +460,7 @@
             // negPercentBlock
             // 
             this.negPercentBlock.BackColor = System.Drawing.Color.White;
-            this.negPercentBlock.Location = new System.Drawing.Point(471, 153);
+            this.negPercentBlock.Location = new System.Drawing.Point(466, 81);
             this.negPercentBlock.Margin = new System.Windows.Forms.Padding(4);
             this.negPercentBlock.Name = "negPercentBlock";
             this.negPercentBlock.ReadOnly = true;
@@ -616,7 +471,7 @@
             // totalDice
             // 
             this.totalDice.BackColor = System.Drawing.Color.White;
-            this.totalDice.Location = new System.Drawing.Point(629, 279);
+            this.totalDice.Location = new System.Drawing.Point(624, 207);
             this.totalDice.Margin = new System.Windows.Forms.Padding(4);
             this.totalDice.Name = "totalDice";
             this.totalDice.ReadOnly = true;
@@ -626,7 +481,7 @@
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(341, 617);
+            this.label16.Location = new System.Drawing.Point(336, 545);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(64, 16);
@@ -636,7 +491,7 @@
             // 
             // pows
             // 
-            this.pows.Location = new System.Drawing.Point(348, 639);
+            this.pows.Location = new System.Drawing.Point(343, 567);
             this.pows.Margin = new System.Windows.Forms.Padding(4);
             this.pows.Name = "pows";
             this.pows.Size = new System.Drawing.Size(53, 22);
@@ -646,7 +501,7 @@
             // percentAp
             // 
             this.percentAp.BackColor = System.Drawing.Color.White;
-            this.percentAp.Location = new System.Drawing.Point(295, 500);
+            this.percentAp.Location = new System.Drawing.Point(290, 428);
             this.percentAp.Margin = new System.Windows.Forms.Padding(4);
             this.percentAp.Name = "percentAp";
             this.percentAp.ReadOnly = true;
@@ -657,7 +512,7 @@
             // totalAp
             // 
             this.totalAp.BackColor = System.Drawing.Color.White;
-            this.totalAp.Location = new System.Drawing.Point(235, 500);
+            this.totalAp.Location = new System.Drawing.Point(230, 428);
             this.totalAp.Margin = new System.Windows.Forms.Padding(4);
             this.totalAp.Name = "totalAp";
             this.totalAp.ReadOnly = true;
@@ -667,7 +522,7 @@
             // 
             // okAp
             // 
-            this.okAp.Location = new System.Drawing.Point(163, 501);
+            this.okAp.Location = new System.Drawing.Point(158, 429);
             this.okAp.Margin = new System.Windows.Forms.Padding(4);
             this.okAp.Name = "okAp";
             this.okAp.Size = new System.Drawing.Size(64, 22);
@@ -676,7 +531,7 @@
             // 
             // failAp
             // 
-            this.failAp.Location = new System.Drawing.Point(91, 501);
+            this.failAp.Location = new System.Drawing.Point(86, 429);
             this.failAp.Margin = new System.Windows.Forms.Padding(4);
             this.failAp.Name = "failAp";
             this.failAp.Size = new System.Drawing.Size(64, 22);
@@ -687,7 +542,7 @@
             // 
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(9, 490);
+            this.pictureBox11.Location = new System.Drawing.Point(4, 418);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(63, 51);
@@ -698,7 +553,7 @@
             // percentBreak
             // 
             this.percentBreak.BackColor = System.Drawing.Color.White;
-            this.percentBreak.Location = new System.Drawing.Point(287, 639);
+            this.percentBreak.Location = new System.Drawing.Point(282, 567);
             this.percentBreak.Margin = new System.Windows.Forms.Padding(4);
             this.percentBreak.Name = "percentBreak";
             this.percentBreak.ReadOnly = true;
@@ -708,7 +563,7 @@
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(291, 617);
+            this.label15.Location = new System.Drawing.Point(286, 545);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 16);
@@ -719,7 +574,7 @@
             // totalBreak
             // 
             this.totalBreak.BackColor = System.Drawing.Color.White;
-            this.totalBreak.Location = new System.Drawing.Point(228, 639);
+            this.totalBreak.Location = new System.Drawing.Point(223, 567);
             this.totalBreak.Margin = new System.Windows.Forms.Padding(4);
             this.totalBreak.Name = "totalBreak";
             this.totalBreak.ReadOnly = true;
@@ -729,7 +584,7 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(227, 617);
+            this.label14.Location = new System.Drawing.Point(222, 545);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(64, 16);
@@ -739,7 +594,7 @@
             // 
             // injury
             // 
-            this.injury.Location = new System.Drawing.Point(156, 639);
+            this.injury.Location = new System.Drawing.Point(151, 567);
             this.injury.Margin = new System.Windows.Forms.Padding(4);
             this.injury.Name = "injury";
             this.injury.Size = new System.Drawing.Size(64, 22);
@@ -750,7 +605,7 @@
             // 
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(12, 581);
+            this.pictureBox10.Location = new System.Drawing.Point(7, 509);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(63, 51);
@@ -760,7 +615,7 @@
             // 
             // ko
             // 
-            this.ko.Location = new System.Drawing.Point(84, 639);
+            this.ko.Location = new System.Drawing.Point(79, 567);
             this.ko.Margin = new System.Windows.Forms.Padding(4);
             this.ko.Name = "ko";
             this.ko.Size = new System.Drawing.Size(64, 22);
@@ -769,7 +624,7 @@
             // 
             // stun
             // 
-            this.stun.Location = new System.Drawing.Point(12, 639);
+            this.stun.Location = new System.Drawing.Point(7, 567);
             this.stun.Margin = new System.Windows.Forms.Padding(4);
             this.stun.Name = "stun";
             this.stun.Size = new System.Drawing.Size(64, 22);
@@ -780,7 +635,7 @@
             // 
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(156, 581);
+            this.pictureBox9.Location = new System.Drawing.Point(151, 509);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(63, 51);
@@ -792,7 +647,7 @@
             // 
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(84, 581);
+            this.pictureBox8.Location = new System.Drawing.Point(79, 509);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(63, 51);
@@ -803,7 +658,7 @@
             // percentCatch
             // 
             this.percentCatch.BackColor = System.Drawing.Color.White;
-            this.percentCatch.Location = new System.Drawing.Point(295, 441);
+            this.percentCatch.Location = new System.Drawing.Point(290, 369);
             this.percentCatch.Margin = new System.Windows.Forms.Padding(4);
             this.percentCatch.Name = "percentCatch";
             this.percentCatch.ReadOnly = true;
@@ -814,7 +669,7 @@
             // totalCatch
             // 
             this.totalCatch.BackColor = System.Drawing.Color.White;
-            this.totalCatch.Location = new System.Drawing.Point(235, 441);
+            this.totalCatch.Location = new System.Drawing.Point(230, 369);
             this.totalCatch.Margin = new System.Windows.Forms.Padding(4);
             this.totalCatch.Name = "totalCatch";
             this.totalCatch.ReadOnly = true;
@@ -825,7 +680,7 @@
             // percentPass
             // 
             this.percentPass.BackColor = System.Drawing.Color.White;
-            this.percentPass.Location = new System.Drawing.Point(295, 388);
+            this.percentPass.Location = new System.Drawing.Point(290, 316);
             this.percentPass.Margin = new System.Windows.Forms.Padding(4);
             this.percentPass.Name = "percentPass";
             this.percentPass.ReadOnly = true;
@@ -836,7 +691,7 @@
             // totalPass
             // 
             this.totalPass.BackColor = System.Drawing.Color.White;
-            this.totalPass.Location = new System.Drawing.Point(235, 388);
+            this.totalPass.Location = new System.Drawing.Point(230, 316);
             this.totalPass.Margin = new System.Windows.Forms.Padding(4);
             this.totalPass.Name = "totalPass";
             this.totalPass.ReadOnly = true;
@@ -846,7 +701,7 @@
             // 
             // okCatch
             // 
-            this.okCatch.Location = new System.Drawing.Point(163, 442);
+            this.okCatch.Location = new System.Drawing.Point(158, 370);
             this.okCatch.Margin = new System.Windows.Forms.Padding(4);
             this.okCatch.Name = "okCatch";
             this.okCatch.Size = new System.Drawing.Size(64, 22);
@@ -855,7 +710,7 @@
             // 
             // failCatch
             // 
-            this.failCatch.Location = new System.Drawing.Point(91, 442);
+            this.failCatch.Location = new System.Drawing.Point(86, 370);
             this.failCatch.Margin = new System.Windows.Forms.Padding(4);
             this.failCatch.Name = "failCatch";
             this.failCatch.Size = new System.Drawing.Size(64, 22);
@@ -864,7 +719,7 @@
             // 
             // okPass
             // 
-            this.okPass.Location = new System.Drawing.Point(163, 388);
+            this.okPass.Location = new System.Drawing.Point(158, 316);
             this.okPass.Margin = new System.Windows.Forms.Padding(4);
             this.okPass.Name = "okPass";
             this.okPass.Size = new System.Drawing.Size(64, 22);
@@ -873,7 +728,7 @@
             // 
             // failPass
             // 
-            this.failPass.Location = new System.Drawing.Point(91, 388);
+            this.failPass.Location = new System.Drawing.Point(86, 316);
             this.failPass.Margin = new System.Windows.Forms.Padding(4);
             this.failPass.Name = "failPass";
             this.failPass.Size = new System.Drawing.Size(64, 22);
@@ -882,7 +737,7 @@
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(295, 364);
+            this.label13.Location = new System.Drawing.Point(290, 292);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(61, 17);
@@ -892,7 +747,7 @@
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(231, 366);
+            this.label12.Location = new System.Drawing.Point(226, 294);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 16);
@@ -902,7 +757,7 @@
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(159, 367);
+            this.label11.Location = new System.Drawing.Point(154, 295);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 16);
@@ -912,7 +767,7 @@
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(87, 367);
+            this.label10.Location = new System.Drawing.Point(82, 295);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 16);
@@ -924,7 +779,7 @@
             // 
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(9, 431);
+            this.pictureBox7.Location = new System.Drawing.Point(4, 359);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(63, 51);
@@ -936,7 +791,7 @@
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(9, 372);
+            this.pictureBox6.Location = new System.Drawing.Point(4, 300);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(63, 51);
@@ -946,7 +801,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(8, 315);
+            this.label9.Location = new System.Drawing.Point(3, 243);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 17);
@@ -956,7 +811,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(5, 284);
+            this.label8.Location = new System.Drawing.Point(0, 212);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 16);
@@ -966,7 +821,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(629, 124);
+            this.label7.Location = new System.Drawing.Point(624, 52);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 16);
@@ -977,7 +832,7 @@
             // threeTotal
             // 
             this.threeTotal.BackColor = System.Drawing.Color.White;
-            this.threeTotal.Location = new System.Drawing.Point(629, 247);
+            this.threeTotal.Location = new System.Drawing.Point(624, 175);
             this.threeTotal.Margin = new System.Windows.Forms.Padding(4);
             this.threeTotal.Name = "threeTotal";
             this.threeTotal.ReadOnly = true;
@@ -988,7 +843,7 @@
             // twoTotal
             // 
             this.twoTotal.BackColor = System.Drawing.Color.White;
-            this.twoTotal.Location = new System.Drawing.Point(629, 215);
+            this.twoTotal.Location = new System.Drawing.Point(624, 143);
             this.twoTotal.Margin = new System.Windows.Forms.Padding(4);
             this.twoTotal.Name = "twoTotal";
             this.twoTotal.ReadOnly = true;
@@ -999,7 +854,7 @@
             // oneTotal
             // 
             this.oneTotal.BackColor = System.Drawing.Color.White;
-            this.oneTotal.Location = new System.Drawing.Point(629, 185);
+            this.oneTotal.Location = new System.Drawing.Point(624, 113);
             this.oneTotal.Margin = new System.Windows.Forms.Padding(4);
             this.oneTotal.Name = "oneTotal";
             this.oneTotal.ReadOnly = true;
@@ -1010,7 +865,7 @@
             // negTotal
             // 
             this.negTotal.BackColor = System.Drawing.Color.White;
-            this.negTotal.Location = new System.Drawing.Point(629, 153);
+            this.negTotal.Location = new System.Drawing.Point(624, 81);
             this.negTotal.Margin = new System.Windows.Forms.Padding(4);
             this.negTotal.Name = "negTotal";
             this.negTotal.ReadOnly = true;
@@ -1021,7 +876,7 @@
             // powPercent
             // 
             this.powPercent.BackColor = System.Drawing.Color.White;
-            this.powPercent.Location = new System.Drawing.Point(515, 311);
+            this.powPercent.Location = new System.Drawing.Point(510, 239);
             this.powPercent.Margin = new System.Windows.Forms.Padding(4);
             this.powPercent.Name = "powPercent";
             this.powPercent.ReadOnly = true;
@@ -1032,7 +887,7 @@
             // blockPercent
             // 
             this.blockPercent.BackColor = System.Drawing.Color.White;
-            this.blockPercent.Location = new System.Drawing.Point(407, 311);
+            this.blockPercent.Location = new System.Drawing.Point(402, 239);
             this.blockPercent.Margin = new System.Windows.Forms.Padding(4);
             this.blockPercent.Name = "blockPercent";
             this.blockPercent.ReadOnly = true;
@@ -1043,7 +898,7 @@
             // dodgePercent
             // 
             this.dodgePercent.BackColor = System.Drawing.Color.White;
-            this.dodgePercent.Location = new System.Drawing.Point(299, 311);
+            this.dodgePercent.Location = new System.Drawing.Point(294, 239);
             this.dodgePercent.Margin = new System.Windows.Forms.Padding(4);
             this.dodgePercent.Name = "dodgePercent";
             this.dodgePercent.ReadOnly = true;
@@ -1054,7 +909,7 @@
             // pushPercent
             // 
             this.pushPercent.BackColor = System.Drawing.Color.White;
-            this.pushPercent.Location = new System.Drawing.Point(188, 311);
+            this.pushPercent.Location = new System.Drawing.Point(183, 239);
             this.pushPercent.Margin = new System.Windows.Forms.Padding(4);
             this.pushPercent.Name = "pushPercent";
             this.pushPercent.ReadOnly = true;
@@ -1065,7 +920,7 @@
             // skullPercent
             // 
             this.skullPercent.BackColor = System.Drawing.Color.White;
-            this.skullPercent.Location = new System.Drawing.Point(77, 311);
+            this.skullPercent.Location = new System.Drawing.Point(72, 239);
             this.skullPercent.Margin = new System.Windows.Forms.Padding(4);
             this.skullPercent.Name = "skullPercent";
             this.skullPercent.ReadOnly = true;
@@ -1076,7 +931,7 @@
             // powTotal
             // 
             this.powTotal.BackColor = System.Drawing.Color.White;
-            this.powTotal.Location = new System.Drawing.Point(515, 279);
+            this.powTotal.Location = new System.Drawing.Point(510, 207);
             this.powTotal.Margin = new System.Windows.Forms.Padding(4);
             this.powTotal.Name = "powTotal";
             this.powTotal.ReadOnly = true;
@@ -1087,7 +942,7 @@
             // blockTotal
             // 
             this.blockTotal.BackColor = System.Drawing.Color.White;
-            this.blockTotal.Location = new System.Drawing.Point(407, 279);
+            this.blockTotal.Location = new System.Drawing.Point(402, 207);
             this.blockTotal.Margin = new System.Windows.Forms.Padding(4);
             this.blockTotal.Name = "blockTotal";
             this.blockTotal.ReadOnly = true;
@@ -1098,7 +953,7 @@
             // dodgeTotal
             // 
             this.dodgeTotal.BackColor = System.Drawing.Color.White;
-            this.dodgeTotal.Location = new System.Drawing.Point(299, 279);
+            this.dodgeTotal.Location = new System.Drawing.Point(294, 207);
             this.dodgeTotal.Margin = new System.Windows.Forms.Padding(4);
             this.dodgeTotal.Name = "dodgeTotal";
             this.dodgeTotal.ReadOnly = true;
@@ -1109,7 +964,7 @@
             // pushTotal
             // 
             this.pushTotal.BackColor = System.Drawing.Color.White;
-            this.pushTotal.Location = new System.Drawing.Point(188, 279);
+            this.pushTotal.Location = new System.Drawing.Point(183, 207);
             this.pushTotal.Margin = new System.Windows.Forms.Padding(4);
             this.pushTotal.Name = "pushTotal";
             this.pushTotal.ReadOnly = true;
@@ -1120,7 +975,7 @@
             // skullTotal
             // 
             this.skullTotal.BackColor = System.Drawing.Color.White;
-            this.skullTotal.Location = new System.Drawing.Point(77, 279);
+            this.skullTotal.Location = new System.Drawing.Point(72, 207);
             this.skullTotal.Margin = new System.Windows.Forms.Padding(4);
             this.skullTotal.Name = "skullTotal";
             this.skullTotal.ReadOnly = true;
@@ -1130,7 +985,7 @@
             // 
             // threeDicePow
             // 
-            this.threeDicePow.Location = new System.Drawing.Point(515, 247);
+            this.threeDicePow.Location = new System.Drawing.Point(510, 175);
             this.threeDicePow.Margin = new System.Windows.Forms.Padding(4);
             this.threeDicePow.Name = "threeDicePow";
             this.threeDicePow.Size = new System.Drawing.Size(64, 22);
@@ -1139,7 +994,7 @@
             // 
             // twoDicePow
             // 
-            this.twoDicePow.Location = new System.Drawing.Point(515, 215);
+            this.twoDicePow.Location = new System.Drawing.Point(510, 143);
             this.twoDicePow.Margin = new System.Windows.Forms.Padding(4);
             this.twoDicePow.Name = "twoDicePow";
             this.twoDicePow.Size = new System.Drawing.Size(64, 22);
@@ -1148,7 +1003,7 @@
             // 
             // oneDicePow
             // 
-            this.oneDicePow.Location = new System.Drawing.Point(515, 185);
+            this.oneDicePow.Location = new System.Drawing.Point(510, 113);
             this.oneDicePow.Margin = new System.Windows.Forms.Padding(4);
             this.oneDicePow.Name = "oneDicePow";
             this.oneDicePow.Size = new System.Drawing.Size(64, 22);
@@ -1157,7 +1012,7 @@
             // 
             // negDicePow
             // 
-            this.negDicePow.Location = new System.Drawing.Point(515, 153);
+            this.negDicePow.Location = new System.Drawing.Point(510, 81);
             this.negDicePow.Margin = new System.Windows.Forms.Padding(4);
             this.negDicePow.Name = "negDicePow";
             this.negDicePow.Size = new System.Drawing.Size(64, 22);
@@ -1166,7 +1021,7 @@
             // 
             // threeDiceBlock
             // 
-            this.threeDiceBlock.Location = new System.Drawing.Point(407, 247);
+            this.threeDiceBlock.Location = new System.Drawing.Point(402, 175);
             this.threeDiceBlock.Margin = new System.Windows.Forms.Padding(4);
             this.threeDiceBlock.Name = "threeDiceBlock";
             this.threeDiceBlock.Size = new System.Drawing.Size(64, 22);
@@ -1175,7 +1030,7 @@
             // 
             // twoDiceBlock
             // 
-            this.twoDiceBlock.Location = new System.Drawing.Point(407, 215);
+            this.twoDiceBlock.Location = new System.Drawing.Point(402, 143);
             this.twoDiceBlock.Margin = new System.Windows.Forms.Padding(4);
             this.twoDiceBlock.Name = "twoDiceBlock";
             this.twoDiceBlock.Size = new System.Drawing.Size(64, 22);
@@ -1184,7 +1039,7 @@
             // 
             // oneDiceBlock
             // 
-            this.oneDiceBlock.Location = new System.Drawing.Point(407, 185);
+            this.oneDiceBlock.Location = new System.Drawing.Point(402, 113);
             this.oneDiceBlock.Margin = new System.Windows.Forms.Padding(4);
             this.oneDiceBlock.Name = "oneDiceBlock";
             this.oneDiceBlock.Size = new System.Drawing.Size(64, 22);
@@ -1193,7 +1048,7 @@
             // 
             // negDiceBlock
             // 
-            this.negDiceBlock.Location = new System.Drawing.Point(407, 153);
+            this.negDiceBlock.Location = new System.Drawing.Point(402, 81);
             this.negDiceBlock.Margin = new System.Windows.Forms.Padding(4);
             this.negDiceBlock.Name = "negDiceBlock";
             this.negDiceBlock.Size = new System.Drawing.Size(64, 22);
@@ -1202,7 +1057,7 @@
             // 
             // threeDiceDodge
             // 
-            this.threeDiceDodge.Location = new System.Drawing.Point(299, 247);
+            this.threeDiceDodge.Location = new System.Drawing.Point(294, 175);
             this.threeDiceDodge.Margin = new System.Windows.Forms.Padding(4);
             this.threeDiceDodge.Name = "threeDiceDodge";
             this.threeDiceDodge.Size = new System.Drawing.Size(64, 22);
@@ -1211,7 +1066,7 @@
             // 
             // twoDiceDodge
             // 
-            this.twoDiceDodge.Location = new System.Drawing.Point(299, 215);
+            this.twoDiceDodge.Location = new System.Drawing.Point(294, 143);
             this.twoDiceDodge.Margin = new System.Windows.Forms.Padding(4);
             this.twoDiceDodge.Name = "twoDiceDodge";
             this.twoDiceDodge.Size = new System.Drawing.Size(64, 22);
@@ -1220,7 +1075,7 @@
             // 
             // oneDiceDodge
             // 
-            this.oneDiceDodge.Location = new System.Drawing.Point(299, 185);
+            this.oneDiceDodge.Location = new System.Drawing.Point(294, 113);
             this.oneDiceDodge.Margin = new System.Windows.Forms.Padding(4);
             this.oneDiceDodge.Name = "oneDiceDodge";
             this.oneDiceDodge.Size = new System.Drawing.Size(64, 22);
@@ -1229,7 +1084,7 @@
             // 
             // negDiceDodge
             // 
-            this.negDiceDodge.Location = new System.Drawing.Point(299, 153);
+            this.negDiceDodge.Location = new System.Drawing.Point(294, 81);
             this.negDiceDodge.Margin = new System.Windows.Forms.Padding(4);
             this.negDiceDodge.Name = "negDiceDodge";
             this.negDiceDodge.Size = new System.Drawing.Size(64, 22);
@@ -1238,7 +1093,7 @@
             // 
             // threeDicePush
             // 
-            this.threeDicePush.Location = new System.Drawing.Point(188, 247);
+            this.threeDicePush.Location = new System.Drawing.Point(183, 175);
             this.threeDicePush.Margin = new System.Windows.Forms.Padding(4);
             this.threeDicePush.Name = "threeDicePush";
             this.threeDicePush.Size = new System.Drawing.Size(64, 22);
@@ -1247,7 +1102,7 @@
             // 
             // twoDicePush
             // 
-            this.twoDicePush.Location = new System.Drawing.Point(188, 215);
+            this.twoDicePush.Location = new System.Drawing.Point(183, 143);
             this.twoDicePush.Margin = new System.Windows.Forms.Padding(4);
             this.twoDicePush.Name = "twoDicePush";
             this.twoDicePush.Size = new System.Drawing.Size(64, 22);
@@ -1256,7 +1111,7 @@
             // 
             // oneDicePush
             // 
-            this.oneDicePush.Location = new System.Drawing.Point(188, 185);
+            this.oneDicePush.Location = new System.Drawing.Point(183, 113);
             this.oneDicePush.Margin = new System.Windows.Forms.Padding(4);
             this.oneDicePush.Name = "oneDicePush";
             this.oneDicePush.Size = new System.Drawing.Size(64, 22);
@@ -1265,7 +1120,7 @@
             // 
             // negDicePush
             // 
-            this.negDicePush.Location = new System.Drawing.Point(188, 153);
+            this.negDicePush.Location = new System.Drawing.Point(183, 81);
             this.negDicePush.Margin = new System.Windows.Forms.Padding(4);
             this.negDicePush.Name = "negDicePush";
             this.negDicePush.Size = new System.Drawing.Size(64, 22);
@@ -1274,7 +1129,7 @@
             // 
             // threeDiceSkull
             // 
-            this.threeDiceSkull.Location = new System.Drawing.Point(77, 247);
+            this.threeDiceSkull.Location = new System.Drawing.Point(72, 175);
             this.threeDiceSkull.Margin = new System.Windows.Forms.Padding(4);
             this.threeDiceSkull.Name = "threeDiceSkull";
             this.threeDiceSkull.Size = new System.Drawing.Size(64, 22);
@@ -1283,7 +1138,7 @@
             // 
             // twoDiceSkull
             // 
-            this.twoDiceSkull.Location = new System.Drawing.Point(77, 215);
+            this.twoDiceSkull.Location = new System.Drawing.Point(72, 143);
             this.twoDiceSkull.Margin = new System.Windows.Forms.Padding(4);
             this.twoDiceSkull.Name = "twoDiceSkull";
             this.twoDiceSkull.Size = new System.Drawing.Size(64, 22);
@@ -1292,7 +1147,7 @@
             // 
             // oneDiceSkull
             // 
-            this.oneDiceSkull.Location = new System.Drawing.Point(77, 185);
+            this.oneDiceSkull.Location = new System.Drawing.Point(72, 113);
             this.oneDiceSkull.Margin = new System.Windows.Forms.Padding(4);
             this.oneDiceSkull.Name = "oneDiceSkull";
             this.oneDiceSkull.Size = new System.Drawing.Size(64, 22);
@@ -1301,7 +1156,7 @@
             // 
             // negDiceSkull
             // 
-            this.negDiceSkull.Location = new System.Drawing.Point(77, 153);
+            this.negDiceSkull.Location = new System.Drawing.Point(72, 81);
             this.negDiceSkull.Margin = new System.Windows.Forms.Padding(4);
             this.negDiceSkull.Name = "negDiceSkull";
             this.negDiceSkull.Size = new System.Drawing.Size(64, 22);
@@ -1310,7 +1165,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(33, 251);
+            this.label6.Location = new System.Drawing.Point(28, 179);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 16);
@@ -1322,7 +1177,7 @@
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(77, 94);
+            this.pictureBox5.Location = new System.Drawing.Point(72, 22);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(63, 51);
@@ -1334,7 +1189,7 @@
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(188, 92);
+            this.pictureBox4.Location = new System.Drawing.Point(183, 20);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(63, 51);
@@ -1346,7 +1201,7 @@
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(299, 91);
+            this.pictureBox3.Location = new System.Drawing.Point(294, 19);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(63, 51);
@@ -1358,7 +1213,7 @@
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(407, 91);
+            this.pictureBox2.Location = new System.Drawing.Point(402, 19);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(63, 51);
@@ -1370,7 +1225,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(515, 89);
+            this.pictureBox1.Location = new System.Drawing.Point(510, 17);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 51);
@@ -1380,7 +1235,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(33, 223);
+            this.label5.Location = new System.Drawing.Point(28, 151);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 16);
@@ -1390,7 +1245,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(33, 191);
+            this.label4.Location = new System.Drawing.Point(28, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 16);
@@ -1400,7 +1255,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(15, 159);
+            this.label3.Location = new System.Drawing.Point(10, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 16);
@@ -1408,36 +1263,123 @@
             this.label3.Text = "-1D:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(32, 59);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Coach:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(91, 55);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 22);
-            this.textBox2.TabIndex = 2;
-            // 
             // BB2StatsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 713);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(702, 614);
+            this.Controls.Add(this.powsPercent);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.negDiceBlock);
+            this.Controls.Add(this.threePercentSkull);
+            this.Controls.Add(this.twoPercentSkull);
+            this.Controls.Add(this.onePercentSkull);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.negPercentSkull);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.threePercentPush);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.twoPercentPush);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.onePercentPush);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.negPercentPush);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.threePercentDodge);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.twoPercentDodge);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.onePercentDodge);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.negDiceSkull);
+            this.Controls.Add(this.negPercentDodge);
+            this.Controls.Add(this.oneDiceSkull);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.twoDiceSkull);
+            this.Controls.Add(this.threePercentPow);
+            this.Controls.Add(this.threeDiceSkull);
+            this.Controls.Add(this.twoPercentPow);
+            this.Controls.Add(this.negDicePush);
+            this.Controls.Add(this.onePercentPow);
+            this.Controls.Add(this.oneDicePush);
+            this.Controls.Add(this.negPercentPow);
+            this.Controls.Add(this.twoDicePush);
+            this.Controls.Add(this.threePercentBlock);
+            this.Controls.Add(this.threeDicePush);
+            this.Controls.Add(this.twoPercentBlock);
+            this.Controls.Add(this.negDiceDodge);
+            this.Controls.Add(this.onePercentBlock);
+            this.Controls.Add(this.oneDiceDodge);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.twoDiceDodge);
+            this.Controls.Add(this.negPercentBlock);
+            this.Controls.Add(this.threeDiceDodge);
+            this.Controls.Add(this.totalDice);
+            this.Controls.Add(this.oneDiceBlock);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.twoDiceBlock);
+            this.Controls.Add(this.pows);
+            this.Controls.Add(this.threeDiceBlock);
+            this.Controls.Add(this.percentAp);
+            this.Controls.Add(this.negDicePow);
+            this.Controls.Add(this.totalAp);
+            this.Controls.Add(this.oneDicePow);
+            this.Controls.Add(this.okAp);
+            this.Controls.Add(this.twoDicePow);
+            this.Controls.Add(this.failAp);
+            this.Controls.Add(this.threeDicePow);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.skullTotal);
+            this.Controls.Add(this.percentBreak);
+            this.Controls.Add(this.pushTotal);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.dodgeTotal);
+            this.Controls.Add(this.totalBreak);
+            this.Controls.Add(this.blockTotal);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.powTotal);
+            this.Controls.Add(this.injury);
+            this.Controls.Add(this.skullPercent);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pushPercent);
+            this.Controls.Add(this.ko);
+            this.Controls.Add(this.dodgePercent);
+            this.Controls.Add(this.stun);
+            this.Controls.Add(this.blockPercent);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.powPercent);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.negTotal);
+            this.Controls.Add(this.percentCatch);
+            this.Controls.Add(this.oneTotal);
+            this.Controls.Add(this.totalCatch);
+            this.Controls.Add(this.twoTotal);
+            this.Controls.Add(this.percentPass);
+            this.Controls.Add(this.threeTotal);
+            this.Controls.Add(this.totalPass);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.okCatch);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.failCatch);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.okPass);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.failPass);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "BB2StatsForm";
-            this.Text = "BB2 Stats";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Text = " ";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okAp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.failAp)).EndInit();
@@ -1480,14 +1422,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.NumericUpDown ko;
         private System.Windows.Forms.NumericUpDown stun;
@@ -1553,8 +1492,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox totalBreak;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.NumericUpDown injury;
