@@ -1,227 +1,291 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
 namespace BB2Stats
 {
     public partial class BB2StatsForm : Form
     {
-        int neg_total = 0;
-        int one_total = 0;
-        int two_total = 0;
-        int three_total = 0;
-        int skull_total = 0;
-        int push_total = 0;
-        int dodge_total = 0;
-        int block_total = 0;
-        int pow_total = 0;
-        int dices_total = 0;
-        int npows = 0;
-        int nstuns = 0;
-        int nkos = 0;
-        int ninjuries = 0;
-        int nbreaks = 0;
-        int total_dodge = 0;
-        int total_catch = 0;
-        int total_ap = 0;
+        class DiceResult
+        {
+            public int neg_dice = 0;
+            public int one_dice = 0;
+            public int two_dice = 0;
+            public int three_dice = 0;
+        };
+
+        class SkillResult
+        {
+            public int fail_count = 0;
+            public int ok_count = 0;
+        }
+
+        class Data
+        {
+            public DiceResult skull = new DiceResult();
+            public DiceResult push = new DiceResult();
+            public DiceResult dodge = new DiceResult();
+            public DiceResult block = new DiceResult();
+            public DiceResult pow = new DiceResult();
+
+            public int neg_total = 0;
+            public int one_total = 0;
+            public int two_total = 0;
+            public int three_total = 0;
+
+            public int skull_total = 0;
+            public int push_total = 0;
+            public int dodge_total = 0;
+            public int block_total = 0;
+            public int pow_total = 0;
+
+            public int dices_total = 0;
+
+            public int npows = 0;
+            
+            public int nstuns = 0;
+            public int nkos = 0;
+            public int ninjuries = 0;
+            
+            public int nbreaks = 0;
+
+            public SkillResult dodge_skill = new SkillResult();
+            public SkillResult catch_skill = new SkillResult();
+            public SkillResult ap_skill = new SkillResult();
+
+            public int total_dodge = 0;
+            public int total_catch = 0;
+            public int total_ap = 0;
+        }
+
+        Data data = new Data();
 
         public BB2StatsForm()
         {
             InitializeComponent();
         }
 
+        public string toJson()
+        {
+            return JsonConvert.SerializeObject(data, Formatting.Indented, new JsonSerializerSettings()
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
+        }
+
         private void updateTotalDices()
         {
-            dices_total = neg_total + one_total + two_total + three_total;
+            data.dices_total = data.neg_total + data.one_total + data.two_total + data.three_total;
             updateSkullValues();
             updatePushValues();
             updateDodgeValues();
             updateBlockValues();
             updatePowValues();
 
-            if (neg_total > 0)
+            if (data.neg_total > 0)
             {
-                negPercentSkull.Text = ((int)((double)negDiceSkull.Value * 100.0 / (double)neg_total)).ToString();
-                negPercentPush.Text = ((int)((double)negDicePush.Value * 100.0 / (double)neg_total)).ToString();
-                negPercentDodge.Text = ((int)((double)negDiceDodge.Value * 100.0 / (double)neg_total)).ToString();
-                negPercentBlock.Text = ((int)((double)negDiceBlock.Value * 100.0 / (double)neg_total)).ToString();
-                negPercentPow.Text = ((int)((double)negDicePow.Value * 100.0 / (double)neg_total)).ToString();
+                negPercentSkull.Text = ((int)((double)negDiceSkull.Value * 100.0 / (double)data.neg_total)).ToString();
+                negPercentPush.Text = ((int)((double)negDicePush.Value * 100.0 / (double)data.neg_total)).ToString();
+                negPercentDodge.Text = ((int)((double)negDiceDodge.Value * 100.0 / (double)data.neg_total)).ToString();
+                negPercentBlock.Text = ((int)((double)negDiceBlock.Value * 100.0 / (double)data.neg_total)).ToString();
+                negPercentPow.Text = ((int)((double)negDicePow.Value * 100.0 / (double)data.neg_total)).ToString();
             }
-            if (one_total > 0)
+            if (data.one_total > 0)
             {
-                onePercentSkull.Text = ((int)((double)oneDiceSkull.Value * 100.0 / (double)one_total)).ToString();
-                onePercentPush.Text = ((int)((double)oneDicePush.Value * 100.0 / (double)one_total)).ToString();
-                onePercentDodge.Text = ((int)((double)oneDiceDodge.Value * 100.0 / (double)one_total)).ToString();
-                onePercentBlock.Text = ((int)((double)oneDiceBlock.Value * 100.0 / (double)one_total)).ToString();
-                onePercentPow.Text = ((int)((double)oneDicePow.Value * 100.0 / (double)one_total)).ToString();
+                onePercentSkull.Text = ((int)((double)oneDiceSkull.Value * 100.0 / (double)data.one_total)).ToString();
+                onePercentPush.Text = ((int)((double)oneDicePush.Value * 100.0 / (double)data.one_total)).ToString();
+                onePercentDodge.Text = ((int)((double)oneDiceDodge.Value * 100.0 / (double)data.one_total)).ToString();
+                onePercentBlock.Text = ((int)((double)oneDiceBlock.Value * 100.0 / (double)data.one_total)).ToString();
+                onePercentPow.Text = ((int)((double)oneDicePow.Value * 100.0 / (double)data.one_total)).ToString();
             }
-            if (two_total > 0)
+            if (data.two_total > 0)
             {
-                twoPercentSkull.Text = ((int)((double)twoDiceSkull.Value * 100.0 / (double)two_total)).ToString();
-                twoPercentPush.Text = ((int)((double)twoDicePush.Value * 100.0 / (double)two_total)).ToString();
-                twoPercentDodge.Text = ((int)((double)twoDiceDodge.Value * 100.0 / (double)two_total)).ToString();
-                twoPercentBlock.Text = ((int)((double)twoDiceBlock.Value * 100.0 / (double)two_total)).ToString();
-                twoPercentPow.Text = ((int)((double)twoDicePow.Value * 100.0 / (double)two_total)).ToString();
+                twoPercentSkull.Text = ((int)((double)twoDiceSkull.Value * 100.0 / (double)data.two_total)).ToString();
+                twoPercentPush.Text = ((int)((double)twoDicePush.Value * 100.0 / (double)data.two_total)).ToString();
+                twoPercentDodge.Text = ((int)((double)twoDiceDodge.Value * 100.0 / (double)data.two_total)).ToString();
+                twoPercentBlock.Text = ((int)((double)twoDiceBlock.Value * 100.0 / (double)data.two_total)).ToString();
+                twoPercentPow.Text = ((int)((double)twoDicePow.Value * 100.0 / (double)data.two_total)).ToString();
             }
-            if (three_total > 0)
+            if (data.three_total > 0)
             {
-                threePercentSkull.Text = ((int)((double)threeDiceSkull.Value * 100.0 / (double)three_total)).ToString();
-                threePercentPush.Text = ((int)((double)threeDicePush.Value * 100.0 / (double)three_total)).ToString();
-                threePercentDodge.Text = ((int)((double)threeDiceDodge.Value * 100.0 / (double)three_total)).ToString();
-                threePercentBlock.Text = ((int)((double)threeDiceBlock.Value * 100.0 / (double)three_total)).ToString();
-                threePercentPow.Text = ((int)((double)threeDicePow.Value * 100.0 / (double)three_total)).ToString();
+                threePercentSkull.Text = ((int)((double)threeDiceSkull.Value * 100.0 / (double)data.three_total)).ToString();
+                threePercentPush.Text = ((int)((double)threeDicePush.Value * 100.0 / (double)data.three_total)).ToString();
+                threePercentDodge.Text = ((int)((double)threeDiceDodge.Value * 100.0 / (double)data.three_total)).ToString();
+                threePercentBlock.Text = ((int)((double)threeDiceBlock.Value * 100.0 / (double)data.three_total)).ToString();
+                threePercentPow.Text = ((int)((double)threeDicePow.Value * 100.0 / (double)data.three_total)).ToString();
             }
-            totalDice.Text = dices_total.ToString();
-            if (dices_total > 0)
+            totalDice.Text = data.dices_total.ToString();
+            if (data.dices_total > 0)
             {
-                powsPercent.Text = ((int)(((double)npows * 100.0) / (double)dices_total)).ToString();
+                powsPercent.Text = ((int)(((double)data.npows * 100.0) / (double)data.dices_total)).ToString();
             }
         }
 
         private void negDice_ValueChanged(object sender, EventArgs e)
         {
-            neg_total = (int)(negDiceSkull.Value + negDicePush.Value + negDiceDodge.Value + negDiceBlock.Value + negDicePow.Value);
-            negTotal.Text = neg_total.ToString();
+            data.neg_total = (int)(negDiceSkull.Value + negDicePush.Value + negDiceDodge.Value + negDiceBlock.Value + negDicePow.Value);
+            negTotal.Text = data.neg_total.ToString();
             updateTotalDices();
         }
 
         private void oneDice_ValueChanged(object sender, EventArgs e)
         {
-            one_total = (int)(oneDiceSkull.Value + oneDicePush.Value + oneDiceDodge.Value + oneDiceBlock.Value + oneDicePow.Value);
-            oneTotal.Text = one_total.ToString();
+            data.one_total = (int)(oneDiceSkull.Value + oneDicePush.Value + oneDiceDodge.Value + oneDiceBlock.Value + oneDicePow.Value);
+            oneTotal.Text = data.one_total.ToString();
             updateTotalDices();
         }
 
         private void twoDice_ValueChanged(object sender, EventArgs e)
         {
-            two_total = (int)(twoDiceSkull.Value + twoDicePush.Value + twoDiceDodge.Value + twoDiceBlock.Value + twoDicePow.Value);
-            twoTotal.Text = two_total.ToString();
+            data.two_total = (int)(twoDiceSkull.Value + twoDicePush.Value + twoDiceDodge.Value + twoDiceBlock.Value + twoDicePow.Value);
+            twoTotal.Text = data.two_total.ToString();
             updateTotalDices();
         }
 
         private void threeDice_ValueChanged(object sender, EventArgs e)
         {
-            three_total = (int)(threeDiceSkull.Value + threeDicePush.Value + threeDiceDodge.Value + threeDiceBlock.Value + threeDicePow.Value);
-            threeTotal.Text = three_total.ToString();
+            data.three_total = (int)(threeDiceSkull.Value + threeDicePush.Value + threeDiceDodge.Value + threeDiceBlock.Value + threeDicePow.Value);
+            threeTotal.Text = data.three_total.ToString();
             updateTotalDices();
         }
 
         private void updateSkullValues()
         {
-            skull_total = (int)(negDiceSkull.Value + oneDiceSkull.Value + twoDiceSkull.Value + threeDiceSkull.Value);
-            skullTotal.Text = skull_total.ToString();
-            if (dices_total > 0)
+            data.skull.neg_dice = (int)(negDiceSkull.Value);
+            data.skull.one_dice = (int)(oneDiceSkull.Value);
+            data.skull.two_dice = (int)(twoDiceSkull.Value);
+            data.skull.three_dice = (int)(threeDiceSkull.Value);
+            data.skull_total = (int)(negDiceSkull.Value + oneDiceSkull.Value + twoDiceSkull.Value + threeDiceSkull.Value);
+            skullTotal.Text = data.skull_total.ToString();
+            if (data.dices_total > 0)
             {
-                skullPercent.Text = ((int)(((double)skull_total * 100.0) / (double)dices_total)).ToString();
+                skullPercent.Text = ((int)(((double)data.skull_total * 100.0) / (double)data.dices_total)).ToString();
             }
         }
 
         private void updatePushValues()
         {
-            push_total = (int)(negDicePush.Value + oneDicePush.Value + twoDicePush.Value + threeDicePush.Value);
-            pushTotal.Text = push_total.ToString();
-            if (dices_total > 0)
+            data.push.neg_dice = (int)(negDicePush.Value);
+            data.push.one_dice = (int)(oneDicePush.Value);
+            data.push.two_dice = (int)(twoDicePush.Value);
+            data.push.three_dice = (int)(threeDicePush.Value);
+            data.push_total = (int)(negDicePush.Value + oneDicePush.Value + twoDicePush.Value + threeDicePush.Value);
+            pushTotal.Text = data.push_total.ToString();
+            if (data.dices_total > 0)
             {
-                pushPercent.Text = ((int)(((double)push_total * 100.0) / (double)dices_total)).ToString();
+                pushPercent.Text = ((int)(((double)data.push_total * 100.0) / (double)data.dices_total)).ToString();
             }
         }
         private void updateDodgeValues()
         {
-            dodge_total = (int)(negDiceDodge.Value + oneDiceDodge.Value + twoDiceDodge.Value + threeDiceDodge.Value);
-            dodgeTotal.Text = dodge_total.ToString();
-            if (dices_total > 0)
+            data.dodge.neg_dice = (int)(negDiceDodge.Value);
+            data.dodge.one_dice = (int)(oneDiceDodge.Value);
+            data.dodge.two_dice = (int)(twoDiceDodge.Value);
+            data.dodge.three_dice = (int)(threeDiceDodge.Value);
+            data.dodge_total = (int)(negDiceDodge.Value + oneDiceDodge.Value + twoDiceDodge.Value + threeDiceDodge.Value);
+            dodgeTotal.Text = data.dodge_total.ToString();
+            if (data.dices_total > 0)
             {
-                dodgePercent.Text = ((int)(((double)dodge_total * 100.0) / (double)dices_total)).ToString();
+                dodgePercent.Text = ((int)(((double)data.dodge_total * 100.0) / (double)data.dices_total)).ToString();
             }
         }
 
         private void updateBlockValues()
         {
-            block_total = (int)(negDiceBlock.Value + oneDiceBlock.Value + twoDiceBlock.Value + threeDiceBlock.Value);
-            blockTotal.Text = block_total.ToString();
-            if (dices_total > 0)
+            data.block.neg_dice = (int)(negDiceBlock.Value);
+            data.block.one_dice = (int)(oneDiceBlock.Value);
+            data.block.two_dice = (int)(twoDiceBlock.Value);
+            data.block.three_dice = (int)(threeDiceBlock.Value);
+            data.block_total = (int)(negDiceBlock.Value + oneDiceBlock.Value + twoDiceBlock.Value + threeDiceBlock.Value);
+            blockTotal.Text = data.block_total.ToString();
+            if (data.dices_total > 0)
             {
-                blockPercent.Text = ((int)(((double)block_total * 100.0) / (double)dices_total)).ToString();
+                blockPercent.Text = ((int)(((double)data.block_total * 100.0) / (double)data.dices_total)).ToString();
             }
         }
 
         private void updatePowValues()
         {
-            pow_total = (int)(negDicePow.Value + oneDicePow.Value + twoDicePow.Value + threeDicePow.Value);
-            powTotal.Text = pow_total.ToString();
-            if (dices_total > 0)
+            data.pow.neg_dice = (int)(negDicePow.Value);
+            data.pow.one_dice = (int)(oneDicePow.Value);
+            data.pow.two_dice = (int)(twoDicePow.Value);
+            data.pow.three_dice = (int)(threeDicePow.Value);
+            data.pow_total = (int)(negDicePow.Value + oneDicePow.Value + twoDicePow.Value + threeDicePow.Value);
+            powTotal.Text = data.pow_total.ToString();
+            if (data.dices_total > 0)
             {
-                powPercent.Text = ((int)(((double)pow_total * 100.0) / (double)dices_total)).ToString();
+                powPercent.Text = ((int)(((double)data.pow_total * 100.0) / (double)data.dices_total)).ToString();
             }
         }
         private void updateBreaks()
         {
-            nbreaks = nstuns + nkos + ninjuries;
-            totalBreak.Text = nbreaks.ToString();
-            if (npows > 0)
+            data.nbreaks = data.nstuns + data.nkos + data.ninjuries;
+            totalBreak.Text = data.nbreaks.ToString();
+            if (data.npows > 0)
             {
-                percentBreak.Text = ((int)((double)nbreaks * 100.0 / npows)).ToString();
+                percentBreak.Text = ((int)((double)data.nbreaks * 100.0 / data.npows)).ToString();
             }
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            npows = (int)pows.Value;
+            data.npows = (int)pows.Value;
             updateBreaks();
-            if (dices_total > 0)
+            if (data.dices_total > 0)
             {
-                powsPercent.Text = ((int)(((double)npows * 100.0) / (double)dices_total)).ToString();
+                powsPercent.Text = ((int)(((double)data.npows * 100.0) / (double)data.dices_total)).ToString();
             }
         }
 
         private void stun_ValueChanged(object sender, EventArgs e)
         {
-            nstuns = (int)stun.Value;
+            data.nstuns = (int)stun.Value;
             updateBreaks();
         }
 
         private void ko_ValueChanged(object sender, EventArgs e)
         {
-            nkos = (int)ko.Value;
+            data.nkos = (int)ko.Value;
             updateBreaks();
         }
 
         private void injury_ValueChanged(object sender, EventArgs e)
         {
-            ninjuries = (int)injury.Value;
+            data.ninjuries = (int)injury.Value;
             updateBreaks();
         }
         private void pass_ValueChanged(object sender, EventArgs e)
         {
-            total_dodge = (int)(failDodge.Value + okDodge.Value);
-            totalDodge.Text = total_dodge.ToString();
-            if (total_dodge > 0)
+            data.dodge_skill.fail_count = (int)(failDodge.Value);
+            data.dodge_skill.ok_count = (int)(okDodge.Value);
+            data.total_dodge = (int)(failDodge.Value + okDodge.Value);
+            totalDodge.Text = data.total_dodge.ToString();
+            if (data.total_dodge > 0)
             {
-                percentDodge.Text = (((int)okDodge.Value * 100) / total_dodge).ToString();
+                percentDodge.Text = (((int)okDodge.Value * 100) / data.total_dodge).ToString();
             }
         }
         private void catch_ValueChanged(object sender, EventArgs e)
         {
-            total_catch = (int)(failCatch.Value + okCatch.Value);
-            totalCatch.Text = total_catch.ToString();
-            if (total_catch > 0)
+            data.catch_skill.fail_count = (int)(failCatch.Value);
+            data.catch_skill.ok_count = (int)(okCatch.Value);
+            data.total_catch = (int)(failCatch.Value + okCatch.Value);
+            totalCatch.Text = data.total_catch.ToString();
+            if (data.total_catch > 0)
             {
-                percentCatch.Text = (((int)okCatch.Value * 100) / total_catch).ToString();
+                percentCatch.Text = (((int)okCatch.Value * 100) / data.total_catch).ToString();
             }
         }
         private void ap_ValueChanged(object sender, EventArgs e)
         {
-            total_ap = (int)(failAp.Value + okAp.Value);
-            totalAp.Text = total_ap.ToString();
-            if (total_ap > 0)
+            data.ap_skill.fail_count = (int)(failAp.Value);
+            data.ap_skill.ok_count = (int)(okAp.Value);
+            data.total_ap = (int)(failAp.Value + okAp.Value);
+            totalAp.Text = data.total_ap.ToString();
+            if (data.total_ap > 0)
             {
-                percentAp.Text = (((int)okAp.Value * 100) / total_ap).ToString();
+                percentAp.Text = (((int)okAp.Value * 100) / data.total_ap).ToString();
             }
         }
 
