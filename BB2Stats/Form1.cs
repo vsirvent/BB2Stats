@@ -27,6 +27,9 @@ namespace BB2Stats
         int nkos = 0;
         int ninjuries = 0;
         int nbreaks = 0;
+        int total_pass = 0;
+        int total_catch = 0;
+        int total_ap = 0;
 
         public BB2StatsForm()
         {
@@ -75,6 +78,10 @@ namespace BB2Stats
                 threePercentPow.Text = ((int)((double)threeDicePow.Value * 100.0 / (double)three_total)).ToString();
             }
             totalDice.Text = dices_total.ToString();
+            if (dices_total > 0)
+            {
+                powsPercent.Text = ((int)(((double)npows * 100.0) / (double)dices_total)).ToString();
+            }
         }
 
         private void negDice_ValueChanged(object sender, EventArgs e)
@@ -137,7 +144,10 @@ namespace BB2Stats
         {
             pow_total = (int)(negDicePow.Value + oneDicePow.Value + twoDicePow.Value + threeDicePow.Value);
             powTotal.Text = pow_total.ToString();
-            powPercent.Text = ((int)(((double)pow_total * 100.0) / (double)dices_total)).ToString();
+            if (dices_total > 0)
+            {
+                powPercent.Text = ((int)(((double)pow_total * 100.0) / (double)dices_total)).ToString();
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -147,11 +157,11 @@ namespace BB2Stats
 
         private void updateBreaks()
         {
-            nbreaks = nstuns + npows + ninjuries;
+            nbreaks = nstuns + nkos + ninjuries;
             totalBreak.Text = nbreaks.ToString();
-            if (pow_total > 0)
+            if (npows > 0)
             {
-                percentBreak.Text = ((int)((double)nbreaks * 100.0 / pow_total)).ToString();
+                percentBreak.Text = ((int)((double)nbreaks * 100.0 / npows)).ToString();
             }
         }
 
@@ -159,6 +169,10 @@ namespace BB2Stats
         {
             npows = (int)pows.Value;
             updateBreaks();
+            if (dices_total > 0)
+            {
+                powsPercent.Text = ((int)(((double)npows * 100.0) / (double)dices_total)).ToString();
+            }
         }
 
         private void stun_ValueChanged(object sender, EventArgs e)
@@ -167,15 +181,34 @@ namespace BB2Stats
             updateBreaks();
         }
 
+        private void ko_ValueChanged(object sender, EventArgs e)
+        {
+            nkos = (int)ko.Value;
+            updateBreaks();
+        }
+
         private void injury_ValueChanged(object sender, EventArgs e)
         {
             ninjuries = (int)injury.Value;
             updateBreaks();
         }
-
-        private void totalBreak_TextChanged(object sender, EventArgs e)
+        private void pass_ValueChanged(object sender, EventArgs e)
         {
-
+            total_pass = (int)(failPass.Value + okPass.Value);
+            totalPass.Text = total_pass.ToString();
+            percentPass.Text = (((int)okPass.Value * 100) / total_pass).ToString();
+        }
+        private void catch_ValueChanged(object sender, EventArgs e)
+        {
+            total_catch = (int)(failCatch.Value + okCatch.Value);
+            totalCatch.Text = total_catch.ToString();
+            percentCatch.Text = (((int)okCatch.Value * 100) / total_catch).ToString();
+        }
+        private void ap_ValueChanged(object sender, EventArgs e)
+        {
+            total_ap = (int)(failAp.Value + okAp.Value);
+            totalAp.Text = total_ap.ToString();
+            percentAp.Text = (((int)okAp.Value * 100) / total_ap).ToString();
         }
     }
 }
