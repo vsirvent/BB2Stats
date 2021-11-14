@@ -2,6 +2,7 @@
 using MQTTnet.Client.Connecting;
 using MQTTnet.Client.Disconnecting;
 using MQTTnet.Client.Options;
+using MQTTnet.Client.Receiving;
 using MQTTnet.Extensions.ManagedClient;
 using MQTTnet.Formatter;
 using MQTTnet.Protocol;
@@ -27,6 +28,8 @@ namespace BB2Stats
         string mqttId = "";
         bool publishMqtt = false;
         bool subscribeMqtt = false;
+        string mqttIdSubs = "";
+        
         public BBStatsMain()
         {
             InitializeComponent();
@@ -112,6 +115,77 @@ namespace BB2Stats
 
             await this.managedMqttClientPublisher.StopAsync();
             this.managedMqttClientPublisher = null;
+        }
+
+        private async void MqttStartSubscribe(string id)
+        {
+            mqttId = id;
+            mqttIdSubs = id;
+            var mqttFactory = new MqttFactory();
+            var tlsOptions = new MqttClientTlsOptions
+            {
+                UseTls = false,
+                IgnoreCertificateChainErrors = true,
+                IgnoreCertificateRevocationErrors = true,
+                AllowUntrustedCertificates = true
+            };
+
+            var options = new MqttClientOptions
+            {
+                ClientId = "ClientSubscriber",
+                ProtocolVersion = MqttProtocolVersion.V311,
+                ChannelOptions = new MqttClientTcpOptions
+                {
+                    Server = "broker.hivemq.com",
+                    Port = 1883,
+                    TlsOptions = tlsOptions
+                }
+            };
+
+            if (options.ChannelOptions == null)
+            {
+                throw new InvalidOperationException();
+            }
+
+            options.CleanSession = true;
+            options.KeepAlivePeriod = TimeSpan.FromSeconds(5);
+
+            this.managedMqttClientSubscriber = mqttFactory.CreateManagedMqttClient();
+            this.managedMqttClientSubscriber.ConnectedHandler = new MqttClientConnectedHandlerDelegate(OnSubscriberConnected);
+            this.managedMqttClientSubscriber.DisconnectedHandler = new MqttClientDisconnectedHandlerDelegate(OnSubscriberDisconnected);
+            this.managedMqttClientSubscriber.ApplicationMessageReceivedHandler = new MqttApplicationMessageReceivedHandlerDelegate(this.OnSubscriberMessageReceived);
+
+            await this.managedMqttClientSubscriber.StartAsync(
+                new ManagedMqttClientOptions
+                {
+                    ClientOptions = options
+                });
+            string topic = "bb2stats/" + id + "/#";
+            MqttTopicFilter topicFilter = new MqttTopicFilter { Topic = topic };
+            await this.managedMqttClientSubscriber.SubscribeAsync(topicFilter);
+            System.Console.WriteLine("Topic " + topic + " is subscribed");
+            subscribeMqtt = true;
+        }
+
+        private void MqttStopSubscribe()
+        {
+            string topic = "bb2stats/" + mqttIdSubs + "/#";
+            managedMqttClientSubscriber.UnsubscribeAsync(topic);
+            subscribeMqtt = false;
+        }
+        private void OnSubscriberMessageReceived(MqttApplicationMessageReceivedEventArgs x)
+        {
+            string topic1 = "bb2stats/" + mqttIdSubs + "/team1";
+            string topic2 = "bb2stats/" + mqttIdSubs + "/team2";
+            var item = $"Timestamp: {DateTime.Now:O} | Topic: {x.ApplicationMessage.Topic} | Payload: {x.ApplicationMessage.ConvertPayloadToString()} | QoS: {x.ApplicationMessage.QualityOfServiceLevel}";
+            System.Console.WriteLine(item);
+            if (x.ApplicationMessage.Topic == topic1)
+            {
+                team1.Invoke((MethodInvoker)delegate { team1.fromJson(x.ApplicationMessage.ConvertPayloadToString()); });
+            }else if (x.ApplicationMessage.Topic == topic2)
+            {
+                team1.Invoke((MethodInvoker)delegate { team2.fromJson(x.ApplicationMessage.ConvertPayloadToString()); }); 
+            }
         }
 
         private async void OnPublish()
@@ -226,6 +300,17 @@ namespace BB2Stats
                 {
                     MqttDisconnectPublisher();
                 }                
+            }
+            if (subscribeMqtt != configForm.IsSubscribeActive())
+            {
+                if (configForm.IsSubscribeActive())
+                {
+                    MqttStartSubscribe(configForm.getSessionId());
+                }
+                else
+                {
+                    MqttStopSubscribe();
+                }
             }
 
         }

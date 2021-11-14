@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using JsonSerializer = Newtonsoft.Json.JsonSerializer;
@@ -72,6 +73,42 @@ namespace BB2Stats
             {
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             });
+        }
+
+        public void fromJson(string json)
+        {
+            data = JsonConvert.DeserializeObject<Data>(json);
+            negDiceSkull.Value = data.skull.neg_dice;
+            oneDiceSkull.Value = data.skull.one_dice;
+            twoDiceSkull.Value = data.skull.two_dice;
+            threeDiceSkull.Value = data.skull.three_dice;
+            negDicePush.Value = data.push.neg_dice;
+            oneDicePush.Value = data.push.one_dice;
+            twoDicePush.Value = data.push.two_dice;
+            threeDicePush.Value = data.push.three_dice;
+            negDiceDodge.Value = data.dodge.neg_dice;
+            oneDiceDodge.Value = data.dodge.one_dice;
+            twoDiceDodge.Value = data.dodge.two_dice;
+            threeDiceDodge.Value = data.dodge.three_dice;
+            negDiceBlock.Value = data.block.neg_dice;
+            oneDiceBlock.Value = data.block.one_dice;
+            twoDiceBlock.Value = data.block.two_dice;
+            threeDiceBlock.Value = data.block.three_dice;
+            negDicePow.Value = data.pow.neg_dice;
+            oneDicePow.Value = data.pow.one_dice;
+            twoDicePow.Value = data.pow.two_dice;
+            threeDicePow.Value = data.pow.three_dice;
+          
+            failDodge.Value = data.dodge_skill.fail_count;
+            okDodge.Value = data.dodge_skill.ok_count;
+            failCatch.Value = data.catch_skill.fail_count;
+            okCatch.Value = data.catch_skill.ok_count;
+            failAp.Value = data.ap_skill.fail_count;
+            okAp.Value = data.ap_skill.ok_count;
+            stun.Value = data.nstuns;
+            ko.Value = data.nkos;
+            injury.Value = data.ninjuries;
+            pows.Value = data.npows;
         }
 
         private void updateTotalDices()
@@ -204,7 +241,6 @@ namespace BB2Stats
                 blockPercent.Text = ((int)(((double)data.block_total * 100.0) / (double)data.dices_total)).ToString();
             }
         }
-
         private void updatePowValues()
         {
             data.pow.neg_dice = (int)(negDicePow.Value);
