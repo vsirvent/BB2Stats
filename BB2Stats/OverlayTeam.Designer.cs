@@ -1524,9 +1524,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-11, -5);
+            this.pictureBox1.Location = new System.Drawing.Point(-11, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(632, 716);
+            this.pictureBox1.Size = new System.Drawing.Size(632, 711);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 177;
             this.pictureBox1.TabStop = false;
@@ -2161,7 +2161,6 @@
             this.Name = "OverlayTeam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = " ";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okAp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.failAp)).EndInit();

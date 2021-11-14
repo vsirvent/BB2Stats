@@ -10,11 +10,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Interop;
 
 namespace BB2Stats
 {
@@ -25,6 +28,7 @@ namespace BB2Stats
         OverlayTeam ovTeam1 = null;
         OverlayTeam ovTeam2 = null;
         ConfigForm configForm = null;
+        OverlayBG ovBg = null;
         IManagedMqttClient managedMqttClientPublisher;
         IManagedMqttClient managedMqttClientSubscriber;
         string mqttId = "";
@@ -34,6 +38,7 @@ namespace BB2Stats
         
         public BBStatsMain()
         {
+            mainClass = this;
             InitializeComponent();
             origBounds = this.Bounds;
             b1Pos = minimize.Location;
@@ -45,8 +50,11 @@ namespace BB2Stats
             team2 = new BB2StatsForm();
             ovTeam1 = new OverlayTeam(1);
             ovTeam2 = new OverlayTeam(2);
+            ovBg = new OverlayBG();
             team1.TopLevel = false;
             team2.TopLevel = false;
+            ovTeam1.TopLevel = false;   
+            ovTeam2.TopLevel = false;
             team1.MouseDown += Form1_MouseDown;
             team1.MouseUp += Form1_MouseUp;
             team1.MouseMove += Form1_MouseMove;
@@ -59,12 +67,66 @@ namespace BB2Stats
             this.panel2.Controls.Add(team2);
             Rectangle screenBounds = Screen.PrimaryScreen.WorkingArea;
             this.Location = new Point((screenBounds.Width - this.Width)/ 2, 0);
+            ovBg.Location = new Point(0, 0);
+            ovBg.Size = new Size(screenBounds.Width, screenBounds.Height);
+            _hookID = SetHook(_proc);
         }
+
+        [DllImport("user32.dll", EntryPoint = "SetWindowLongW")]
+        private static extern IntPtr SetWindowLongPtr32(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
 
         private bool IsFormBeingDragged = false;
         private Point OrigPosition;
         private Point MouseDownPosition;
         private bool stopWorker;
+
+        private const int WH_KEYBOARD_LL = 13;
+        private const int WM_KEYDOWN = 0x0100;
+        private static LowLevelKeyboardProc _proc = HookCallback;
+        private static IntPtr _hookID = IntPtr.Zero;
+        private static BBStatsMain mainClass = null;
+        private static IntPtr SetHook(LowLevelKeyboardProc proc)
+        {
+            using (Process curProcess = Process.GetCurrentProcess())
+            using (ProcessModule curModule = curProcess.MainModule)
+            {
+                return SetWindowsHookEx(WH_KEYBOARD_LL, proc,
+                    GetModuleHandle(curModule.ModuleName), 0);
+            }
+        }
+
+        private delegate IntPtr LowLevelKeyboardProc(
+            int nCode, IntPtr wParam, IntPtr lParam);
+
+        private static IntPtr HookCallback(
+            int nCode, IntPtr wParam, IntPtr lParam)
+        {
+            if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
+            {
+                int vkCode = Marshal.ReadInt32(lParam);
+                Console.WriteLine(vkCode + ":" + wParam + ":" + lParam);
+                if (vkCode == 0x09)
+                {
+                    mainClass.pictureBox2_Click(null, new EventArgs());
+                }
+            }
+            return CallNextHookEx(_hookID, nCode, wParam, lParam);
+        }
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr SetWindowsHookEx(int idHook,
+            LowLevelKeyboardProc lpfn, IntPtr hMod, uint dwThreadId);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static extern bool UnhookWindowsHookEx(IntPtr hhk);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr CallNextHookEx(IntPtr hhk, int nCode,
+            IntPtr wParam, IntPtr lParam);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr GetModuleHandle(string lpModuleName);
 
         private async void MqttConnectPublisher(string id)
         {
@@ -340,15 +402,17 @@ namespace BB2Stats
 
         private void BBStatsMain_Shown(object sender, EventArgs e)
         {
-            ovTeam1.Owner = this;
-            ovTeam2.Owner = this;
+            ovTeam1.Parent = ovBg;
+            ovTeam2.Parent = ovBg;
             configForm.Owner = this;
             team1.Show();
             team2.Show();
             ovTeam1.Show();
             ovTeam2.Show();
+            ovBg.Show();
             ovTeam1.BringToFront();
             ovTeam2.BringToFront();
+            ovBg.SendToBack();
             backgroundWorker1.RunWorkerAsync();
         }
 
