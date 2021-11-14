@@ -65,7 +65,7 @@ namespace BB2Stats
             checkBox1.Checked = true;
             this.panel1.Controls.Add(team1);
             this.panel2.Controls.Add(team2);
-            Rectangle screenBounds = Screen.PrimaryScreen.WorkingArea;
+            Rectangle screenBounds = Screen.PrimaryScreen.Bounds;
             this.Location = new Point((screenBounds.Width - this.Width)/ 2, 0);
             ovBg.Location = new Point(0, 0);
             ovBg.Size = new Size(screenBounds.Width, screenBounds.Height);
@@ -394,10 +394,21 @@ namespace BB2Stats
 
         }
 
+        bool ovActive = false;
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            ovTeam1.FaddToggle();
-            ovTeam2.FaddToggle();
+            if (!ovActive)
+            {
+                ovTeam1.FadeIn();
+                ovTeam2.FadeIn();
+                ovActive = true;
+            }
+            else
+            {
+                ovTeam1.FadeOut();
+                ovTeam2.FadeOut();
+                ovActive = false;
+            }
         }
 
         private void BBStatsMain_Shown(object sender, EventArgs e)
