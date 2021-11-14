@@ -22,6 +22,8 @@ namespace BB2Stats
     {
         BB2StatsForm team1 = null;
         BB2StatsForm team2 = null;
+        OverlayTeam ovTeam1 = null;
+        OverlayTeam ovTeam2 = null;
         ConfigForm configForm = null;
         IManagedMqttClient managedMqttClientPublisher;
         IManagedMqttClient managedMqttClientSubscriber;
@@ -33,9 +35,16 @@ namespace BB2Stats
         public BBStatsMain()
         {
             InitializeComponent();
+            origBounds = this.Bounds;
+            b1Pos = minimize.Location;
+            b2Pos = show.Location;
+            b3Pos = settings.Location;
+
             configForm = new ConfigForm();
             team1 = new BB2StatsForm();
             team2 = new BB2StatsForm();
+            ovTeam1 = new OverlayTeam(1);
+            ovTeam2 = new OverlayTeam(2);
             team1.TopLevel = false;
             team2.TopLevel = false;
             team1.MouseDown += Form1_MouseDown;
@@ -44,12 +53,12 @@ namespace BB2Stats
             team2.MouseDown += Form1_MouseDown;
             team2.MouseUp += Form1_MouseUp;
             team2.MouseMove += Form1_MouseMove;
-            pictureBox1.BringToFront();
+            settings.BringToFront();
             checkBox1.Checked = true;
             this.panel1.Controls.Add(team1);
             this.panel2.Controls.Add(team2);
-            team1.Show();
-            team2.Show();            
+            Rectangle screenBounds = Screen.PrimaryScreen.WorkingArea;
+            this.Location = new Point((screenBounds.Width - this.Width)/ 2, 0);
         }
 
         private bool IsFormBeingDragged = false;
@@ -100,13 +109,10 @@ namespace BB2Stats
                     ClientOptions = options
                 });
             publishMqtt = true;
-            stopWorker = false; 
-            backgroundWorker1.RunWorkerAsync();
         }
 
         private async void MqttDisconnectPublisher()
         {
-            stopWorker = true;
             publishMqtt = false;
             if (this.managedMqttClientPublisher == null)
             {
@@ -166,7 +172,6 @@ namespace BB2Stats
             System.Console.WriteLine("Topic " + topic + " is subscribed");
             subscribeMqtt = true;
         }
-
         private void MqttStopSubscribe()
         {
             string topic = "bb2stats/" + mqttIdSubs + "/#";
@@ -182,9 +187,12 @@ namespace BB2Stats
             if (x.ApplicationMessage.Topic == topic1)
             {
                 team1.Invoke((MethodInvoker)delegate { team1.fromJson(x.ApplicationMessage.ConvertPayloadToString()); });
-            }else if (x.ApplicationMessage.Topic == topic2)
+                ovTeam1.Invoke((MethodInvoker)delegate { ovTeam1.fromJson(x.ApplicationMessage.ConvertPayloadToString()); });
+            }
+            else if (x.ApplicationMessage.Topic == topic2)
             {
-                team1.Invoke((MethodInvoker)delegate { team2.fromJson(x.ApplicationMessage.ConvertPayloadToString()); }); 
+                team2.Invoke((MethodInvoker)delegate { team2.fromJson(x.ApplicationMessage.ConvertPayloadToString()); });
+                ovTeam2.Invoke((MethodInvoker)delegate { ovTeam2.fromJson(x.ApplicationMessage.ConvertPayloadToString()); });
             }
         }
 
@@ -282,8 +290,17 @@ namespace BB2Stats
         {
             while (!stopWorker)
             {
-                OnPublish();
-                System.Threading.Thread.Sleep(5000);
+                if (publishMqtt)
+                {
+                    OnPublish();
+                }else if (!subscribeMqtt)
+                {
+                    string payload = team1.toJson();
+                    ovTeam1.Invoke((MethodInvoker)delegate { ovTeam1.fromJson(payload); });
+                    payload = team2.toJson();
+                    ovTeam2.Invoke((MethodInvoker)delegate { ovTeam2.fromJson(payload); });
+                }
+                System.Threading.Thread.Sleep(1000);
             }
         }
 
@@ -313,6 +330,55 @@ namespace BB2Stats
                 }
             }
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ovTeam1.FaddToggle();
+            ovTeam2.FaddToggle();
+        }
+
+        private void BBStatsMain_Shown(object sender, EventArgs e)
+        {
+            ovTeam1.Owner = this;
+            ovTeam2.Owner = this;
+            configForm.Owner = this;
+            team1.Show();
+            team2.Show();
+            ovTeam1.Show();
+            ovTeam2.Show();
+            ovTeam1.BringToFront();
+            ovTeam2.BringToFront();
+            backgroundWorker1.RunWorkerAsync();
+        }
+
+        bool minimized = false;
+        Point b1Pos;
+        Point b2Pos;
+        Point b3Pos;
+        Rectangle origBounds;
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            if (minimized)
+            {
+                minimize.Location = b1Pos;
+                show.Location = b2Pos;
+                settings.Location = b3Pos;
+                this.Width = origBounds.Width;
+                this.Height = origBounds.Height;
+                groupBox1.Visible = true;
+                minimized = false;
+            }
+            else
+            {
+                minimize.Location = new Point(10, 10);
+                show.Location = new Point(minimize.Location.X, minimize.Location.Y + minimize.Height);
+                settings.Location = new Point(show.Location.X, show.Location.Y + show.Height);
+                this.Width = minimize.Width + 20;
+                this.Height = minimize.Height * 3 + 20;
+                groupBox1.Visible = false;
+                minimized = true;
+            }
         }
     }
 }

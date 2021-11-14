@@ -49,3 +49,4 @@ C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.c
 C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.csproj.CopyComplete
 C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.exe
 C:\Users\vicen\OneDrive\Documentos\GitHub\BB2Stats\BB2Stats\obj\Debug\BB2Stats.pdb
+C:\Users\Vicen\git\BB2Stats\BB2Stats\BB2Stats\obj\Debug\BB2Stats.OverlayTeam.resources
