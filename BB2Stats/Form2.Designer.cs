@@ -34,8 +34,8 @@ namespace BB2Stats
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.show = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.show = new System.Windows.Forms.PictureBox();
             this.settings = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.minimize = new System.Windows.Forms.PictureBox();
@@ -92,17 +92,6 @@ namespace BB2Stats
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "TEAM 2";
             // 
-            // show
-            // 
-            this.show.Image = ((System.Drawing.Image)(resources.GetObject("show.Image")));
-            this.show.Location = new System.Drawing.Point(1096, 299);
-            this.show.Name = "show";
-            this.show.Size = new System.Drawing.Size(38, 32);
-            this.show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.show.TabIndex = 4;
-            this.show.TabStop = false;
-            this.show.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(7, 17);
@@ -113,6 +102,17 @@ namespace BB2Stats
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
+            // 
+            // show
+            // 
+            this.show.Image = ((System.Drawing.Image)(resources.GetObject("show.Image")));
+            this.show.Location = new System.Drawing.Point(1096, 299);
+            this.show.Name = "show";
+            this.show.Size = new System.Drawing.Size(38, 32);
+            this.show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.show.TabIndex = 4;
+            this.show.TabStop = false;
+            this.show.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // settings
             // 
