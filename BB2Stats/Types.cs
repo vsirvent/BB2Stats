@@ -154,5 +154,27 @@ namespace BB2Stats
             Fumbled = 2,
             Cancelled = 3
         }
+
+        public enum Dice
+        {
+            AttackerDown = 0,
+            BothDown = 1,
+            Pushed = 2,
+            DefenderStumbles = 3,
+            DefenderDown = 4,
+            None = 255
+        }
+
+        public enum RollOutcome
+        {
+            AttackerDown = 0,
+            BothDown = 1,
+            BothWrestleDown = 2,
+            BothStanding = 3,
+            Pushed = 4,
+            DefenderDown = 5,
+            DefenderPushedDown = 6,
+            None = 255
+        }
     }
 }

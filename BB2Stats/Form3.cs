@@ -66,5 +66,7 @@ namespace BB2Stats
         {
             comboBox1.Enabled = snifferActive.Checked;
         }
+
+
     }
 }

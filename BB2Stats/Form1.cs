@@ -8,6 +8,7 @@ namespace BB2Stats
 {
     public partial class BB2StatsForm : Form
     {
+        
         class DiceResult
         {
             public int neg_dice = 0;

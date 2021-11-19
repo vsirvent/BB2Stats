@@ -1111,7 +1111,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 50);
             this.label3.TabIndex = 5;
-            this.label3.Text = "A";
+            this.label3.Text = "B";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // button1
@@ -1470,7 +1470,7 @@
             // 
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label17.Location = new System.Drawing.Point(209, 23);
+            this.label17.Location = new System.Drawing.Point(339, 23);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(57, 54);
             this.label17.TabIndex = 172;
@@ -1492,7 +1492,7 @@
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Location = new System.Drawing.Point(339, 23);
+            this.label19.Location = new System.Drawing.Point(210, 23);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(57, 54);
             this.label19.TabIndex = 174;
@@ -1568,7 +1568,7 @@
             // 
             this.totalDicePushLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDicePushLabel.ForeColor = System.Drawing.Color.White;
-            this.totalDicePushLabel.Location = new System.Drawing.Point(209, 353);
+            this.totalDicePushLabel.Location = new System.Drawing.Point(339, 353);
             this.totalDicePushLabel.Name = "totalDicePushLabel";
             this.totalDicePushLabel.Size = new System.Drawing.Size(57, 50);
             this.totalDicePushLabel.TabIndex = 184;
@@ -1579,7 +1579,7 @@
             // 
             this.twoDicePushLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoDicePushLabel.ForeColor = System.Drawing.Color.White;
-            this.twoDicePushLabel.Location = new System.Drawing.Point(209, 225);
+            this.twoDicePushLabel.Location = new System.Drawing.Point(339, 225);
             this.twoDicePushLabel.Name = "twoDicePushLabel";
             this.twoDicePushLabel.Size = new System.Drawing.Size(57, 50);
             this.twoDicePushLabel.TabIndex = 183;
@@ -1590,7 +1590,7 @@
             // 
             this.oneDicePushLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneDicePushLabel.ForeColor = System.Drawing.Color.White;
-            this.oneDicePushLabel.Location = new System.Drawing.Point(209, 159);
+            this.oneDicePushLabel.Location = new System.Drawing.Point(339, 159);
             this.oneDicePushLabel.Name = "oneDicePushLabel";
             this.oneDicePushLabel.Size = new System.Drawing.Size(57, 50);
             this.oneDicePushLabel.TabIndex = 182;
@@ -1601,7 +1601,7 @@
             // 
             this.negDicePushLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.negDicePushLabel.ForeColor = System.Drawing.Color.White;
-            this.negDicePushLabel.Location = new System.Drawing.Point(209, 93);
+            this.negDicePushLabel.Location = new System.Drawing.Point(339, 93);
             this.negDicePushLabel.Name = "negDicePushLabel";
             this.negDicePushLabel.Size = new System.Drawing.Size(57, 50);
             this.negDicePushLabel.TabIndex = 181;
@@ -1656,7 +1656,7 @@
             // 
             this.totalDiceBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDiceBlockLabel.ForeColor = System.Drawing.Color.White;
-            this.totalDiceBlockLabel.Location = new System.Drawing.Point(339, 353);
+            this.totalDiceBlockLabel.Location = new System.Drawing.Point(210, 353);
             this.totalDiceBlockLabel.Name = "totalDiceBlockLabel";
             this.totalDiceBlockLabel.Size = new System.Drawing.Size(57, 50);
             this.totalDiceBlockLabel.TabIndex = 192;
@@ -1667,7 +1667,7 @@
             // 
             this.twoDiceBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoDiceBlockLabel.ForeColor = System.Drawing.Color.White;
-            this.twoDiceBlockLabel.Location = new System.Drawing.Point(339, 225);
+            this.twoDiceBlockLabel.Location = new System.Drawing.Point(210, 225);
             this.twoDiceBlockLabel.Name = "twoDiceBlockLabel";
             this.twoDiceBlockLabel.Size = new System.Drawing.Size(57, 50);
             this.twoDiceBlockLabel.TabIndex = 191;
@@ -1678,7 +1678,7 @@
             // 
             this.oneDiceBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneDiceBlockLabel.ForeColor = System.Drawing.Color.White;
-            this.oneDiceBlockLabel.Location = new System.Drawing.Point(339, 159);
+            this.oneDiceBlockLabel.Location = new System.Drawing.Point(210, 159);
             this.oneDiceBlockLabel.Name = "oneDiceBlockLabel";
             this.oneDiceBlockLabel.Size = new System.Drawing.Size(57, 50);
             this.oneDiceBlockLabel.TabIndex = 190;
@@ -1689,7 +1689,7 @@
             // 
             this.negDiceBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.negDiceBlockLabel.ForeColor = System.Drawing.Color.White;
-            this.negDiceBlockLabel.Location = new System.Drawing.Point(339, 93);
+            this.negDiceBlockLabel.Location = new System.Drawing.Point(210, 93);
             this.negDiceBlockLabel.Name = "negDiceBlockLabel";
             this.negDiceBlockLabel.Size = new System.Drawing.Size(57, 50);
             this.negDiceBlockLabel.TabIndex = 189;
@@ -1766,9 +1766,9 @@
             // 
             this.twoDiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoDiceLabel.ForeColor = System.Drawing.Color.White;
-            this.twoDiceLabel.Location = new System.Drawing.Point(492, 225);
+            this.twoDiceLabel.Location = new System.Drawing.Point(472, 225);
             this.twoDiceLabel.Name = "twoDiceLabel";
-            this.twoDiceLabel.Size = new System.Drawing.Size(57, 50);
+            this.twoDiceLabel.Size = new System.Drawing.Size(94, 50);
             this.twoDiceLabel.TabIndex = 200;
             this.twoDiceLabel.Text = "0";
             this.twoDiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1777,9 +1777,9 @@
             // 
             this.oneDiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneDiceLabel.ForeColor = System.Drawing.Color.White;
-            this.oneDiceLabel.Location = new System.Drawing.Point(492, 159);
+            this.oneDiceLabel.Location = new System.Drawing.Point(472, 159);
             this.oneDiceLabel.Name = "oneDiceLabel";
-            this.oneDiceLabel.Size = new System.Drawing.Size(57, 50);
+            this.oneDiceLabel.Size = new System.Drawing.Size(94, 50);
             this.oneDiceLabel.TabIndex = 199;
             this.oneDiceLabel.Text = "0";
             this.oneDiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1788,9 +1788,9 @@
             // 
             this.negDiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.negDiceLabel.ForeColor = System.Drawing.Color.White;
-            this.negDiceLabel.Location = new System.Drawing.Point(492, 93);
+            this.negDiceLabel.Location = new System.Drawing.Point(472, 93);
             this.negDiceLabel.Name = "negDiceLabel";
-            this.negDiceLabel.Size = new System.Drawing.Size(57, 50);
+            this.negDiceLabel.Size = new System.Drawing.Size(94, 50);
             this.negDiceLabel.TabIndex = 198;
             this.negDiceLabel.Text = "0";
             this.negDiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1799,9 +1799,9 @@
             // 
             this.threeDiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeDiceLabel.ForeColor = System.Drawing.Color.White;
-            this.threeDiceLabel.Location = new System.Drawing.Point(492, 288);
+            this.threeDiceLabel.Location = new System.Drawing.Point(472, 288);
             this.threeDiceLabel.Name = "threeDiceLabel";
-            this.threeDiceLabel.Size = new System.Drawing.Size(57, 50);
+            this.threeDiceLabel.Size = new System.Drawing.Size(94, 50);
             this.threeDiceLabel.TabIndex = 208;
             this.threeDiceLabel.Text = "0";
             this.threeDiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1821,7 +1821,7 @@
             // 
             this.threeDiceBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeDiceBlockLabel.ForeColor = System.Drawing.Color.White;
-            this.threeDiceBlockLabel.Location = new System.Drawing.Point(339, 288);
+            this.threeDiceBlockLabel.Location = new System.Drawing.Point(210, 288);
             this.threeDiceBlockLabel.Name = "threeDiceBlockLabel";
             this.threeDiceBlockLabel.Size = new System.Drawing.Size(57, 50);
             this.threeDiceBlockLabel.TabIndex = 206;
@@ -1843,7 +1843,7 @@
             // 
             this.threeDicePushLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeDicePushLabel.ForeColor = System.Drawing.Color.White;
-            this.threeDicePushLabel.Location = new System.Drawing.Point(209, 288);
+            this.threeDicePushLabel.Location = new System.Drawing.Point(339, 288);
             this.threeDicePushLabel.Name = "threeDicePushLabel";
             this.threeDicePushLabel.Size = new System.Drawing.Size(57, 50);
             this.threeDicePushLabel.TabIndex = 204;
