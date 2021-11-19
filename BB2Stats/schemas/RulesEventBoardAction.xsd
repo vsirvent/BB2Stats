@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Cell">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="y" type="xs:string" minOccurs="0" />
+        <xs:element name="x" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RulesEventBoardAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PlayerId" type="xs:string" minOccurs="0" />
+        <xs:element name="RequestType" type="xs:string" minOccurs="0" />
+        <xs:element name="ActionType" type="xs:string" minOccurs="0" />
+        <xs:element name="Order" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CellTo" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="Cell" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CellFrom" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="y" type="xs:string" minOccurs="0" />
+                    <xs:element name="x" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Results" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BoardActionResult" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Requirement" type="xs:string" minOccurs="0" />
+                    <xs:element name="RollStatus" type="xs:string" minOccurs="0" />
+                    <xs:element name="RequestType" type="xs:string" minOccurs="0" />
+                    <xs:element name="ResultType" type="xs:string" minOccurs="0" />
+                    <xs:element name="IsOrderCompleted" type="xs:string" minOccurs="0" />
+                    <xs:element name="RollType" type="xs:string" minOccurs="0" />
+                    <xs:element name="SubResultType" type="xs:string" minOccurs="0" />
+                    <xs:element name="ListModifiers" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="DiceModifier" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Skill" type="xs:string" minOccurs="0" />
+                                <xs:element name="Type" type="xs:string" minOccurs="0" />
+                                <xs:element name="Value" type="xs:string" minOccurs="0" />
+                                <xs:element ref="Cell" minOccurs="0" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CoachChoices" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="RerollPro" type="xs:string" minOccurs="0" />
+                          <xs:element name="ConcernedTeam" type="xs:string" minOccurs="0" />
+                          
+                          <xs:element name="ListCells" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="Cell" minOccurs="0" maxOccurs="unbounded" />
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+                          
+                          <xs:element name="ListDices" type="xs:string" minOccurs="0" />
+                          <xs:element name="Reroll" type="xs:string" minOccurs="0" />
+                          <xs:element name="ListSkills" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="SkillInfo" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="PlayerId" type="xs:string" minOccurs="0" />
+                                      <xs:element name="SkillId" type="xs:string" minOccurs="0" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Cell" />
+        <xs:element ref="RulesEventBoardAction" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

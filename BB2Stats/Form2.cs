@@ -1,4 +1,10 @@
-﻿using MQTTnet;
+﻿using BB2Stats.schemas.board_action;
+using BB2Stats.schemas.coach_choice;
+using BB2Stats.schemas.end_turn;
+using BB2Stats.schemas.forced_dices;
+using BB2Stats.schemas.full_state;
+using BB2Stats.schemas.waiting_request;
+using MQTTnet;
 using MQTTnet.Client.Connecting;
 using MQTTnet.Client.Disconnecting;
 using MQTTnet.Client.Options;
@@ -6,6 +12,7 @@ using MQTTnet.Client.Receiving;
 using MQTTnet.Extensions.ManagedClient;
 using MQTTnet.Formatter;
 using MQTTnet.Protocol;
+using schemas.full_state;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +28,7 @@ using System.Windows.Interop;
 
 namespace BB2Stats
 {
-    public partial class BBStatsMain : Form
+    public partial class BBStatsMain : Form, SnifferListener
     {
         BB2StatsForm team1 = null;
         BB2StatsForm team2 = null;
@@ -35,6 +42,7 @@ namespace BB2Stats
         bool publishMqtt = false;
         bool subscribeMqtt = false;
         string mqttIdSubs = "";
+        Sniffer sniffer = null;
         
         public BBStatsMain()
         {
@@ -45,12 +53,16 @@ namespace BB2Stats
             b2Pos = show.Location;
             b3Pos = settings.Location;
 
-            configForm = new ConfigForm();
+            sniffer = new Sniffer();
+            sniffer.SetListener(this);
+
+            configForm = new ConfigForm(sniffer);
             team1 = new BB2StatsForm();
             team2 = new BB2StatsForm();
             ovTeam1 = new OverlayTeam(1);
             ovTeam2 = new OverlayTeam(2);
             ovBg = new OverlayBG();
+            
             team1.TopLevel = false;
             team2.TopLevel = false;
             ovTeam1.TopLevel = false;   
@@ -62,14 +74,16 @@ namespace BB2Stats
             team2.MouseUp += Form1_MouseUp;
             team2.MouseMove += Form1_MouseMove;
             settings.BringToFront();
-            checkBox1.Checked = true;
+            turnCheck.Checked = true;
             this.panel1.Controls.Add(team1);
             this.panel2.Controls.Add(team2);
             Rectangle screenBounds = Screen.PrimaryScreen.Bounds;
             this.Location = new Point((screenBounds.Width - this.Width)/ 2, 0);
             ovBg.Location = new Point(0, 0);
             ovBg.Size = new Size(screenBounds.Width, screenBounds.Height);
+
             _hookID = SetHook(_proc);
+            timer1.Start();
         }
 
         [DllImport("user32.dll", EntryPoint = "SetWindowLongW")]
@@ -78,7 +92,7 @@ namespace BB2Stats
         private bool IsFormBeingDragged = false;
         private Point OrigPosition;
         private Point MouseDownPosition;
-        private bool stopWorker;
+        private bool stopWorker = false;
 
         private const int WH_KEYBOARD_LL = 13;
         private const int WM_KEYDOWN = 0x0100;
@@ -336,7 +350,7 @@ namespace BB2Stats
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (turnCheck.Checked)
             {
                 panel1.Enabled = true;
                 panel2.Enabled = false;
@@ -454,6 +468,112 @@ namespace BB2Stats
                 groupBox1.Visible = false;
                 minimized = true;
             }
+        }
+
+        void ProcessAction(int team, RulesEventFullStateBoardStateTeamStatePlayerState player, RulesEventBoardAction action)
+        {
+            Types.ActionTypes action_type = (Types.ActionTypes)Int32.Parse(action.ActionType);
+            switch (action_type)
+            {
+                case Types.ActionTypes.Block:
+                {
+
+                }break;
+                case Types.ActionTypes.Catch:
+                {
+
+                }break;
+                case Types.ActionTypes.Pass:
+                {
+
+                }
+                break;
+                default:
+                {
+                    break;
+                }
+            }
+        }
+
+        void SnifferListener.OnRulesEventBoardAction(RulesEventBoardAction rulesEventBoardAction)
+        {
+            Console.WriteLine("OnRulesEventBoardAction");
+            if (players.Count > 0)
+            {
+                int player_id = Int32.Parse(rulesEventBoardAction.PlayerId);
+                if (players[0].ContainsKey(player_id))
+                {
+                    Console.WriteLine("Team 1::Player " + player_id + " action received");
+                    ProcessAction(0, players[0][player_id], rulesEventBoardAction);
+                    this.Invoke((MethodInvoker)delegate { turnCheck.Checked = true; });
+                }
+                else if (players[1].ContainsKey(player_id))
+                {
+                    Console.WriteLine("Team 2::Player " + player_id + " action received");
+                    ProcessAction(1, players[1][player_id], rulesEventBoardAction);
+                    this.Invoke((MethodInvoker)delegate { turnCheck.Checked = false; });
+                }
+                else
+                {
+                    Console.WriteLine("ERROR::Unknown player id " + player_id);
+                }
+            }
+        }
+
+        void SnifferListener.OnRulesEventCoachChoice(RulesEventCoachChoice rulesEventCoachChoice)
+        {
+            Console.WriteLine("OnRulesEventCoachChoice");
+        }
+
+        void SnifferListener.OnRulesEventEndTurn(RulesEventEndTurn rulesEventEndTurn)
+        {
+            Console.WriteLine("OnRulesEventEndTurn");
+            this.Invoke((MethodInvoker)delegate { turnCheck.Checked = (rulesEventEndTurn.PlayingTeam == "0"); });
+        }
+
+        void SnifferListener.OnRulesEventForcedDices(RulesEventForcedDices rulesEventForcedDices)
+        {
+            Console.WriteLine("OnRulesEventForcedDices");
+        }
+
+        Dictionary<int, Dictionary<int, RulesEventFullStateBoardStateTeamStatePlayerState>> players = new Dictionary<int, Dictionary<int, RulesEventFullStateBoardStateTeamStatePlayerState>>();
+        void SnifferListener.OnRulesEventFullState(RulesEventFullState rulesEventFullState)
+        {
+            Console.WriteLine("OnRulesEventFullState");
+            RulesEventFullStateBoardState state = (RulesEventFullStateBoardState)rulesEventFullState.Items[2];
+            for (int i = 0; i <= 1; ++i)
+            {
+                if (!players.ContainsKey(i))
+                {
+                    players[i] = new Dictionary<int, RulesEventFullStateBoardStateTeamStatePlayerState>();
+                }
+                foreach (var player in state.ListTeams[i].ListPitchPlayers)
+                {
+                    int id = Int32.Parse(player.Id);
+                    if (!players[i].ContainsKey(id))
+                    {
+                        players[i].Add(id, player);
+                    }
+                    else
+                    {
+                        players[i][id] = player;
+                    }
+                }
+            }
+        }
+
+        void SnifferListener.OnRulesEventWaitingRequest(RulesEventWaitingRequest rulesEventWaitingRequest)
+        {
+            Console.WriteLine("OnRulesEventWaitingRequest");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int ok_frames;
+            int total_frames;
+            sniffer.GetStats(out ok_frames, out total_frames);
+            nFrames.Text = "Frames: " + ok_frames;
+            snifferStatus.Text = "Sniffer: " + (sniffer.IsRunning()? "YES" : "NO");
         }
     }
 }

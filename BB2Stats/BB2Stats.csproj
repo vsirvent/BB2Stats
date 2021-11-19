@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>BB2Stats</RootNamespace>
     <AssemblyName>BB2Stats</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +38,9 @@
     <ApplicationIcon>bb2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
     <Reference Include="MQTTnet, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b69712f52770c0a7, processorArchitecture=MSIL">
       <HintPath>..\packages\MQTTnet.3.1.0\lib\net461\MQTTnet.dll</HintPath>
     </Reference>
@@ -45,6 +49,18 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PcapDotNet.Base, Version=1.0.4.25027, Culture=neutral, PublicKeyToken=06a20bc2fabb1931, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pcap.Net.x86.1.0.4.1\lib\net45\PcapDotNet.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="PcapDotNet.Core, Version=1.0.4.25067, Culture=neutral, PublicKeyToken=06a20bc2fabb1931, processorArchitecture=x86">
+      <HintPath>..\packages\Pcap.Net.x86.1.0.4.1\lib\net45\PcapDotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PcapDotNet.Core.Extensions, Version=1.0.4.25069, Culture=neutral, PublicKeyToken=06a20bc2fabb1931, processorArchitecture=x86">
+      <HintPath>..\packages\Pcap.Net.x86.1.0.4.1\lib\net45\PcapDotNet.Core.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="PcapDotNet.Packets, Version=1.0.4.25028, Culture=neutral, PublicKeyToken=06a20bc2fabb1931, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pcap.Net.x86.1.0.4.1\lib\net45\PcapDotNet.Packets.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -98,6 +114,85 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="schemas\header.cs">
+      <DependentUpon>header.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\header.Designer.cs">
+      <DependentUpon>header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\header1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>header.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventBoardAction.cs">
+      <DependentUpon>RulesEventBoardAction.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventBoardAction.Designer.cs">
+      <DependentUpon>RulesEventBoardAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventBoardAction1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RulesEventBoardAction.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventCoachChoice.cs">
+      <DependentUpon>RulesEventCoachChoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventCoachChoice.Designer.cs">
+      <DependentUpon>RulesEventCoachChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventCoachChoice1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RulesEventCoachChoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventEndTurn.cs">
+      <DependentUpon>RulesEventEndTurn.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventEndTurn.Designer.cs">
+      <DependentUpon>RulesEventEndTurn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventEndTurn1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RulesEventEndTurn.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventForcedDices.cs">
+      <DependentUpon>RulesEventForcedDices.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventForcedDices.Designer.cs">
+      <DependentUpon>RulesEventForcedDices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventForcedDices1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RulesEventForcedDices.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\rulesEventFullState.cs">
+      <DependentUpon>rulesEventFullState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\rulesEventFullState.Designer.cs">
+      <DependentUpon>rulesEventFullState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\rulesEventFullState1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rulesEventFullState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventWaitingRequest.cs">
+      <DependentUpon>RulesEventWaitingRequest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventWaitingRequest.Designer.cs">
+      <DependentUpon>RulesEventWaitingRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="schemas\RulesEventWaitingRequest1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RulesEventWaitingRequest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sniffer.cs" />
+    <Compile Include="Types.cs" />
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +216,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -132,12 +228,97 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="schemas\header.xsc">
+      <DependentUpon>header.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\header.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>header1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\header.xss">
+      <DependentUpon>header.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\RulesEventBoardAction.xsc">
+      <DependentUpon>RulesEventBoardAction.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\RulesEventBoardAction.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RulesEventBoardAction1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\RulesEventBoardAction.xss">
+      <DependentUpon>RulesEventBoardAction.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\RulesEventCoachChoice.xsc">
+      <DependentUpon>RulesEventCoachChoice.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\RulesEventCoachChoice.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RulesEventCoachChoice1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\RulesEventCoachChoice.xss">
+      <DependentUpon>RulesEventCoachChoice.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\RulesEventEndTurn.xsc">
+      <DependentUpon>RulesEventEndTurn.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\RulesEventEndTurn.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RulesEventEndTurn1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\RulesEventEndTurn.xss">
+      <DependentUpon>RulesEventEndTurn.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\RulesEventForcedDices.xsc">
+      <DependentUpon>RulesEventForcedDices.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\RulesEventForcedDices.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RulesEventForcedDices1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\RulesEventForcedDices.xss">
+      <DependentUpon>RulesEventForcedDices.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\rulesEventFullState.xsc">
+      <DependentUpon>rulesEventFullState.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\rulesEventFullState.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rulesEventFullState1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\rulesEventFullState.xss">
+      <DependentUpon>rulesEventFullState.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\RulesEventWaitingRequest.xsc">
+      <DependentUpon>RulesEventWaitingRequest.xsd</DependentUpon>
+    </None>
+    <None Include="schemas\RulesEventWaitingRequest.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RulesEventWaitingRequest1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\RulesEventWaitingRequest.xss">
+      <DependentUpon>RulesEventWaitingRequest.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bb2.ico" />
+    <Content Include="schemas\header.xml" />
+    <Content Include="schemas\RulesEventBoardAction.xml" />
+    <Content Include="schemas\RulesEventCoachChoice.xml" />
+    <Content Include="schemas\RulesEventEndTurn.xml" />
+    <Content Include="schemas\RulesEventForcedDices.xml" />
+    <Content Include="schemas\rulesEventFullState.xml" />
+    <Content Include="schemas\RulesEventWaitingRequest.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RulesEventFullState" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Cell">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="y" type="xs:string" minOccurs="0" />
+        <xs:element name="x" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Destination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="y" type="xs:string" minOccurs="0" />
+        <xs:element name="x" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Statistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IdCoachHome" type="xs:string" minOccurs="0" />
+        <xs:element name="ShardedIdTeamListingAway" type="xs:string" minOccurs="0" />
+        <xs:element name="IdCoachAway" type="xs:string" minOccurs="0" />
+        <xs:element name="ShardedIdTeamListingHome" type="xs:string" minOccurs="0" />
+        <xs:element name="InflictedCasualties" type="xs:string" minOccurs="0" />
+        <xs:element name="InflictedTackles" type="xs:string" minOccurs="0" />
+        <xs:element name="SustainedTackles" type="xs:string" minOccurs="0" />
+        <xs:element name="InflictedKO" type="xs:string" minOccurs="0" />
+        <xs:element name="InflictedPushOuts" type="xs:string" minOccurs="0" />
+        <xs:element name="InflictedInjuries" type="xs:string" minOccurs="0" />
+        <xs:element name="SustainedInjuries" type="xs:string" minOccurs="0" />
+        <xs:element name="SustainedCasualties" type="xs:string" minOccurs="0" />
+        <xs:element name="SustainedKO" type="xs:string" minOccurs="0" />
+        <xs:element name="InflictedMetersRunning" type="xs:string" minOccurs="0" />
+        <xs:element name="DicesStat" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BlockDistrib" type="xs:string" minOccurs="0" />
+              <xs:element name="RollDistrib" type="xs:string" minOccurs="0" />
+              <xs:element name="Roll" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RowRollStatistics" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="RollType" type="xs:string" minOccurs="0" />
+                          <xs:element name="Success" type="xs:string" minOccurs="0" />
+                          <xs:element name="Failure" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Block" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RowBlockStatistics" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Attacker" type="xs:string" minOccurs="0" />
+                          <xs:element name="Choice" type="xs:string" minOccurs="0" />
+                          <xs:element name="Dices" type="xs:string" minOccurs="0" />
+                          <xs:element name="Red" type="xs:string" minOccurs="0" />
+                          <xs:element name="Defender" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="LobbyId" type="xs:string" minOccurs="0" />
+        <xs:element name="Ma" type="xs:string" minOccurs="0" />
+        <xs:element name="Name" type="xs:string" minOccurs="0" />
+        <xs:element name="Ag" type="xs:string" minOccurs="0" />
+        <xs:element name="Level" type="xs:string" minOccurs="0" />
+        <xs:element name="Number" type="xs:string" minOccurs="0" />
+        <xs:element name="Experience" type="xs:string" minOccurs="0" />
+        <xs:element name="IdHead" type="xs:string" minOccurs="0" />
+        <xs:element name="ListCasualties" type="xs:string" minOccurs="0" />
+        <xs:element name="TeamId" type="xs:string" minOccurs="0" />
+        <xs:element name="Contract" type="xs:string" minOccurs="0" />
+        <xs:element name="Value" type="xs:string" minOccurs="0" />
+        <xs:element name="Av" type="xs:string" minOccurs="0" />
+        <xs:element name="St" type="xs:string" minOccurs="0" />
+        <xs:element name="ListSkills" type="xs:string" minOccurs="0" />
+        <xs:element name="Id" type="xs:string" minOccurs="0" />
+        <xs:element name="IdPlayerTypes" type="xs:string" minOccurs="0" />
+        <xs:element name="TreasuryBeforeInducements" type="xs:string" minOccurs="0" />
+        <xs:element name="Popularity" type="xs:string" minOccurs="0" />
+        <xs:element name="IdCheerleadersRace" type="xs:string" minOccurs="0" />
+        <xs:element name="IdRace" type="xs:string" minOccurs="0" />
+        <xs:element name="Treasury" type="xs:string" minOccurs="0" />
+        <xs:element name="Reroll" type="xs:string" minOccurs="0" />
+        <xs:element name="Logo" type="xs:string" minOccurs="0" />
+        <xs:element name="CoachSlot" type="xs:string" minOccurs="0" />
+        <xs:element name="TeamColor" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Id">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Value" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RulesEventFullState" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Cell" />
+        <xs:element ref="Destination" />
+        <xs:element ref="Statistics" />
+        <xs:element ref="Data" />
+        <xs:element ref="Id" />
+        <xs:element name="ReplayInfos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IsLive" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentPosition" type="xs:string" minOccurs="0" />
+              <xs:element name="NbPositions" type="xs:string" minOccurs="0" />
+              <xs:element name="IsReplay" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Messages">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StringMessage" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element name="MessageData" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BoardState">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CurrentPhase" type="xs:string" minOccurs="0" />
+              <xs:element name="CampaignSpecifics" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ListDangerousCells" type="xs:string" minOccurs="0" />
+                    <xs:element name="ListPoisonnedPlayers" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Ball" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="IsHeld" type="xs:string" minOccurs="0" />
+                    <xs:element ref="Cell" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="Destination" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Bomb" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="Cell" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="Destination" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element ref="Statistics" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="ListTeams" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="TeamState" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="KickOffTurn" type="xs:string" minOccurs="0" />
+                          <xs:element name="HandOfferId" type="xs:string" minOccurs="0" />
+                          <xs:element name="FoulAvailable" type="xs:string" minOccurs="0" />
+                          <xs:element name="PasserId" type="xs:string" minOccurs="0" />
+                          <xs:element name="BlitzerId" type="xs:string" minOccurs="0" />
+                          <xs:element name="GameTurn" type="xs:string" minOccurs="0" />
+                          <xs:element name="Fame" type="xs:string" minOccurs="0" />
+                          <xs:element name="WizardEndsTurn" type="xs:string" minOccurs="0" />
+                          <xs:element name="InducementsTurn" type="xs:string" minOccurs="0" />
+                          <xs:element name="ListInducements" type="xs:string" minOccurs="0" />
+                          <xs:element name="TeamRerollAvailable" type="xs:string" minOccurs="0" />
+                          <xs:element name="RerollNumber" type="xs:string" minOccurs="0" />
+                          <xs:element name="ListMercenaries" type="xs:string" minOccurs="0" />
+                          <xs:element name="NbSupporters" type="xs:string" minOccurs="0" />
+                          <xs:element name="Side" type="xs:string" minOccurs="0" />
+                          <xs:element name="ApothecaryAvailable" type="xs:string" minOccurs="0" />
+                          <xs:element name="ListPitchPlayers" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PlayerState" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="CanDeclareBlitz" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Gfi" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Id" type="xs:string" minOccurs="0" />
+                                      <xs:element name="CanBlock" type="xs:string" minOccurs="0" />
+                                      <xs:element name="CanAct" type="xs:string" minOccurs="0" />
+                                      <xs:element name="CanHandOff" type="xs:string" minOccurs="0" />
+                                      <xs:element name="TackleZone" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Status" type="xs:string" minOccurs="0" />
+                                      <xs:element name="MovePoint" type="xs:string" minOccurs="0" />
+                                      <xs:element name="CanPass" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Situation" type="xs:string" minOccurs="0" />
+                                      <xs:element name="ListCasualties" type="xs:string" minOccurs="0" />
+                                      <xs:element name="ExperienceGained" type="xs:string" minOccurs="0" />
+                                      <xs:element ref="Cell" minOccurs="0" />
+                                      <xs:element ref="Statistics" minOccurs="0"/>
+                                      <xs:element ref="Data" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element ref="Data" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GameInfos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AnswerClock" type="xs:string" minOccurs="0" />
+              <xs:element name="ServerReconnectionAllowedTime" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientDelayDetectionPingIntervall" type="xs:string" minOccurs="0" />
+              <xs:element name="TurnClockDuration" type="xs:string" minOccurs="0" />
+              <xs:element name="TeamStadiumOwner" type="xs:string" minOccurs="0" />
+              <xs:element name="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="LevelCabalVision" type="xs:string" minOccurs="0" />
+              <xs:element name="Clock" type="xs:string" minOccurs="0" />
+              <xs:element name="StructStadium" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalCoachSlot" type="xs:string" minOccurs="0" />
+              <xs:element name="State" type="xs:string" minOccurs="0" />
+              <xs:element name="Stadium" type="xs:string" minOccurs="0" />
+              <xs:element name="BallType" type="xs:string" minOccurs="0" />
+              <xs:element name="TurnClock" type="xs:string" minOccurs="0" />
+              <xs:element name="Map" type="xs:string" minOccurs="0" />
+              <xs:element name="PlayingCoachSlot" type="xs:string" minOccurs="0" />
+              <xs:element name="ServerDelayDetectionThreshold" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientReconnectionIntervall" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxPausePerCoach" type="xs:string" minOccurs="0" />
+              <xs:element name="NameStadium" type="xs:string" minOccurs="0" />
+              <xs:element name="LevelStadium" type="xs:string" minOccurs="0" />
+              <xs:element name="Mode" type="xs:string" minOccurs="0" />
+              <xs:element name="IsPaused" type="xs:string" minOccurs="0" />
+              <xs:element name="CoachesInfos" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="CoachInfos" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Slot" type="xs:string" minOccurs="0" />
+                          <xs:element name="PauseUsed" type="xs:string" minOccurs="0" />
+                          <xs:element name="Login" type="xs:string" minOccurs="0" />
+                          <xs:element name="UserId" type="xs:string" minOccurs="0" />
+                          <xs:element name="OwnedDLC" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RowLeague" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EmailContacts" type="xs:string" minOccurs="0" />
+                    <xs:element name="Edition" type="xs:string" minOccurs="0" />
+                    <xs:element name="IdOwner" type="xs:string" minOccurs="0" />
+                    <xs:element name="LeagueType" type="xs:string" minOccurs="0" />
+                    <xs:element name="Logo" type="xs:string" minOccurs="0" />
+                    <xs:element name="MarketPlaceLastRookieProcess" type="xs:string" minOccurs="0" />
+                    <xs:element name="MarketPlaceRookieGenerated" type="xs:string" minOccurs="0" />
+                    <xs:element name="HasPassword" type="xs:string" minOccurs="0" />
+                    <xs:element name="Solo" type="xs:string" minOccurs="0" />
+                    <xs:element name="Description" type="xs:string" minOccurs="0" />
+                    <xs:element name="MarketPlace" type="xs:string" minOccurs="0" />
+                    <xs:element name="NeedValidation" type="xs:string" minOccurs="0" />
+                    <xs:element name="Phase" type="xs:string" minOccurs="0" />
+                    <xs:element name="Password" type="xs:string" minOccurs="0" />
+                    <xs:element name="Data" type="xs:string" minOccurs="0" />
+                    <xs:element name="DateLastMatch" type="xs:string" minOccurs="0" />
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element name="Created" type="xs:string" minOccurs="0" />
+                    <xs:element name="Official" type="xs:string" minOccurs="0" />
+                    <xs:element name="Websites" type="xs:string" minOccurs="0" />
+                    <xs:element name="TreasurySp" type="xs:string" minOccurs="0" />
+                    <xs:element name="NbRegisteredTeams" type="xs:string" minOccurs="0" />
+                    <xs:element name="Flags" type="xs:string" minOccurs="0" />
+                    <xs:element ref="Id" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RowCompetition" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="IdOwner" type="xs:string" minOccurs="0" />
+                    <xs:element name="RankedChallengeAllowed" type="xs:string" minOccurs="0" />
+                    <xs:element name="Logo" type="xs:string" minOccurs="0" />
+                    <xs:element name="RankedMatchAllowed" type="xs:string" minOccurs="0" />
+                    <xs:element name="CheckinPrice" type="xs:string" minOccurs="0" />
+                    <xs:element name="AutomatchAllowed" type="xs:string" minOccurs="0" />
+                    <xs:element name="KeepReplayPolicy" type="xs:string" minOccurs="0" />
+                    <xs:element name="CloneOnNextLeagueEdition" type="xs:string" minOccurs="0" />
+                    <xs:element name="LeaguePhase" type="xs:string" minOccurs="0" />
+                    <xs:element name="ChallengeAllowed" type="xs:string" minOccurs="0" />
+                    <xs:element name="PrematchEvents" type="xs:string" minOccurs="0" />
+                    <xs:element name="Flags" type="xs:string" minOccurs="0" />
+                    <xs:element name="IdCompetitionTypes" type="xs:string" minOccurs="0" />
+                    <xs:element name="RegistrationMode" type="xs:string" minOccurs="0" />
+                    <xs:element name="NbRounds" type="xs:string" minOccurs="0" />
+                    <xs:element name="NbTeamsMax" type="xs:string" minOccurs="0" />
+                    <xs:element name="CompetitionStatus" type="xs:string" minOccurs="0" />
+                    <xs:element name="NeedValidation" type="xs:string" minOccurs="0" />
+                    <xs:element name="UnRankedChallengeAllowed" type="xs:string" minOccurs="0" />
+                    <xs:element name="CurrentRound" type="xs:string" minOccurs="0" />
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element name="LeagueEdition" type="xs:string" minOccurs="0" />
+                    <xs:element name="UnRankedMatchAllowed" type="xs:string" minOccurs="0" />
+                    <xs:element name="PureAutomatch" type="xs:string" minOccurs="0" />
+                    <xs:element name="ConcedeLimit" type="xs:string" minOccurs="0" />
+                    <xs:element name="NbRegisteredTeams" type="xs:string" minOccurs="0" />
+                    <xs:element name="AcceptTicketRequest" type="xs:string" minOccurs="0" />
+                    <xs:element name="TurnDuration" type="xs:string" minOccurs="0" />
+                    <xs:element name="GameOptions" type="xs:string" minOccurs="0" />
+                    <xs:element name="IdPreviousEdition" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Value" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="Id" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="IdLeague" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Value" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

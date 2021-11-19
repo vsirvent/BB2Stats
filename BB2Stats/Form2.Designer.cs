@@ -29,16 +29,20 @@ namespace BB2Stats
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BBStatsMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.turnCheck = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.show = new System.Windows.Forms.PictureBox();
             this.settings = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.minimize = new System.Windows.Forms.PictureBox();
+            this.snifferStatus = new System.Windows.Forms.Label();
+            this.nFrames = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show)).BeginInit();
@@ -59,7 +63,7 @@ namespace BB2Stats
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.turnCheck);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -70,15 +74,15 @@ namespace BB2Stats
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TEAM 1";
             // 
-            // checkBox1
+            // turnCheck
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(56, 0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.turnCheck.AutoSize = true;
+            this.turnCheck.Location = new System.Drawing.Point(56, 0);
+            this.turnCheck.Name = "turnCheck";
+            this.turnCheck.Size = new System.Drawing.Size(15, 14);
+            this.turnCheck.TabIndex = 1;
+            this.turnCheck.UseVisualStyleBackColor = true;
+            this.turnCheck.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -106,7 +110,7 @@ namespace BB2Stats
             // show
             // 
             this.show.Image = ((System.Drawing.Image)(resources.GetObject("show.Image")));
-            this.show.Location = new System.Drawing.Point(1096, 299);
+            this.show.Location = new System.Drawing.Point(1175, 297);
             this.show.Name = "show";
             this.show.Size = new System.Drawing.Size(38, 32);
             this.show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,7 +121,7 @@ namespace BB2Stats
             // settings
             // 
             this.settings.Image = ((System.Drawing.Image)(resources.GetObject("settings.Image")));
-            this.settings.Location = new System.Drawing.Point(1096, 331);
+            this.settings.Location = new System.Drawing.Point(1175, 329);
             this.settings.Name = "settings";
             this.settings.Size = new System.Drawing.Size(38, 32);
             this.settings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +136,7 @@ namespace BB2Stats
             // minimize
             // 
             this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
-            this.minimize.Location = new System.Drawing.Point(1096, 268);
+            this.minimize.Location = new System.Drawing.Point(1175, 268);
             this.minimize.Name = "minimize";
             this.minimize.Size = new System.Drawing.Size(38, 32);
             this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -140,11 +144,34 @@ namespace BB2Stats
             this.minimize.TabStop = false;
             this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
+            // snifferStatus
+            // 
+            this.snifferStatus.Location = new System.Drawing.Point(1145, 27);
+            this.snifferStatus.Name = "snifferStatus";
+            this.snifferStatus.Size = new System.Drawing.Size(68, 13);
+            this.snifferStatus.TabIndex = 6;
+            this.snifferStatus.Text = "Sniffer: NO";
+            // 
+            // nFrames
+            // 
+            this.nFrames.Location = new System.Drawing.Point(1145, 49);
+            this.nFrames.Name = "nFrames";
+            this.nFrames.Size = new System.Drawing.Size(68, 13);
+            this.nFrames.TabIndex = 7;
+            this.nFrames.Text = "Frames: 0";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // BBStatsMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1142, 370);
+            this.ClientSize = new System.Drawing.Size(1225, 370);
+            this.Controls.Add(this.nFrames);
+            this.Controls.Add(this.snifferStatus);
             this.Controls.Add(this.minimize);
             this.Controls.Add(this.show);
             this.Controls.Add(this.settings);
@@ -178,10 +205,13 @@ namespace BB2Stats
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox turnCheck;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox settings;
         private System.Windows.Forms.PictureBox show;
         private System.Windows.Forms.PictureBox minimize;
+        private System.Windows.Forms.Label snifferStatus;
+        private System.Windows.Forms.Label nFrames;
+        private System.Windows.Forms.Timer timer1;
     }
 }

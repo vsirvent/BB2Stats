@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Header" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Header" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Data">
+          <xs:complexType>
+            <xs:attribute name="type" type="xs:string" />
+            <xs:attribute name="size" type="xs:string" />
+            <xs:attribute name="zipped" type="xs:string" />
+            <xs:attribute name="MessageName" type="xs:string" />
+            <xs:attribute name="MessageToken" type="xs:string" />
+            <xs:attribute name="sizeBeforeCompression" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
