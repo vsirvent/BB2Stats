@@ -51,7 +51,8 @@ namespace BB2Stats
             public int nstuns = 0;
             public int nkos = 0;
             public int ninjuries = 0;
-            
+
+            public int breaks_pows = 0;
             public int nbreaks = 0;
 
             public SkillResult dodge_skill = new SkillResult();
@@ -175,8 +176,8 @@ namespace BB2Stats
         }
 
         bool fadeIn = false;
-        bool fadeOut = false; 
-
+        bool fadeOut = false;
+        int orig_pos = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (fadeIn)
@@ -193,6 +194,7 @@ namespace BB2Stats
                     }
                     else
                     {
+                        orig_pos = this.Location.X;
                         fadeIn = false;
                     }
                 }else if (teamNum == 2)
@@ -208,6 +210,7 @@ namespace BB2Stats
                     }
                     else
                     {
+                        orig_pos = this.Location.X;
                         fadeIn = false;
                     }
                 }
@@ -218,8 +221,8 @@ namespace BB2Stats
                     if (this.Location.X + this.Width > 0)
                     {
                         int target_pos = -this.Width;
-                        int diff = (this.Location.X - target_pos) / 3;
-                        if (diff < 5) { diff = 5; }
+                        int diff =(orig_pos - this.Location.X) / 3;
+                        if (diff < 10) { diff = 10; }
                         var temp = this.Location;
                         temp.X -= diff;
                         this.Location = temp;
@@ -234,8 +237,8 @@ namespace BB2Stats
                     int target_pos = screenBounds.X + screenBounds.Width;
                     if (this.Location.X < target_pos)
                     {
-                        int diff = (target_pos - this.Location.X) / 3;
-                        if (diff < 5) { diff = 5; }
+                        int diff = (this.Location.X - orig_pos) / 3;
+                        if (diff < 10) { diff = 10; }
                         var temp = this.Location;
                         temp.X += diff;
                         this.Location = temp;
@@ -338,7 +341,7 @@ namespace BB2Stats
             ko.Value = data.nkos;
             injury.Value = data.ninjuries;
             pows.Value = data.npows;
-
+            
             negDiceSkullLabel.Text = negDiceSkull.Value.ToString();
             oneDiceSkullLabel.Text = oneDiceSkull.Value.ToString();
             twoDiceSkullLabel.Text = twoDiceSkull.Value.ToString();
@@ -530,7 +533,7 @@ namespace BB2Stats
         }
         private void updateBreaks()
         {
-            data.nbreaks = data.nstuns + data.nkos + data.ninjuries;
+            data.nbreaks = data.breaks_pows;
             totalBreak.Text = data.nbreaks.ToString();
             if (data.npows > 0)
             {
