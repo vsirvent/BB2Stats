@@ -49,6 +49,7 @@ namespace BB2Stats
             public int nstuns = 0;
             public int nkos = 0;
             public int ninjuries = 0;
+            public int breaks_pows = 0;
             
             public int nbreaks = 0;
 
@@ -257,7 +258,7 @@ namespace BB2Stats
         }
         private void updateBreaks()
         {
-            data.nbreaks = data.nstuns + data.nkos + data.ninjuries;
+            data.nbreaks = data.breaks_pows;
             totalBreak.Text = data.nbreaks.ToString();
             if (data.npows > 0)
             {
@@ -278,6 +279,12 @@ namespace BB2Stats
         private void stun_ValueChanged(object sender, EventArgs e)
         {
             data.nstuns = (int)stun.Value;
+            updateBreaks();
+        }
+
+        public void setBreaksPows(int val)
+        {
+            data.breaks_pows = val;
             updateBreaks();
         }
 

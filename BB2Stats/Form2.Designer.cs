@@ -185,6 +185,7 @@ namespace BB2Stats
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "BB2 Stats";
             this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BBStatsMain_FormClosed);
             this.Shown += new System.EventHandler(this.BBStatsMain_Shown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);

@@ -66,7 +66,6 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.percentBreak = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.totalBreak = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.injury = new System.Windows.Forms.NumericUpDown();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -162,6 +161,7 @@
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
+            this.totalBreak = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okAp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.failAp)).BeginInit();
@@ -564,16 +564,6 @@
             this.label15.TabIndex = 103;
             this.label15.Text = "%";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // totalBreak
-            // 
-            this.totalBreak.BackColor = System.Drawing.Color.White;
-            this.totalBreak.Location = new System.Drawing.Point(289, 295);
-            this.totalBreak.Name = "totalBreak";
-            this.totalBreak.ReadOnly = true;
-            this.totalBreak.Size = new System.Drawing.Size(48, 20);
-            this.totalBreak.TabIndex = 102;
-            this.totalBreak.Text = "0";
             // 
             // label14
             // 
@@ -1507,6 +1497,16 @@
             this.button28.UseVisualStyleBackColor = false;
             this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
+            // totalBreak
+            // 
+            this.totalBreak.BackColor = System.Drawing.Color.White;
+            this.totalBreak.Location = new System.Drawing.Point(289, 295);
+            this.totalBreak.Name = "totalBreak";
+            this.totalBreak.ReadOnly = true;
+            this.totalBreak.Size = new System.Drawing.Size(48, 20);
+            this.totalBreak.TabIndex = 102;
+            this.totalBreak.Text = "0";
+            // 
             // BB2StatsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1763,7 +1763,6 @@
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox totalBreak;
         public System.Windows.Forms.Label label14;
         public System.Windows.Forms.NumericUpDown injury;
         public System.Windows.Forms.TextBox percentBreak;
@@ -1831,6 +1830,7 @@
         public System.Windows.Forms.Button button26;
         public System.Windows.Forms.Button button27;
         public System.Windows.Forms.Button button28;
+        public System.Windows.Forms.TextBox totalBreak;
     }
 }
 

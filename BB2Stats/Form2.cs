@@ -30,6 +30,8 @@ namespace BB2Stats
 {
     public partial class BBStatsMain : Form, SnifferListener
     {
+        private delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
+
         BB2StatsForm team1 = null;
         BB2StatsForm team2 = null;
         OverlayTeam ovTeam1 = null;
@@ -43,6 +45,31 @@ namespace BB2Stats
         bool subscribeMqtt = false;
         string mqttIdSubs = "";
         Sniffer sniffer = null;
+        private bool isFormBeingDragged = false;
+        private Point origPosition;
+        private Point mouseDownPosition;
+        private bool stopWorker = false;
+        bool ovActive = false;
+
+        private const int WH_KEYBOARD_LL = 13;
+        private const int WM_KEYDOWN = 0x0100;
+        private static LowLevelKeyboardProc hookCallBack = HookCallback;
+        private static IntPtr hookID = IntPtr.Zero;
+        private static BBStatsMain mainClass = null;
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr SetWindowsHookEx(int idHook,
+        LowLevelKeyboardProc lpfn, IntPtr hMod, uint dwThreadId);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static extern bool UnhookWindowsHookEx(IntPtr hhk);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr CallNextHookEx(IntPtr hhk, int nCode, IntPtr wParam, IntPtr lParam);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr GetModuleHandle(string lpModuleName);
 
         public BBStatsMain()
         {
@@ -54,7 +81,6 @@ namespace BB2Stats
             b3Pos = settings.Location;
 
             sniffer = new Sniffer();
-            sniffer.SetListener(this);
 
             configForm = new ConfigForm(sniffer);
             team1 = new BB2StatsForm();
@@ -66,7 +92,7 @@ namespace BB2Stats
             ovBg.TransparencyKey = Color.Green;
             ovBg.AllowTransparency = true;
             ovBg.TopMost = true;
-            
+
             team1.TopLevel = false;
             team2.TopLevel = false;
             ovTeam1.TopLevel = false;
@@ -86,23 +112,11 @@ namespace BB2Stats
             ovBg.Location = new Point(0, 0);
             ovBg.Size = new Size(screenBounds.Width, screenBounds.Height);
 
-            _hookID = SetHook(_proc);
+            sniffer.SetListener(this);
+            hookID = SetHook(hookCallBack);
             timer1.Start();
         }
 
-        [DllImport("user32.dll", EntryPoint = "SetWindowLongW")]
-        private static extern IntPtr SetWindowLongPtr32(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
-
-        private bool IsFormBeingDragged = false;
-        private Point OrigPosition;
-        private Point MouseDownPosition;
-        private bool stopWorker = false;
-
-        private const int WH_KEYBOARD_LL = 13;
-        private const int WM_KEYDOWN = 0x0100;
-        private static LowLevelKeyboardProc _proc = HookCallback;
-        private static IntPtr _hookID = IntPtr.Zero;
-        private static BBStatsMain mainClass = null;
         private static IntPtr SetHook(LowLevelKeyboardProc proc)
         {
             using (Process curProcess = Process.GetCurrentProcess())
@@ -113,11 +127,7 @@ namespace BB2Stats
             }
         }
 
-        private delegate IntPtr LowLevelKeyboardProc(
-            int nCode, IntPtr wParam, IntPtr lParam);
-
-        private static IntPtr HookCallback(
-            int nCode, IntPtr wParam, IntPtr lParam)
+        private static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam)
         {
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
             {
@@ -128,23 +138,8 @@ namespace BB2Stats
                     mainClass.pictureBox2_Click(null, new EventArgs());
                 }
             }
-            return CallNextHookEx(_hookID, nCode, wParam, lParam);
+            return CallNextHookEx(hookID, nCode, wParam, lParam);
         }
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        private static extern IntPtr SetWindowsHookEx(int idHook,
-            LowLevelKeyboardProc lpfn, IntPtr hMod, uint dwThreadId);
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        private static extern bool UnhookWindowsHookEx(IntPtr hhk);
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        private static extern IntPtr CallNextHookEx(IntPtr hhk, int nCode,
-            IntPtr wParam, IntPtr lParam);
-
-        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        private static extern IntPtr GetModuleHandle(string lpModuleName);
 
         private async void MqttConnectPublisher(string id)
         {
@@ -329,9 +324,9 @@ namespace BB2Stats
         {
             if (e.Button == MouseButtons.Left)
             {
-                IsFormBeingDragged = true;
-                MouseDownPosition = MousePosition;
-                OrigPosition = this.Location;
+                isFormBeingDragged = true;
+                mouseDownPosition = MousePosition;
+                origPosition = this.Location;
                 System.Console.WriteLine("Mouse Down");
             }
         }
@@ -340,18 +335,18 @@ namespace BB2Stats
         {
             if (e.Button == MouseButtons.Left)
             {
-                IsFormBeingDragged = false;
+                isFormBeingDragged = false;
                 System.Console.WriteLine("Mouse Up");
             }
         }
 
         private void Form1_MouseMove(Object sender, MouseEventArgs e)
         {
-            if (IsFormBeingDragged)
+            if (isFormBeingDragged)
             {
                 Point temp = new Point();
-                temp.X = OrigPosition.X + (MousePosition.X - MouseDownPosition.X);
-                temp.Y = OrigPosition.Y + (MousePosition.Y - MouseDownPosition.Y);
+                temp.X = origPosition.X + (MousePosition.X - mouseDownPosition.X);
+                temp.Y = origPosition.Y + (MousePosition.Y - mouseDownPosition.Y);
                 this.Location = temp;
                 System.Console.WriteLine("Mouse Move");
             }
@@ -359,15 +354,23 @@ namespace BB2Stats
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (turnCheck.Checked)
+            if (!sniffer.IsRunning())
             {
-                panel1.Enabled = true;
-                panel2.Enabled = false;
+                if (turnCheck.Checked)
+                {
+                    panel1.Enabled = true;
+                    panel2.Enabled = false;
+                }
+                else
+                {
+                    panel2.Enabled = true;
+                    panel1.Enabled = false;
+                }
             }
             else
             {
                 panel2.Enabled = true;
-                panel1.Enabled = false;
+                panel1.Enabled = true;
             }
         }
 
@@ -379,7 +382,7 @@ namespace BB2Stats
                 {
                     OnPublish();
                 }
-                else if (!subscribeMqtt)
+                if (!subscribeMqtt)
                 {
                     string payload = team1.toJson();
                     ovTeam1.Invoke((MethodInvoker)delegate { ovTeam1.fromJson(payload); });
@@ -389,7 +392,6 @@ namespace BB2Stats
                 System.Threading.Thread.Sleep(1000);
             }
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             configForm.ShowDialog();
@@ -418,7 +420,6 @@ namespace BB2Stats
 
         }
 
-        bool ovActive = false;
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             if (!ovActive)
@@ -443,11 +444,12 @@ namespace BB2Stats
             team1.Show();
             team2.Show();
             ovTeam1.Show();
-            ovTeam2.Show();            
+            ovTeam2.Show();
             ovTeam1.BringToFront();
             ovTeam2.BringToFront();
             ovBg.Show();
             this.BringToFront();
+            backgroundWorker1.WorkerSupportsCancellation = true;
             backgroundWorker1.RunWorkerAsync();
         }
 
@@ -491,7 +493,6 @@ namespace BB2Stats
             }
             return dices;
         }
-        
         int SumDices(string list_dices)
         {
             int sum = 0;
@@ -629,14 +630,15 @@ namespace BB2Stats
         }
 
         int ndices;
-        bool last_action_armour = false;
+        bool lastActionBlock = false;
+        int[] breaks_pows = new int[2];
         void ProcessAction(int team, RulesEventFullStateBoardStateTeamStatePlayerState player, RulesEventBoardAction action)
         {
             Types.ActionTypes action_type = (Types.ActionTypes)Int32.Parse(action.ActionType);
             foreach (var result in action.Results)
             {
                 Types.RollType roll_type = (Types.RollType)Int32.Parse(result.RollType);
-                Console.WriteLine("Action: " + action_type + ", completed = " + result.IsOrderCompleted + ", resulttype = " + result.ResultType + ", subresulttype = " + result.SubResultType + ", Roll type: " + roll_type + " throw, dices = " + result.CoachChoices[0].ListDices + ", rollStatus = " + result.RollStatus);
+                Console.WriteLine("Action: " + action_type + ", completed = " + result.IsOrderCompleted + ", resulttype = " + result.ResultType + ", subresulttype = " + result.SubResultType + ", Roll type: " + roll_type + " throw, dices = " + result.CoachChoices[0].ListDices + ", rollStatus = " + result.RollStatus + ", requirement = " + result.Requirement);
             }
             BB2StatsForm form = null;
             BB2StatsForm oponent_form = null;
@@ -655,12 +657,13 @@ namespace BB2Stats
                 case Types.ActionTypes.Block:
                 case Types.ActionTypes.Blitz:
                     {
-                        last_action_armour = false;
+                        lastActionBlock = true;
 
                         foreach (var result in action.Results)
                         {
                             Types.RollType roll_type = (Types.RollType)Int32.Parse(result.RollType);
-                            int result_type = (int)Int32.Parse(result.ResultType); 
+                            int result_type = (int)Int32.Parse(result.ResultType);
+                            int requirement = (int)Int32.Parse(result.Requirement);
                             string dices = result.CoachChoices[0].ListDices;
                             Types.RollOutcome outcome;
                             Types.Dice dice;
@@ -672,7 +675,8 @@ namespace BB2Stats
                                     {
                                         if (outcome != Types.RollOutcome.None && ndices > 0)
                                         {
-                                            if (result_type == 3) {
+                                            if (requirement < 0)
+                                            {
                                                 ndices = -1;
                                             }
                                             AddRoll(team, ndices, dice, outcome);
@@ -684,7 +688,7 @@ namespace BB2Stats
                                             ndices = temp_ndices;
                                         }
                                     }
-                                    break;                              
+                                    break;
                             }
                         }
                     }
@@ -697,33 +701,33 @@ namespace BB2Stats
                             Console.WriteLine("Roll type " + roll_type + ", completed = " + result.IsOrderCompleted + ", resulttype = " + result.ResultType + ", subresulttype = " + result.SubResultType);
                             if (result.IsOrderCompleted == "1")
                             {
-                                
+
                                 switch (roll_type)
                                 {
-                                    case Types.RollType.Armor:
-                                        {
-                                            last_action_armour = true;
-                                        }break;
                                     case Types.RollType.Injury:
                                         {
-                                            if (last_action_armour)
+                                            //Don't count self injuries
+                                            if (lastActionBlock)
                                             {
-                                                switch (Int32.Parse(result.SubResultType))
-                                                {
-                                                    case 2: oponent_form.Invoke((MethodInvoker)delegate { oponent_form.stun.Value++; }); break;
-                                                    case 3: oponent_form.Invoke((MethodInvoker)delegate { oponent_form.ko.Value++; }); break;
-                                                    case 4: oponent_form.Invoke((MethodInvoker)delegate { oponent_form.injury.Value++; }); break;
-                                                }
+                                                breaks_pows[team]++;
+                                                oponent_form.Invoke((MethodInvoker)delegate { oponent_form.setBreaksPows(breaks_pows[team]); }); 
                                             }
+                                            switch (Int32.Parse(result.SubResultType))
+                                            {
+                                                case 2: oponent_form.Invoke((MethodInvoker)delegate { oponent_form.stun.Value++; }); break;
+                                                case 3: oponent_form.Invoke((MethodInvoker)delegate { oponent_form.ko.Value++; }); break;
+                                                case 4: oponent_form.Invoke((MethodInvoker)delegate { oponent_form.injury.Value++; }); break;
+                                            }                                            
                                         }
                                         break;
                                 }
-                            }
+                            }                            
                         }
-                    }break;
+                    }
+                    break;
                 case Types.ActionTypes.Move:
                     {
-                        last_action_armour = false;
+                        lastActionBlock = false;
 
                         foreach (var result in action.Results)
                         {
@@ -741,7 +745,8 @@ namespace BB2Stats
                                     {
                                         form.Invoke((MethodInvoker)delegate { form.failAp.Value++; });
                                     }
-                                }else if (roll_type == Types.RollType.Dodge)
+                                }
+                                else if (roll_type == Types.RollType.Dodge)
                                 {
                                     switch (Int32.Parse(result.ResultType))
                                     {
@@ -750,8 +755,7 @@ namespace BB2Stats
                                                 form.Invoke((MethodInvoker)delegate { form.okDodge.Value++; });
                                             }
                                             break;
-                                        case 1:
-                                        case 3:
+                                        default:
                                             {
                                                 form.Invoke((MethodInvoker)delegate { form.failDodge.Value++; });
                                             }
@@ -764,7 +768,7 @@ namespace BB2Stats
                     break;
                 case Types.ActionTypes.PickUp:
                     {
-                        last_action_armour = false;
+                        lastActionBlock = false;
 
                         foreach (var result in action.Results)
                         {
@@ -776,23 +780,24 @@ namespace BB2Stats
                                     switch (Int32.Parse(result.ResultType))
                                     {
                                         case 0:
-                                        {
-                                            form.Invoke((MethodInvoker)delegate { form.okCatch.Value++; });
-                                        }
-                                        break;
-                                        case 1:
-                                        {
-                                            form.Invoke((MethodInvoker)delegate { form.failCatch.Value++; });
-                                        }
-                                        break;
+                                            {
+                                                form.Invoke((MethodInvoker)delegate { form.okCatch.Value++; });
+                                            }
+                                            break;
+                                        default:
+                                            {
+                                                form.Invoke((MethodInvoker)delegate { form.failCatch.Value++; });
+                                            }
+                                            break;
                                     }
                                 }
                             }
                         }
-                    }break;
-                case Types.ActionTypes.Catch:              
+                    }
+                    break;
+                case Types.ActionTypes.Catch:
                     {
-                        last_action_armour = false;
+                        lastActionBlock = false;
 
                         foreach (var result in action.Results)
                         {
@@ -808,7 +813,7 @@ namespace BB2Stats
                                                 form.Invoke((MethodInvoker)delegate { form.okCatch.Value++; });
                                             }
                                             break;
-                                        case 1:
+                                        default:
                                             {
                                                 form.Invoke((MethodInvoker)delegate { form.failCatch.Value++; });
                                             }
@@ -821,14 +826,14 @@ namespace BB2Stats
                     break;
                 case Types.ActionTypes.Pass:
                     {
-                        last_action_armour = false;
+                        lastActionBlock = false;
 
                         foreach (var result in action.Results)
                         {
                             if (result.IsOrderCompleted == "1")
                             {
                                 Types.RollType roll_type = (Types.RollType)Int32.Parse(result.RollType);
-                                if (roll_type == Types.RollType.Catch)
+                                if (roll_type == Types.RollType.Pass)
                                 {
                                     switch (Int32.Parse(result.ResultType))
                                     {
@@ -837,7 +842,7 @@ namespace BB2Stats
                                                 //form.Invoke((MethodInvoker)delegate { form.okCatch.Value++; });
                                             }
                                             break;
-                                        case 1:
+                                        default:
                                             {
                                                 form.Invoke((MethodInvoker)delegate { form.failCatch.Value++; });
                                             }
@@ -850,8 +855,7 @@ namespace BB2Stats
                     break;
                 default:
                     {
-                        last_action_armour = false;
-
+                        lastActionBlock = false;
                         break;
                     }
             }
@@ -885,9 +889,11 @@ namespace BB2Stats
             Console.WriteLine("OnRulesEventCoachChoice");
         }
 
+        int playing_team = 0;
         void SnifferListener.OnRulesEventEndTurn(RulesEventEndTurn rulesEventEndTurn)
         {
             Console.WriteLine("OnRulesEventEndTurn");
+            playing_team = Int32.Parse(rulesEventEndTurn.PlayingTeam);
         }
 
         void SnifferListener.OnRulesEventForcedDices(RulesEventForcedDices rulesEventForcedDices)
@@ -946,6 +952,12 @@ namespace BB2Stats
             sniffer.GetStats(out ok_frames, out total_frames);
             nFrames.Text = "Frames: " + ok_frames;
             snifferStatus.Text = "Sniffer: " + (sniffer.IsRunning() ? "YES" : "NO");
+        }
+
+        private void BBStatsMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            backgroundWorker1.CancelAsync();
+            Process.GetCurrentProcess().Kill();
         }
     }
 }
