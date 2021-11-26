@@ -86,8 +86,20 @@ namespace BB2Stats
                 {
                     if (!eth_map.ContainsKey(device.Description))
                     {
-                        eth_map.Add(device.Description, device);
-                        eth_names.Add(device.Description);
+                        string key = device.Description;
+                        if (device.Addresses.Count > 0)
+                        {
+                            foreach (var address in device.Addresses) {
+                                if (address.Address.Family == SocketAddressFamily.Internet)
+                                {
+                                    key += "(" + address.ToString() + ")";
+                                    break;
+                                }
+                            }
+                           
+                        } 
+                        eth_map.Add(key, device);
+                        eth_names.Add(key);
                     }
                 }
                 else

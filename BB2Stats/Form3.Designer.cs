@@ -46,9 +46,10 @@
             // publishMqtt
             // 
             this.publishMqtt.AutoSize = true;
-            this.publishMqtt.Location = new System.Drawing.Point(169, 42);
+            this.publishMqtt.Location = new System.Drawing.Point(225, 52);
+            this.publishMqtt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.publishMqtt.Name = "publishMqtt";
-            this.publishMqtt.Size = new System.Drawing.Size(71, 17);
+            this.publishMqtt.Size = new System.Drawing.Size(85, 20);
             this.publishMqtt.TabIndex = 0;
             this.publishMqtt.Text = "PUBLISH";
             this.publishMqtt.UseVisualStyleBackColor = true;
@@ -56,27 +57,30 @@
             // subscribeMqtt
             // 
             this.subscribeMqtt.AutoSize = true;
-            this.subscribeMqtt.Location = new System.Drawing.Point(169, 65);
+            this.subscribeMqtt.Location = new System.Drawing.Point(225, 80);
+            this.subscribeMqtt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.subscribeMqtt.Name = "subscribeMqtt";
-            this.subscribeMqtt.Size = new System.Drawing.Size(93, 17);
+            this.subscribeMqtt.Size = new System.Drawing.Size(114, 20);
             this.subscribeMqtt.TabIndex = 1;
             this.subscribeMqtt.Text = "SUSBSCRIBE";
             this.subscribeMqtt.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 30);
+            this.textBox1.Location = new System.Drawing.Point(64, 37);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "1234";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 33);
+            this.label1.Location = new System.Drawing.Point(28, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.Size = new System.Drawing.Size(23, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "ID:";
             // 
@@ -87,9 +91,11 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.publishMqtt);
             this.groupBox1.Controls.Add(this.subscribeMqtt);
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(17, 16);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(353, 100);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(650, 123);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Session";
@@ -98,9 +104,10 @@
             // 
             this.disabledMqtt.AutoSize = true;
             this.disabledMqtt.Checked = true;
-            this.disabledMqtt.Location = new System.Drawing.Point(169, 19);
+            this.disabledMqtt.Location = new System.Drawing.Point(225, 23);
+            this.disabledMqtt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.disabledMqtt.Name = "disabledMqtt";
-            this.disabledMqtt.Size = new System.Drawing.Size(78, 17);
+            this.disabledMqtt.Size = new System.Drawing.Size(94, 20);
             this.disabledMqtt.TabIndex = 4;
             this.disabledMqtt.TabStop = true;
             this.disabledMqtt.Text = "DISABLED";
@@ -108,9 +115,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(153, 225);
+            this.button1.Location = new System.Drawing.Point(204, 277);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
+            this.button1.Size = new System.Drawing.Size(100, 46);
             this.button1.TabIndex = 5;
             this.button1.Text = "Apply";
             this.button1.UseVisualStyleBackColor = true;
@@ -121,9 +129,11 @@
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.snifferActive);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(13, 119);
+            this.groupBox2.Location = new System.Drawing.Point(17, 146);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(353, 100);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(650, 123);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sniffer";
@@ -133,17 +143,19 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(68, 53);
+            this.comboBox1.Location = new System.Drawing.Point(69, 65);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(276, 21);
+            this.comboBox1.Size = new System.Drawing.Size(573, 24);
             this.comboBox1.TabIndex = 2;
             // 
             // snifferActive
             // 
             this.snifferActive.AutoSize = true;
-            this.snifferActive.Location = new System.Drawing.Point(24, 24);
+            this.snifferActive.Location = new System.Drawing.Point(11, 37);
+            this.snifferActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.snifferActive.Name = "snifferActive";
-            this.snifferActive.Size = new System.Drawing.Size(56, 17);
+            this.snifferActive.Size = new System.Drawing.Size(66, 20);
             this.snifferActive.TabIndex = 1;
             this.snifferActive.Text = "Active";
             this.snifferActive.UseVisualStyleBackColor = true;
@@ -152,21 +164,23 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 56);
+            this.label2.Location = new System.Drawing.Point(8, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Device:";
             // 
             // ConfigForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 276);
+            this.ClientSize = new System.Drawing.Size(680, 340);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConfigForm";
             this.Text = "Settings";
             this.TopMost = true;

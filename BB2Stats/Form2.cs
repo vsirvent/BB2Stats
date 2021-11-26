@@ -766,8 +766,10 @@ namespace BB2Stats
                         }
                     }
                     break;
+                    
                 case Types.ActionTypes.PickUp:
                     {
+                        /*
                         lastActionBlock = false;
 
                         foreach (var result in action.Results)
@@ -793,12 +795,12 @@ namespace BB2Stats
                                 }
                             }
                         }
+                        */
                     }
                     break;
                 case Types.ActionTypes.Catch:
                     {
                         lastActionBlock = false;
-
                         foreach (var result in action.Results)
                         {
                             if (result.IsOrderCompleted == "1")
@@ -827,7 +829,6 @@ namespace BB2Stats
                 case Types.ActionTypes.Pass:
                     {
                         lastActionBlock = false;
-
                         foreach (var result in action.Results)
                         {
                             if (result.IsOrderCompleted == "1")
@@ -839,12 +840,12 @@ namespace BB2Stats
                                     {
                                         case 0:
                                             {
-                                                //form.Invoke((MethodInvoker)delegate { form.okCatch.Value++; });
+                                                form.Invoke((MethodInvoker)delegate { form.okPass.Value++; });
                                             }
                                             break;
                                         default:
                                             {
-                                                form.Invoke((MethodInvoker)delegate { form.failCatch.Value++; });
+                                                form.Invoke((MethodInvoker)delegate { form.failPass.Value++; });
                                             }
                                             break;
                                     }

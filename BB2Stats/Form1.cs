@@ -56,10 +56,8 @@ namespace BB2Stats
             public SkillResult dodge_skill = new SkillResult();
             public SkillResult catch_skill = new SkillResult();
             public SkillResult ap_skill = new SkillResult();
+            public SkillResult pass_skill = new SkillResult();
 
-            public int total_dodge = 0;
-            public int total_catch = 0;
-            public int total_ap = 0;
         }
 
         Data data = new Data();
@@ -107,6 +105,8 @@ namespace BB2Stats
             okCatch.Value = data.catch_skill.ok_count;
             failAp.Value = data.ap_skill.fail_count;
             okAp.Value = data.ap_skill.ok_count;
+            failPass.Value = data.pass_skill.fail_count;
+            okPass.Value = data.pass_skill.ok_count;
             stun.Value = data.nstuns;
             ko.Value = data.nkos;
             injury.Value = data.ninjuries;
@@ -299,37 +299,49 @@ namespace BB2Stats
             data.ninjuries = (int)injury.Value;
             updateBreaks();
         }
-        private void pass_ValueChanged(object sender, EventArgs e)
+        private void dodge_ValueChanged(object sender, EventArgs e)
         {
             data.dodge_skill.fail_count = (int)(failDodge.Value);
             data.dodge_skill.ok_count = (int)(okDodge.Value);
-            data.total_dodge = (int)(failDodge.Value + okDodge.Value);
-            totalDodge.Text = data.total_dodge.ToString();
-            if (data.total_dodge > 0)
+            int total_dodge = (int)(failDodge.Value + okDodge.Value);
+            totalDodge.Text = total_dodge.ToString();
+            if (total_dodge > 0)
             {
-                percentDodge.Text = (((int)okDodge.Value * 100) / data.total_dodge).ToString();
+                percentDodge.Text = (((int)okDodge.Value * 100) / total_dodge).ToString();
             }
         }
         private void catch_ValueChanged(object sender, EventArgs e)
         {
             data.catch_skill.fail_count = (int)(failCatch.Value);
             data.catch_skill.ok_count = (int)(okCatch.Value);
-            data.total_catch = (int)(failCatch.Value + okCatch.Value);
-            totalCatch.Text = data.total_catch.ToString();
-            if (data.total_catch > 0)
+            int total_catch = (int)(failCatch.Value + okCatch.Value);
+            totalCatch.Text = total_catch.ToString();
+            if (total_catch > 0)
             {
-                percentCatch.Text = (((int)okCatch.Value * 100) / data.total_catch).ToString();
+                percentCatch.Text = (((int)okCatch.Value * 100) / total_catch).ToString();
             }
         }
         private void ap_ValueChanged(object sender, EventArgs e)
         {
             data.ap_skill.fail_count = (int)(failAp.Value);
             data.ap_skill.ok_count = (int)(okAp.Value);
-            data.total_ap = (int)(failAp.Value + okAp.Value);
-            totalAp.Text = data.total_ap.ToString();
-            if (data.total_ap > 0)
+            int total_ap = (int)(failAp.Value + okAp.Value);
+            totalAp.Text = total_ap.ToString();
+            if (total_ap > 0)
             {
-                percentAp.Text = (((int)okAp.Value * 100) / data.total_ap).ToString();
+                percentAp.Text = (((int)okAp.Value * 100) / total_ap).ToString();
+            }
+        }
+
+        private void pass_ValueChanged(object sender, EventArgs e)
+        {
+            data.pass_skill.fail_count = (int)(failPass.Value);
+            data.pass_skill.ok_count = (int)(okPass.Value);
+            int total_pass = (int)(failPass.Value + okPass.Value);
+            totalPass.Text = total_pass.ToString();
+            if (total_pass > 0)
+            {
+                percentPass.Text = (((int)okPass.Value * 100) / total_pass).ToString();
             }
         }
 
