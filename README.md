@@ -20,7 +20,7 @@ Get and install NPCAP from repo: https://github.com/nmap/npcap
 
 ### Automatic stats
 
-To use automatic stats go to settings and activate "Sniff" option, select the ethernet device you are using for internet connection and "Apply". To check that sniffer is working the frame counter located at the right side of the panel must increase. The person filling the stats must PUBLISH and the caster that reads it must be SUBSCRIBER. 
+To use automatic stats go to settings and activate "Sniff" option, select the ethernet device you are using for internet connection and "Apply". To check that sniffer is working the frame counter located at the right side of the panel must increase. 
 
 ### Manual stats
 
@@ -30,7 +30,7 @@ Use the main stats panel to add manually stats to the application. This can be o
 
 ### Session
 
-This is used to share stats between 2 BB2Stats applications running in different devices, useful when using manual stats and one person manages the stats in background and the caster shows it, as it's very difficult to fill the stats manually and cast a game at the same time.
+This is used to share stats between 2 BB2Stats applications running in different devices, useful when using manual stats and one person manages the stats in background and the caster shows it, as it's very difficult to fill the stats manually and cast a game at the same time. The person filling the stats must PUBLISH and the caster that reads it must be SUBSCRIBER. 
 
 ### Sniffer
 
