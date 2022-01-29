@@ -55,7 +55,7 @@ namespace BB2Stats
             this.panel1.Location = new System.Drawing.Point(7, 17);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(552, 336);
+            this.panel1.Size = new System.Drawing.Size(552, 386);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
@@ -69,7 +69,7 @@ namespace BB2Stats
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(567, 356);
+            this.groupBox1.Size = new System.Drawing.Size(567, 406);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TEAM 1";
@@ -91,7 +91,7 @@ namespace BB2Stats
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(566, 356);
+            this.groupBox2.Size = new System.Drawing.Size(566, 406);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "TEAM 2";
@@ -101,7 +101,7 @@ namespace BB2Stats
             this.panel2.Location = new System.Drawing.Point(7, 17);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(552, 336);
+            this.panel2.Size = new System.Drawing.Size(552, 386);
             this.panel2.TabIndex = 0;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
@@ -169,7 +169,7 @@ namespace BB2Stats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1225, 370);
+            this.ClientSize = new System.Drawing.Size(1225, 420);
             this.Controls.Add(this.nFrames);
             this.Controls.Add(this.snifferStatus);
             this.Controls.Add(this.minimize);

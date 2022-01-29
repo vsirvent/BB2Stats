@@ -322,4 +322,7 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cp $(ProjectDir)/fonts/* $(ProjectDir)/$(OutDir)</PostBuildEvent>
+  </PropertyGroup>
 </Project>

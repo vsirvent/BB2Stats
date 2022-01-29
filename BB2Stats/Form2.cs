@@ -694,6 +694,7 @@ namespace BB2Stats
                     }
                     break;
                 case Types.ActionTypes.TakeDamage:
+                case Types.ActionTypes.Foul:
                     {
                         foreach (var result in action.Results)
                         {
@@ -736,14 +737,18 @@ namespace BB2Stats
                                 Types.RollType roll_type = (Types.RollType)Int32.Parse(result.RollType);
                                 if (roll_type == Types.RollType.GFI)
                                 {
-                                    int dice = Int32.Parse(result.CoachChoices[0].ListDices.Substring(1, 1));
-                                    if (dice > 1)
+                                    switch (Int32.Parse(result.ResultType))
                                     {
-                                        form.Invoke((MethodInvoker)delegate { form.okAp.Value++; });
-                                    }
-                                    else
-                                    {
-                                        form.Invoke((MethodInvoker)delegate { form.failAp.Value++; });
+                                        case 0:
+                                            {
+                                                form.Invoke((MethodInvoker)delegate { form.okAp.Value++; });
+                                            }
+                                            break;
+                                        default:
+                                            {
+                                                form.Invoke((MethodInvoker)delegate { form.failAp.Value++; });
+                                            }
+                                            break;
                                     }
                                 }
                                 else if (roll_type == Types.RollType.Dodge)
@@ -768,8 +773,7 @@ namespace BB2Stats
                     break;
                     
                 case Types.ActionTypes.PickUp:
-                    {
-                        /*
+                    {                        
                         lastActionBlock = false;
 
                         foreach (var result in action.Results)
@@ -783,19 +787,18 @@ namespace BB2Stats
                                     {
                                         case 0:
                                             {
-                                                form.Invoke((MethodInvoker)delegate { form.okCatch.Value++; });
+                                                form.Invoke((MethodInvoker)delegate { form.okPickUp.Value++; });
                                             }
                                             break;
                                         default:
                                             {
-                                                form.Invoke((MethodInvoker)delegate { form.failCatch.Value++; });
+                                                form.Invoke((MethodInvoker)delegate { form.failPickUp.Value++; });
                                             }
                                             break;
                                     }
                                 }
                             }
-                        }
-                        */
+                        }                        
                     }
                     break;
                 case Types.ActionTypes.Catch:

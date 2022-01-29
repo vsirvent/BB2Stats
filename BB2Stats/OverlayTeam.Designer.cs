@@ -208,6 +208,12 @@
             this.totalPass = new System.Windows.Forms.TextBox();
             this.okPass = new System.Windows.Forms.NumericUpDown();
             this.failPass = new System.Windows.Forms.NumericUpDown();
+            this.pickUpLabel = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.percentPickUp = new System.Windows.Forms.TextBox();
+            this.totalPickUp = new System.Windows.Forms.TextBox();
+            this.okPickUp = new System.Windows.Forms.NumericUpDown();
+            this.failPickUp = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okAp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.failAp)).BeginInit();
@@ -249,25 +255,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.failPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.okPickUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.failPickUp)).BeginInit();
             this.SuspendLayout();
             // 
             // powsPercent
             // 
             this.powsPercent.BackColor = System.Drawing.Color.White;
-            this.powsPercent.Location = new System.Drawing.Point(1624, 588);
-            this.powsPercent.Margin = new System.Windows.Forms.Padding(4);
+            this.powsPercent.Location = new System.Drawing.Point(1218, 478);
             this.powsPercent.Name = "powsPercent";
             this.powsPercent.ReadOnly = true;
-            this.powsPercent.Size = new System.Drawing.Size(63, 22);
+            this.powsPercent.Size = new System.Drawing.Size(48, 20);
             this.powsPercent.TabIndex = 139;
             this.powsPercent.Text = "0";
             // 
             // label22
             // 
-            this.label22.Location = new System.Drawing.Point(1624, 566);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(1218, 460);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(64, 16);
+            this.label22.Size = new System.Drawing.Size(48, 13);
             this.label22.TabIndex = 138;
             this.label22.Text = "%";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -275,132 +282,120 @@
             // threePercentSkull
             // 
             this.threePercentSkull.BackColor = System.Drawing.Color.White;
-            this.threePercentSkull.Location = new System.Drawing.Point(1123, 358);
-            this.threePercentSkull.Margin = new System.Windows.Forms.Padding(4);
+            this.threePercentSkull.Location = new System.Drawing.Point(842, 291);
             this.threePercentSkull.Name = "threePercentSkull";
             this.threePercentSkull.ReadOnly = true;
-            this.threePercentSkull.Size = new System.Drawing.Size(32, 22);
+            this.threePercentSkull.Size = new System.Drawing.Size(25, 20);
             this.threePercentSkull.TabIndex = 137;
             this.threePercentSkull.Text = "0";
             // 
             // twoPercentSkull
             // 
             this.twoPercentSkull.BackColor = System.Drawing.Color.White;
-            this.twoPercentSkull.Location = new System.Drawing.Point(1123, 326);
-            this.twoPercentSkull.Margin = new System.Windows.Forms.Padding(4);
+            this.twoPercentSkull.Location = new System.Drawing.Point(842, 265);
             this.twoPercentSkull.Name = "twoPercentSkull";
             this.twoPercentSkull.ReadOnly = true;
-            this.twoPercentSkull.Size = new System.Drawing.Size(32, 22);
+            this.twoPercentSkull.Size = new System.Drawing.Size(25, 20);
             this.twoPercentSkull.TabIndex = 136;
             this.twoPercentSkull.Text = "0";
             // 
             // onePercentSkull
             // 
             this.onePercentSkull.BackColor = System.Drawing.Color.White;
-            this.onePercentSkull.Location = new System.Drawing.Point(1123, 297);
-            this.onePercentSkull.Margin = new System.Windows.Forms.Padding(4);
+            this.onePercentSkull.Location = new System.Drawing.Point(842, 241);
             this.onePercentSkull.Name = "onePercentSkull";
             this.onePercentSkull.ReadOnly = true;
-            this.onePercentSkull.Size = new System.Drawing.Size(32, 22);
+            this.onePercentSkull.Size = new System.Drawing.Size(25, 20);
             this.onePercentSkull.TabIndex = 135;
             this.onePercentSkull.Text = "0";
             // 
             // negPercentSkull
             // 
             this.negPercentSkull.BackColor = System.Drawing.Color.White;
-            this.negPercentSkull.Location = new System.Drawing.Point(1123, 240);
-            this.negPercentSkull.Margin = new System.Windows.Forms.Padding(4);
+            this.negPercentSkull.Location = new System.Drawing.Point(842, 195);
             this.negPercentSkull.Name = "negPercentSkull";
             this.negPercentSkull.ReadOnly = true;
-            this.negPercentSkull.Size = new System.Drawing.Size(32, 22);
+            this.negPercentSkull.Size = new System.Drawing.Size(25, 20);
             this.negPercentSkull.TabIndex = 133;
             this.negPercentSkull.Text = "0";
             // 
             // threePercentPush
             // 
             this.threePercentPush.BackColor = System.Drawing.Color.White;
-            this.threePercentPush.Location = new System.Drawing.Point(1233, 358);
-            this.threePercentPush.Margin = new System.Windows.Forms.Padding(4);
+            this.threePercentPush.Location = new System.Drawing.Point(925, 291);
             this.threePercentPush.Name = "threePercentPush";
             this.threePercentPush.ReadOnly = true;
-            this.threePercentPush.Size = new System.Drawing.Size(32, 22);
+            this.threePercentPush.Size = new System.Drawing.Size(25, 20);
             this.threePercentPush.TabIndex = 132;
             this.threePercentPush.Text = "0";
             // 
             // twoPercentPush
             // 
             this.twoPercentPush.BackColor = System.Drawing.Color.White;
-            this.twoPercentPush.Location = new System.Drawing.Point(1233, 326);
-            this.twoPercentPush.Margin = new System.Windows.Forms.Padding(4);
+            this.twoPercentPush.Location = new System.Drawing.Point(925, 265);
             this.twoPercentPush.Name = "twoPercentPush";
             this.twoPercentPush.ReadOnly = true;
-            this.twoPercentPush.Size = new System.Drawing.Size(32, 22);
+            this.twoPercentPush.Size = new System.Drawing.Size(25, 20);
             this.twoPercentPush.TabIndex = 131;
             this.twoPercentPush.Text = "0";
             // 
             // onePercentPush
             // 
             this.onePercentPush.BackColor = System.Drawing.Color.White;
-            this.onePercentPush.Location = new System.Drawing.Point(1233, 297);
-            this.onePercentPush.Margin = new System.Windows.Forms.Padding(4);
+            this.onePercentPush.Location = new System.Drawing.Point(925, 241);
             this.onePercentPush.Name = "onePercentPush";
             this.onePercentPush.ReadOnly = true;
-            this.onePercentPush.Size = new System.Drawing.Size(32, 22);
+            this.onePercentPush.Size = new System.Drawing.Size(25, 20);
             this.onePercentPush.TabIndex = 130;
             this.onePercentPush.Text = "0";
             // 
             // negPercentPush
             // 
             this.negPercentPush.BackColor = System.Drawing.Color.White;
-            this.negPercentPush.Location = new System.Drawing.Point(1233, 240);
-            this.negPercentPush.Margin = new System.Windows.Forms.Padding(4);
+            this.negPercentPush.Location = new System.Drawing.Point(925, 195);
             this.negPercentPush.Name = "negPercentPush";
             this.negPercentPush.ReadOnly = true;
-            this.negPercentPush.Size = new System.Drawing.Size(32, 22);
+            this.negPercentPush.Size = new System.Drawing.Size(25, 20);
             this.negPercentPush.TabIndex = 128;
             this.negPercentPush.Text = "0";
             // 
             // threePercentDodge
             // 
             this.threePercentDodge.BackColor = System.Drawing.Color.White;
-            this.threePercentDodge.Location = new System.Drawing.Point(1345, 358);
-            this.threePercentDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.threePercentDodge.Location = new System.Drawing.Point(1009, 291);
             this.threePercentDodge.Name = "threePercentDodge";
             this.threePercentDodge.ReadOnly = true;
-            this.threePercentDodge.Size = new System.Drawing.Size(32, 22);
+            this.threePercentDodge.Size = new System.Drawing.Size(25, 20);
             this.threePercentDodge.TabIndex = 127;
             this.threePercentDodge.Text = "0";
             // 
             // twoPercentDodge
             // 
             this.twoPercentDodge.BackColor = System.Drawing.Color.White;
-            this.twoPercentDodge.Location = new System.Drawing.Point(1345, 326);
-            this.twoPercentDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.twoPercentDodge.Location = new System.Drawing.Point(1009, 265);
             this.twoPercentDodge.Name = "twoPercentDodge";
             this.twoPercentDodge.ReadOnly = true;
-            this.twoPercentDodge.Size = new System.Drawing.Size(32, 22);
+            this.twoPercentDodge.Size = new System.Drawing.Size(25, 20);
             this.twoPercentDodge.TabIndex = 126;
             this.twoPercentDodge.Text = "0";
             // 
             // onePercentDodge
             // 
             this.onePercentDodge.BackColor = System.Drawing.Color.White;
-            this.onePercentDodge.Location = new System.Drawing.Point(1345, 297);
-            this.onePercentDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.onePercentDodge.Location = new System.Drawing.Point(1009, 241);
             this.onePercentDodge.Name = "onePercentDodge";
             this.onePercentDodge.ReadOnly = true;
-            this.onePercentDodge.Size = new System.Drawing.Size(32, 22);
+            this.onePercentDodge.Size = new System.Drawing.Size(25, 20);
             this.onePercentDodge.TabIndex = 125;
             this.onePercentDodge.Text = "0";
             // 
             // negPercentDodge
             // 
             this.negPercentDodge.BackColor = System.Drawing.Color.White;
-            this.negPercentDodge.Location = new System.Drawing.Point(1345, 240);
-            this.negPercentDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.negPercentDodge.Location = new System.Drawing.Point(1009, 195);
             this.negPercentDodge.Name = "negPercentDodge";
             this.negPercentDodge.ReadOnly = true;
-            this.negPercentDodge.Size = new System.Drawing.Size(32, 22);
+            this.negPercentDodge.Size = new System.Drawing.Size(25, 20);
             this.negPercentDodge.TabIndex = 123;
             this.negPercentDodge.Text = "0";
             // 
@@ -408,159 +403,144 @@
             // 
             this.threePercentPow.BackColor = System.Drawing.Color.White;
             this.threePercentPow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.threePercentPow.Location = new System.Drawing.Point(1632, 358);
-            this.threePercentPow.Margin = new System.Windows.Forms.Padding(4);
+            this.threePercentPow.Location = new System.Drawing.Point(1224, 291);
             this.threePercentPow.Name = "threePercentPow";
             this.threePercentPow.ReadOnly = true;
-            this.threePercentPow.Size = new System.Drawing.Size(33, 22);
+            this.threePercentPow.Size = new System.Drawing.Size(25, 20);
             this.threePercentPow.TabIndex = 121;
             this.threePercentPow.Text = "0";
             // 
             // twoPercentPow
             // 
             this.twoPercentPow.BackColor = System.Drawing.Color.White;
-            this.twoPercentPow.Location = new System.Drawing.Point(1632, 326);
-            this.twoPercentPow.Margin = new System.Windows.Forms.Padding(4);
+            this.twoPercentPow.Location = new System.Drawing.Point(1224, 265);
             this.twoPercentPow.Name = "twoPercentPow";
             this.twoPercentPow.ReadOnly = true;
-            this.twoPercentPow.Size = new System.Drawing.Size(32, 22);
+            this.twoPercentPow.Size = new System.Drawing.Size(25, 20);
             this.twoPercentPow.TabIndex = 120;
             this.twoPercentPow.Text = "0";
             // 
             // onePercentPow
             // 
             this.onePercentPow.BackColor = System.Drawing.Color.White;
-            this.onePercentPow.Location = new System.Drawing.Point(1632, 297);
-            this.onePercentPow.Margin = new System.Windows.Forms.Padding(4);
+            this.onePercentPow.Location = new System.Drawing.Point(1224, 241);
             this.onePercentPow.Name = "onePercentPow";
             this.onePercentPow.ReadOnly = true;
-            this.onePercentPow.Size = new System.Drawing.Size(32, 22);
+            this.onePercentPow.Size = new System.Drawing.Size(25, 20);
             this.onePercentPow.TabIndex = 119;
             this.onePercentPow.Text = "0";
             // 
             // negPercentPow
             // 
             this.negPercentPow.BackColor = System.Drawing.Color.White;
-            this.negPercentPow.Location = new System.Drawing.Point(1632, 240);
-            this.negPercentPow.Margin = new System.Windows.Forms.Padding(4);
+            this.negPercentPow.Location = new System.Drawing.Point(1224, 195);
             this.negPercentPow.Name = "negPercentPow";
             this.negPercentPow.ReadOnly = true;
-            this.negPercentPow.Size = new System.Drawing.Size(32, 22);
+            this.negPercentPow.Size = new System.Drawing.Size(25, 20);
             this.negPercentPow.TabIndex = 118;
             this.negPercentPow.Text = "0";
             // 
             // threePercentBlock
             // 
             this.threePercentBlock.BackColor = System.Drawing.Color.White;
-            this.threePercentBlock.Location = new System.Drawing.Point(1488, 358);
-            this.threePercentBlock.Margin = new System.Windows.Forms.Padding(4);
+            this.threePercentBlock.Location = new System.Drawing.Point(1116, 291);
             this.threePercentBlock.Name = "threePercentBlock";
             this.threePercentBlock.ReadOnly = true;
-            this.threePercentBlock.Size = new System.Drawing.Size(32, 22);
+            this.threePercentBlock.Size = new System.Drawing.Size(25, 20);
             this.threePercentBlock.TabIndex = 117;
             this.threePercentBlock.Text = "0";
             // 
             // twoPercentBlock
             // 
             this.twoPercentBlock.BackColor = System.Drawing.Color.White;
-            this.twoPercentBlock.Location = new System.Drawing.Point(1488, 326);
-            this.twoPercentBlock.Margin = new System.Windows.Forms.Padding(4);
+            this.twoPercentBlock.Location = new System.Drawing.Point(1116, 265);
             this.twoPercentBlock.Name = "twoPercentBlock";
             this.twoPercentBlock.ReadOnly = true;
-            this.twoPercentBlock.Size = new System.Drawing.Size(32, 22);
+            this.twoPercentBlock.Size = new System.Drawing.Size(25, 20);
             this.twoPercentBlock.TabIndex = 116;
             this.twoPercentBlock.Text = "0";
             // 
             // onePercentBlock
             // 
             this.onePercentBlock.BackColor = System.Drawing.Color.White;
-            this.onePercentBlock.Location = new System.Drawing.Point(1488, 297);
-            this.onePercentBlock.Margin = new System.Windows.Forms.Padding(4);
+            this.onePercentBlock.Location = new System.Drawing.Point(1116, 241);
             this.onePercentBlock.Name = "onePercentBlock";
             this.onePercentBlock.ReadOnly = true;
-            this.onePercentBlock.Size = new System.Drawing.Size(32, 22);
+            this.onePercentBlock.Size = new System.Drawing.Size(25, 20);
             this.onePercentBlock.TabIndex = 115;
             this.onePercentBlock.Text = "0";
             // 
             // negPercentBlock
             // 
             this.negPercentBlock.BackColor = System.Drawing.Color.White;
-            this.negPercentBlock.Location = new System.Drawing.Point(1488, 240);
-            this.negPercentBlock.Margin = new System.Windows.Forms.Padding(4);
+            this.negPercentBlock.Location = new System.Drawing.Point(1116, 195);
             this.negPercentBlock.Name = "negPercentBlock";
             this.negPercentBlock.ReadOnly = true;
-            this.negPercentBlock.Size = new System.Drawing.Size(32, 22);
+            this.negPercentBlock.Size = new System.Drawing.Size(25, 20);
             this.negPercentBlock.TabIndex = 113;
             this.negPercentBlock.Text = "0";
             // 
             // totalDice
             // 
             this.totalDice.BackColor = System.Drawing.Color.White;
-            this.totalDice.Location = new System.Drawing.Point(1701, 390);
-            this.totalDice.Margin = new System.Windows.Forms.Padding(4);
+            this.totalDice.Location = new System.Drawing.Point(1276, 317);
             this.totalDice.Name = "totalDice";
             this.totalDice.ReadOnly = true;
-            this.totalDice.Size = new System.Drawing.Size(45, 22);
+            this.totalDice.Size = new System.Drawing.Size(35, 20);
             this.totalDice.TabIndex = 112;
             this.totalDice.Text = "0";
             this.totalDice.TextChanged += new System.EventHandler(this.totalDice_TextChanged);
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(1552, 566);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(1164, 460);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(64, 16);
+            this.label16.Size = new System.Drawing.Size(48, 13);
             this.label16.TabIndex = 111;
             this.label16.Text = "POWS";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pows
             // 
-            this.pows.Location = new System.Drawing.Point(1551, 588);
-            this.pows.Margin = new System.Windows.Forms.Padding(4);
+            this.pows.Location = new System.Drawing.Point(1163, 478);
             this.pows.Name = "pows";
-            this.pows.Size = new System.Drawing.Size(65, 22);
+            this.pows.Size = new System.Drawing.Size(49, 20);
             this.pows.TabIndex = 110;
             this.pows.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // percentAp
             // 
             this.percentAp.BackColor = System.Drawing.Color.White;
-            this.percentAp.Location = new System.Drawing.Point(1317, 588);
-            this.percentAp.Margin = new System.Windows.Forms.Padding(4);
+            this.percentAp.Location = new System.Drawing.Point(988, 478);
             this.percentAp.Name = "percentAp";
             this.percentAp.ReadOnly = true;
-            this.percentAp.Size = new System.Drawing.Size(55, 22);
+            this.percentAp.Size = new System.Drawing.Size(42, 20);
             this.percentAp.TabIndex = 109;
             this.percentAp.Text = "0";
             // 
             // totalAp
             // 
             this.totalAp.BackColor = System.Drawing.Color.White;
-            this.totalAp.Location = new System.Drawing.Point(1256, 588);
-            this.totalAp.Margin = new System.Windows.Forms.Padding(4);
+            this.totalAp.Location = new System.Drawing.Point(942, 478);
             this.totalAp.Name = "totalAp";
             this.totalAp.ReadOnly = true;
-            this.totalAp.Size = new System.Drawing.Size(51, 22);
+            this.totalAp.Size = new System.Drawing.Size(39, 20);
             this.totalAp.TabIndex = 108;
             this.totalAp.Text = "0";
             // 
             // okAp
             // 
-            this.okAp.Location = new System.Drawing.Point(1184, 590);
-            this.okAp.Margin = new System.Windows.Forms.Padding(4);
+            this.okAp.Location = new System.Drawing.Point(888, 479);
             this.okAp.Name = "okAp";
-            this.okAp.Size = new System.Drawing.Size(64, 22);
+            this.okAp.Size = new System.Drawing.Size(48, 20);
             this.okAp.TabIndex = 107;
             this.okAp.ValueChanged += new System.EventHandler(this.ap_ValueChanged);
             // 
             // failAp
             // 
-            this.failAp.Location = new System.Drawing.Point(1112, 590);
-            this.failAp.Margin = new System.Windows.Forms.Padding(4);
+            this.failAp.Location = new System.Drawing.Point(834, 479);
             this.failAp.Name = "failAp";
-            this.failAp.Size = new System.Drawing.Size(64, 22);
+            this.failAp.Size = new System.Drawing.Size(48, 20);
             this.failAp.TabIndex = 106;
             this.failAp.ValueChanged += new System.EventHandler(this.ap_ValueChanged);
             // 
@@ -568,10 +548,9 @@
             // 
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(374, 781);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Location = new System.Drawing.Point(310, 664);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox11.Size = new System.Drawing.Size(42, 45);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 105;
             this.pictureBox11.TabStop = false;
@@ -579,20 +558,18 @@
             // percentBreak
             // 
             this.percentBreak.BackColor = System.Drawing.Color.White;
-            this.percentBreak.Location = new System.Drawing.Point(1480, 588);
-            this.percentBreak.Margin = new System.Windows.Forms.Padding(4);
+            this.percentBreak.Location = new System.Drawing.Point(1110, 478);
             this.percentBreak.Name = "percentBreak";
             this.percentBreak.ReadOnly = true;
-            this.percentBreak.Size = new System.Drawing.Size(61, 22);
+            this.percentBreak.Size = new System.Drawing.Size(47, 20);
             this.percentBreak.TabIndex = 104;
             this.percentBreak.Text = "0";
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(1485, 566);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(1114, 460);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(49, 16);
+            this.label15.Size = new System.Drawing.Size(37, 13);
             this.label15.TabIndex = 103;
             this.label15.Text = "%";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -600,30 +577,27 @@
             // totalBreak
             // 
             this.totalBreak.BackColor = System.Drawing.Color.White;
-            this.totalBreak.Location = new System.Drawing.Point(1408, 588);
-            this.totalBreak.Margin = new System.Windows.Forms.Padding(4);
+            this.totalBreak.Location = new System.Drawing.Point(1056, 478);
             this.totalBreak.Name = "totalBreak";
             this.totalBreak.ReadOnly = true;
-            this.totalBreak.Size = new System.Drawing.Size(63, 22);
+            this.totalBreak.Size = new System.Drawing.Size(48, 20);
             this.totalBreak.TabIndex = 102;
             this.totalBreak.Text = "0";
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(1409, 566);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(1057, 460);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(64, 16);
+            this.label14.Size = new System.Drawing.Size(48, 13);
             this.label14.TabIndex = 101;
             this.label14.Text = "BREAKS";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // injury
             // 
-            this.injury.Location = new System.Drawing.Point(1552, 518);
-            this.injury.Margin = new System.Windows.Forms.Padding(4);
+            this.injury.Location = new System.Drawing.Point(1164, 421);
             this.injury.Name = "injury";
-            this.injury.Size = new System.Drawing.Size(64, 22);
+            this.injury.Size = new System.Drawing.Size(48, 20);
             this.injury.TabIndex = 100;
             this.injury.ValueChanged += new System.EventHandler(this.injury_ValueChanged);
             // 
@@ -631,29 +605,26 @@
             // 
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(84, 602);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Location = new System.Drawing.Point(77, 493);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox10.Size = new System.Drawing.Size(49, 53);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 99;
             this.pictureBox10.TabStop = false;
             // 
             // ko
             // 
-            this.ko.Location = new System.Drawing.Point(1480, 518);
-            this.ko.Margin = new System.Windows.Forms.Padding(4);
+            this.ko.Location = new System.Drawing.Point(1110, 421);
             this.ko.Name = "ko";
-            this.ko.Size = new System.Drawing.Size(64, 22);
+            this.ko.Size = new System.Drawing.Size(48, 20);
             this.ko.TabIndex = 98;
             this.ko.ValueChanged += new System.EventHandler(this.ko_ValueChanged);
             // 
             // stun
             // 
-            this.stun.Location = new System.Drawing.Point(1408, 518);
-            this.stun.Margin = new System.Windows.Forms.Padding(4);
+            this.stun.Location = new System.Drawing.Point(1056, 421);
             this.stun.Name = "stun";
-            this.stun.Size = new System.Drawing.Size(64, 22);
+            this.stun.Size = new System.Drawing.Size(48, 20);
             this.stun.TabIndex = 97;
             this.stun.ValueChanged += new System.EventHandler(this.stun_ValueChanged);
             // 
@@ -661,10 +632,9 @@
             // 
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(84, 771);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Location = new System.Drawing.Point(77, 630);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox9.Size = new System.Drawing.Size(49, 53);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 96;
             this.pictureBox9.TabStop = false;
@@ -673,10 +643,9 @@
             // 
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(1480, 460);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Location = new System.Drawing.Point(1110, 374);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(63, 51);
+            this.pictureBox8.Size = new System.Drawing.Size(48, 42);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 95;
             this.pictureBox8.TabStop = false;
@@ -685,119 +654,107 @@
             // percentCatch
             // 
             this.percentCatch.BackColor = System.Drawing.Color.White;
-            this.percentCatch.Location = new System.Drawing.Point(1317, 529);
-            this.percentCatch.Margin = new System.Windows.Forms.Padding(4);
+            this.percentCatch.Location = new System.Drawing.Point(988, 430);
             this.percentCatch.Name = "percentCatch";
             this.percentCatch.ReadOnly = true;
-            this.percentCatch.Size = new System.Drawing.Size(55, 22);
+            this.percentCatch.Size = new System.Drawing.Size(42, 20);
             this.percentCatch.TabIndex = 94;
             this.percentCatch.Text = "0";
             // 
             // totalCatch
             // 
             this.totalCatch.BackColor = System.Drawing.Color.White;
-            this.totalCatch.Location = new System.Drawing.Point(1256, 529);
-            this.totalCatch.Margin = new System.Windows.Forms.Padding(4);
+            this.totalCatch.Location = new System.Drawing.Point(942, 430);
             this.totalCatch.Name = "totalCatch";
             this.totalCatch.ReadOnly = true;
-            this.totalCatch.Size = new System.Drawing.Size(51, 22);
+            this.totalCatch.Size = new System.Drawing.Size(39, 20);
             this.totalCatch.TabIndex = 93;
             this.totalCatch.Text = "0";
             // 
             // percentDodge
             // 
             this.percentDodge.BackColor = System.Drawing.Color.White;
-            this.percentDodge.Location = new System.Drawing.Point(1317, 476);
-            this.percentDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.percentDodge.Location = new System.Drawing.Point(988, 387);
             this.percentDodge.Name = "percentDodge";
             this.percentDodge.ReadOnly = true;
-            this.percentDodge.Size = new System.Drawing.Size(55, 22);
+            this.percentDodge.Size = new System.Drawing.Size(42, 20);
             this.percentDodge.TabIndex = 92;
             this.percentDodge.Text = "0";
             // 
             // totalDodge
             // 
             this.totalDodge.BackColor = System.Drawing.Color.White;
-            this.totalDodge.Location = new System.Drawing.Point(1256, 476);
-            this.totalDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.totalDodge.Location = new System.Drawing.Point(942, 387);
             this.totalDodge.Name = "totalDodge";
             this.totalDodge.ReadOnly = true;
-            this.totalDodge.Size = new System.Drawing.Size(51, 22);
+            this.totalDodge.Size = new System.Drawing.Size(39, 20);
             this.totalDodge.TabIndex = 91;
             this.totalDodge.Text = "0";
             // 
             // okCatch
             // 
-            this.okCatch.Location = new System.Drawing.Point(1184, 530);
-            this.okCatch.Margin = new System.Windows.Forms.Padding(4);
+            this.okCatch.Location = new System.Drawing.Point(888, 431);
             this.okCatch.Name = "okCatch";
-            this.okCatch.Size = new System.Drawing.Size(64, 22);
+            this.okCatch.Size = new System.Drawing.Size(48, 20);
             this.okCatch.TabIndex = 90;
             this.okCatch.ValueChanged += new System.EventHandler(this.catch_ValueChanged);
             // 
             // failCatch
             // 
-            this.failCatch.Location = new System.Drawing.Point(1112, 530);
-            this.failCatch.Margin = new System.Windows.Forms.Padding(4);
+            this.failCatch.Location = new System.Drawing.Point(834, 431);
             this.failCatch.Name = "failCatch";
-            this.failCatch.Size = new System.Drawing.Size(64, 22);
+            this.failCatch.Size = new System.Drawing.Size(48, 20);
             this.failCatch.TabIndex = 89;
             this.failCatch.ValueChanged += new System.EventHandler(this.catch_ValueChanged);
             // 
             // okDodge
             // 
-            this.okDodge.Location = new System.Drawing.Point(1184, 476);
-            this.okDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.okDodge.Location = new System.Drawing.Point(888, 387);
             this.okDodge.Name = "okDodge";
-            this.okDodge.Size = new System.Drawing.Size(64, 22);
+            this.okDodge.Size = new System.Drawing.Size(48, 20);
             this.okDodge.TabIndex = 86;
             this.okDodge.ValueChanged += new System.EventHandler(this.dodge_ValueChanged);
             // 
             // failDodge
             // 
-            this.failDodge.Location = new System.Drawing.Point(1112, 476);
-            this.failDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.failDodge.Location = new System.Drawing.Point(834, 387);
             this.failDodge.Name = "failDodge";
-            this.failDodge.Size = new System.Drawing.Size(64, 22);
+            this.failDodge.Size = new System.Drawing.Size(48, 20);
             this.failDodge.TabIndex = 85;
             this.failDodge.ValueChanged += new System.EventHandler(this.dodge_ValueChanged);
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(1317, 455);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(988, 370);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 17);
+            this.label13.Size = new System.Drawing.Size(46, 14);
             this.label13.TabIndex = 84;
             this.label13.Text = "%";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(1253, 457);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(940, 371);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 16);
+            this.label12.Size = new System.Drawing.Size(48, 13);
             this.label12.TabIndex = 83;
             this.label12.Text = "TOTAL";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(1181, 457);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(886, 371);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 16);
+            this.label11.Size = new System.Drawing.Size(48, 13);
             this.label11.TabIndex = 82;
             this.label11.Text = "OK";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(1109, 457);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(832, 371);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 16);
+            this.label10.Size = new System.Drawing.Size(48, 13);
             this.label10.TabIndex = 81;
             this.label10.Text = "FAIL";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -806,10 +763,9 @@
             // 
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(372, 655);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Location = new System.Drawing.Point(309, 520);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox7.Size = new System.Drawing.Size(42, 45);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 80;
             this.pictureBox7.TabStop = false;
@@ -818,30 +774,27 @@
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(372, 592);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Location = new System.Drawing.Point(309, 472);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox6.Size = new System.Drawing.Size(42, 45);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 79;
             this.pictureBox6.TabStop = false;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(1008, 426);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(756, 346);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 17);
+            this.label9.Size = new System.Drawing.Size(46, 14);
             this.label9.TabIndex = 78;
             this.label9.Text = "%";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(1005, 395);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(754, 321);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 16);
+            this.label8.Size = new System.Drawing.Size(48, 13);
             this.label8.TabIndex = 77;
             this.label8.Text = "TOT";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -849,11 +802,10 @@
             // threeTotal
             // 
             this.threeTotal.BackColor = System.Drawing.Color.White;
-            this.threeTotal.Location = new System.Drawing.Point(1701, 358);
-            this.threeTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.threeTotal.Location = new System.Drawing.Point(1276, 291);
             this.threeTotal.Name = "threeTotal";
             this.threeTotal.ReadOnly = true;
-            this.threeTotal.Size = new System.Drawing.Size(45, 22);
+            this.threeTotal.Size = new System.Drawing.Size(35, 20);
             this.threeTotal.TabIndex = 75;
             this.threeTotal.Text = "0";
             this.threeTotal.TextChanged += new System.EventHandler(this.threeTotal_TextChanged);
@@ -861,11 +813,10 @@
             // twoTotal
             // 
             this.twoTotal.BackColor = System.Drawing.Color.White;
-            this.twoTotal.Location = new System.Drawing.Point(1701, 326);
-            this.twoTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.twoTotal.Location = new System.Drawing.Point(1276, 265);
             this.twoTotal.Name = "twoTotal";
             this.twoTotal.ReadOnly = true;
-            this.twoTotal.Size = new System.Drawing.Size(45, 22);
+            this.twoTotal.Size = new System.Drawing.Size(35, 20);
             this.twoTotal.TabIndex = 74;
             this.twoTotal.Text = "0";
             this.twoTotal.TextChanged += new System.EventHandler(this.twoTotal_TextChanged);
@@ -873,11 +824,10 @@
             // oneTotal
             // 
             this.oneTotal.BackColor = System.Drawing.Color.White;
-            this.oneTotal.Location = new System.Drawing.Point(1701, 297);
-            this.oneTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.oneTotal.Location = new System.Drawing.Point(1276, 241);
             this.oneTotal.Name = "oneTotal";
             this.oneTotal.ReadOnly = true;
-            this.oneTotal.Size = new System.Drawing.Size(45, 22);
+            this.oneTotal.Size = new System.Drawing.Size(35, 20);
             this.oneTotal.TabIndex = 73;
             this.oneTotal.Text = "0";
             this.oneTotal.TextChanged += new System.EventHandler(this.oneTotal_TextChanged);
@@ -885,11 +835,10 @@
             // negTotal
             // 
             this.negTotal.BackColor = System.Drawing.Color.White;
-            this.negTotal.Location = new System.Drawing.Point(1701, 240);
-            this.negTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.negTotal.Location = new System.Drawing.Point(1276, 195);
             this.negTotal.Name = "negTotal";
             this.negTotal.ReadOnly = true;
-            this.negTotal.Size = new System.Drawing.Size(45, 22);
+            this.negTotal.Size = new System.Drawing.Size(35, 20);
             this.negTotal.TabIndex = 72;
             this.negTotal.Text = "0";
             this.negTotal.TextChanged += new System.EventHandler(this.negTotal_TextChanged);
@@ -897,309 +846,277 @@
             // powPercent
             // 
             this.powPercent.BackColor = System.Drawing.Color.White;
-            this.powPercent.Location = new System.Drawing.Point(1583, 422);
-            this.powPercent.Margin = new System.Windows.Forms.Padding(4);
+            this.powPercent.Location = new System.Drawing.Point(1187, 343);
             this.powPercent.Name = "powPercent";
             this.powPercent.ReadOnly = true;
-            this.powPercent.Size = new System.Drawing.Size(45, 22);
+            this.powPercent.Size = new System.Drawing.Size(35, 20);
             this.powPercent.TabIndex = 71;
             this.powPercent.Text = "0";
             // 
             // blockPercent
             // 
             this.blockPercent.BackColor = System.Drawing.Color.White;
-            this.blockPercent.Location = new System.Drawing.Point(1441, 422);
-            this.blockPercent.Margin = new System.Windows.Forms.Padding(4);
+            this.blockPercent.Location = new System.Drawing.Point(1081, 343);
             this.blockPercent.Name = "blockPercent";
             this.blockPercent.ReadOnly = true;
-            this.blockPercent.Size = new System.Drawing.Size(45, 22);
+            this.blockPercent.Size = new System.Drawing.Size(35, 20);
             this.blockPercent.TabIndex = 70;
             this.blockPercent.Text = "0";
             // 
             // dodgePercent
             // 
             this.dodgePercent.BackColor = System.Drawing.Color.White;
-            this.dodgePercent.Location = new System.Drawing.Point(1299, 422);
-            this.dodgePercent.Margin = new System.Windows.Forms.Padding(4);
+            this.dodgePercent.Location = new System.Drawing.Point(974, 343);
             this.dodgePercent.Name = "dodgePercent";
             this.dodgePercent.ReadOnly = true;
-            this.dodgePercent.Size = new System.Drawing.Size(45, 22);
+            this.dodgePercent.Size = new System.Drawing.Size(35, 20);
             this.dodgePercent.TabIndex = 69;
             this.dodgePercent.Text = "0";
             // 
             // pushPercent
             // 
             this.pushPercent.BackColor = System.Drawing.Color.White;
-            this.pushPercent.Location = new System.Drawing.Point(1188, 422);
-            this.pushPercent.Margin = new System.Windows.Forms.Padding(4);
+            this.pushPercent.Location = new System.Drawing.Point(891, 343);
             this.pushPercent.Name = "pushPercent";
             this.pushPercent.ReadOnly = true;
-            this.pushPercent.Size = new System.Drawing.Size(45, 22);
+            this.pushPercent.Size = new System.Drawing.Size(35, 20);
             this.pushPercent.TabIndex = 68;
             this.pushPercent.Text = "0";
             // 
             // skullPercent
             // 
             this.skullPercent.BackColor = System.Drawing.Color.White;
-            this.skullPercent.Location = new System.Drawing.Point(1077, 422);
-            this.skullPercent.Margin = new System.Windows.Forms.Padding(4);
+            this.skullPercent.Location = new System.Drawing.Point(808, 343);
             this.skullPercent.Name = "skullPercent";
             this.skullPercent.ReadOnly = true;
-            this.skullPercent.Size = new System.Drawing.Size(45, 22);
+            this.skullPercent.Size = new System.Drawing.Size(35, 20);
             this.skullPercent.TabIndex = 67;
             this.skullPercent.Text = "0";
             // 
             // powTotal
             // 
             this.powTotal.BackColor = System.Drawing.Color.White;
-            this.powTotal.Location = new System.Drawing.Point(1583, 390);
-            this.powTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.powTotal.Location = new System.Drawing.Point(1187, 317);
             this.powTotal.Name = "powTotal";
             this.powTotal.ReadOnly = true;
-            this.powTotal.Size = new System.Drawing.Size(45, 22);
+            this.powTotal.Size = new System.Drawing.Size(35, 20);
             this.powTotal.TabIndex = 66;
             this.powTotal.Text = "0";
             // 
             // blockTotal
             // 
             this.blockTotal.BackColor = System.Drawing.Color.White;
-            this.blockTotal.Location = new System.Drawing.Point(1441, 390);
-            this.blockTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.blockTotal.Location = new System.Drawing.Point(1081, 317);
             this.blockTotal.Name = "blockTotal";
             this.blockTotal.ReadOnly = true;
-            this.blockTotal.Size = new System.Drawing.Size(45, 22);
+            this.blockTotal.Size = new System.Drawing.Size(35, 20);
             this.blockTotal.TabIndex = 65;
             this.blockTotal.Text = "0";
             // 
             // dodgeTotal
             // 
             this.dodgeTotal.BackColor = System.Drawing.Color.White;
-            this.dodgeTotal.Location = new System.Drawing.Point(1299, 390);
-            this.dodgeTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.dodgeTotal.Location = new System.Drawing.Point(974, 317);
             this.dodgeTotal.Name = "dodgeTotal";
             this.dodgeTotal.ReadOnly = true;
-            this.dodgeTotal.Size = new System.Drawing.Size(45, 22);
+            this.dodgeTotal.Size = new System.Drawing.Size(35, 20);
             this.dodgeTotal.TabIndex = 64;
             this.dodgeTotal.Text = "0";
             // 
             // pushTotal
             // 
             this.pushTotal.BackColor = System.Drawing.Color.White;
-            this.pushTotal.Location = new System.Drawing.Point(1188, 390);
-            this.pushTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.pushTotal.Location = new System.Drawing.Point(891, 317);
             this.pushTotal.Name = "pushTotal";
             this.pushTotal.ReadOnly = true;
-            this.pushTotal.Size = new System.Drawing.Size(45, 22);
+            this.pushTotal.Size = new System.Drawing.Size(35, 20);
             this.pushTotal.TabIndex = 63;
             this.pushTotal.Text = "0";
             // 
             // skullTotal
             // 
             this.skullTotal.BackColor = System.Drawing.Color.White;
-            this.skullTotal.Location = new System.Drawing.Point(1077, 390);
-            this.skullTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.skullTotal.Location = new System.Drawing.Point(808, 317);
             this.skullTotal.Name = "skullTotal";
             this.skullTotal.ReadOnly = true;
-            this.skullTotal.Size = new System.Drawing.Size(45, 22);
+            this.skullTotal.Size = new System.Drawing.Size(35, 20);
             this.skullTotal.TabIndex = 62;
             this.skullTotal.Text = "0";
             // 
             // threeDicePow
             // 
-            this.threeDicePow.Location = new System.Drawing.Point(1585, 358);
-            this.threeDicePow.Margin = new System.Windows.Forms.Padding(4);
+            this.threeDicePow.Location = new System.Drawing.Point(1189, 291);
             this.threeDicePow.Name = "threeDicePow";
-            this.threeDicePow.Size = new System.Drawing.Size(47, 22);
+            this.threeDicePow.Size = new System.Drawing.Size(35, 20);
             this.threeDicePow.TabIndex = 61;
             this.threeDicePow.ValueChanged += new System.EventHandler(this.threeDice_ValueChanged);
             // 
             // twoDicePow
             // 
-            this.twoDicePow.Location = new System.Drawing.Point(1585, 326);
-            this.twoDicePow.Margin = new System.Windows.Forms.Padding(4);
+            this.twoDicePow.Location = new System.Drawing.Point(1189, 265);
             this.twoDicePow.Name = "twoDicePow";
-            this.twoDicePow.Size = new System.Drawing.Size(47, 22);
+            this.twoDicePow.Size = new System.Drawing.Size(35, 20);
             this.twoDicePow.TabIndex = 60;
             this.twoDicePow.ValueChanged += new System.EventHandler(this.twoDice_ValueChanged);
             // 
             // oneDicePow
             // 
-            this.oneDicePow.Location = new System.Drawing.Point(1585, 297);
-            this.oneDicePow.Margin = new System.Windows.Forms.Padding(4);
+            this.oneDicePow.Location = new System.Drawing.Point(1189, 241);
             this.oneDicePow.Name = "oneDicePow";
-            this.oneDicePow.Size = new System.Drawing.Size(47, 22);
+            this.oneDicePow.Size = new System.Drawing.Size(35, 20);
             this.oneDicePow.TabIndex = 59;
             this.oneDicePow.ValueChanged += new System.EventHandler(this.oneDice_ValueChanged);
             // 
             // negDicePow
             // 
-            this.negDicePow.Location = new System.Drawing.Point(1585, 240);
-            this.negDicePow.Margin = new System.Windows.Forms.Padding(4);
+            this.negDicePow.Location = new System.Drawing.Point(1189, 195);
             this.negDicePow.Name = "negDicePow";
-            this.negDicePow.Size = new System.Drawing.Size(47, 22);
+            this.negDicePow.Size = new System.Drawing.Size(35, 20);
             this.negDicePow.TabIndex = 58;
             this.negDicePow.ValueChanged += new System.EventHandler(this.negDice_ValueChanged);
             // 
             // threeDiceBlock
             // 
-            this.threeDiceBlock.Location = new System.Drawing.Point(1441, 358);
-            this.threeDiceBlock.Margin = new System.Windows.Forms.Padding(4);
+            this.threeDiceBlock.Location = new System.Drawing.Point(1081, 291);
             this.threeDiceBlock.Name = "threeDiceBlock";
-            this.threeDiceBlock.Size = new System.Drawing.Size(47, 22);
+            this.threeDiceBlock.Size = new System.Drawing.Size(35, 20);
             this.threeDiceBlock.TabIndex = 57;
             this.threeDiceBlock.ValueChanged += new System.EventHandler(this.threeDice_ValueChanged);
             // 
             // twoDiceBlock
             // 
-            this.twoDiceBlock.Location = new System.Drawing.Point(1441, 326);
-            this.twoDiceBlock.Margin = new System.Windows.Forms.Padding(4);
+            this.twoDiceBlock.Location = new System.Drawing.Point(1081, 265);
             this.twoDiceBlock.Name = "twoDiceBlock";
-            this.twoDiceBlock.Size = new System.Drawing.Size(47, 22);
+            this.twoDiceBlock.Size = new System.Drawing.Size(35, 20);
             this.twoDiceBlock.TabIndex = 56;
             this.twoDiceBlock.ValueChanged += new System.EventHandler(this.twoDice_ValueChanged);
             // 
             // oneDiceBlock
             // 
-            this.oneDiceBlock.Location = new System.Drawing.Point(1441, 297);
-            this.oneDiceBlock.Margin = new System.Windows.Forms.Padding(4);
+            this.oneDiceBlock.Location = new System.Drawing.Point(1081, 241);
             this.oneDiceBlock.Name = "oneDiceBlock";
-            this.oneDiceBlock.Size = new System.Drawing.Size(47, 22);
+            this.oneDiceBlock.Size = new System.Drawing.Size(35, 20);
             this.oneDiceBlock.TabIndex = 55;
             this.oneDiceBlock.ValueChanged += new System.EventHandler(this.oneDice_ValueChanged);
             // 
             // negDiceBlock
             // 
-            this.negDiceBlock.Location = new System.Drawing.Point(1441, 240);
-            this.negDiceBlock.Margin = new System.Windows.Forms.Padding(4);
+            this.negDiceBlock.Location = new System.Drawing.Point(1081, 195);
             this.negDiceBlock.Name = "negDiceBlock";
-            this.negDiceBlock.Size = new System.Drawing.Size(47, 22);
+            this.negDiceBlock.Size = new System.Drawing.Size(35, 20);
             this.negDiceBlock.TabIndex = 54;
             this.negDiceBlock.ValueChanged += new System.EventHandler(this.negDice_ValueChanged);
             // 
             // threeDiceDodge
             // 
-            this.threeDiceDodge.Location = new System.Drawing.Point(1300, 358);
-            this.threeDiceDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.threeDiceDodge.Location = new System.Drawing.Point(975, 291);
             this.threeDiceDodge.Name = "threeDiceDodge";
-            this.threeDiceDodge.Size = new System.Drawing.Size(47, 22);
+            this.threeDiceDodge.Size = new System.Drawing.Size(35, 20);
             this.threeDiceDodge.TabIndex = 53;
             this.threeDiceDodge.ValueChanged += new System.EventHandler(this.threeDice_ValueChanged);
             // 
             // twoDiceDodge
             // 
-            this.twoDiceDodge.Location = new System.Drawing.Point(1300, 326);
-            this.twoDiceDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.twoDiceDodge.Location = new System.Drawing.Point(975, 265);
             this.twoDiceDodge.Name = "twoDiceDodge";
-            this.twoDiceDodge.Size = new System.Drawing.Size(47, 22);
+            this.twoDiceDodge.Size = new System.Drawing.Size(35, 20);
             this.twoDiceDodge.TabIndex = 52;
             this.twoDiceDodge.ValueChanged += new System.EventHandler(this.twoDice_ValueChanged);
             // 
             // oneDiceDodge
             // 
-            this.oneDiceDodge.Location = new System.Drawing.Point(1300, 297);
-            this.oneDiceDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.oneDiceDodge.Location = new System.Drawing.Point(975, 241);
             this.oneDiceDodge.Name = "oneDiceDodge";
-            this.oneDiceDodge.Size = new System.Drawing.Size(47, 22);
+            this.oneDiceDodge.Size = new System.Drawing.Size(35, 20);
             this.oneDiceDodge.TabIndex = 51;
             this.oneDiceDodge.ValueChanged += new System.EventHandler(this.oneDice_ValueChanged);
             // 
             // negDiceDodge
             // 
-            this.negDiceDodge.Location = new System.Drawing.Point(1300, 240);
-            this.negDiceDodge.Margin = new System.Windows.Forms.Padding(4);
+            this.negDiceDodge.Location = new System.Drawing.Point(975, 195);
             this.negDiceDodge.Name = "negDiceDodge";
-            this.negDiceDodge.Size = new System.Drawing.Size(47, 22);
+            this.negDiceDodge.Size = new System.Drawing.Size(35, 20);
             this.negDiceDodge.TabIndex = 50;
             this.negDiceDodge.ValueChanged += new System.EventHandler(this.negDice_ValueChanged);
             // 
             // threeDicePush
             // 
-            this.threeDicePush.Location = new System.Drawing.Point(1188, 358);
-            this.threeDicePush.Margin = new System.Windows.Forms.Padding(4);
+            this.threeDicePush.Location = new System.Drawing.Point(891, 291);
             this.threeDicePush.Name = "threeDicePush";
-            this.threeDicePush.Size = new System.Drawing.Size(47, 22);
+            this.threeDicePush.Size = new System.Drawing.Size(35, 20);
             this.threeDicePush.TabIndex = 49;
             this.threeDicePush.ValueChanged += new System.EventHandler(this.threeDice_ValueChanged);
             // 
             // twoDicePush
             // 
-            this.twoDicePush.Location = new System.Drawing.Point(1188, 326);
-            this.twoDicePush.Margin = new System.Windows.Forms.Padding(4);
+            this.twoDicePush.Location = new System.Drawing.Point(891, 265);
             this.twoDicePush.Name = "twoDicePush";
-            this.twoDicePush.Size = new System.Drawing.Size(47, 22);
+            this.twoDicePush.Size = new System.Drawing.Size(35, 20);
             this.twoDicePush.TabIndex = 48;
             this.twoDicePush.ValueChanged += new System.EventHandler(this.twoDice_ValueChanged);
             // 
             // oneDicePush
             // 
-            this.oneDicePush.Location = new System.Drawing.Point(1188, 297);
-            this.oneDicePush.Margin = new System.Windows.Forms.Padding(4);
+            this.oneDicePush.Location = new System.Drawing.Point(891, 241);
             this.oneDicePush.Name = "oneDicePush";
-            this.oneDicePush.Size = new System.Drawing.Size(47, 22);
+            this.oneDicePush.Size = new System.Drawing.Size(35, 20);
             this.oneDicePush.TabIndex = 47;
             this.oneDicePush.ValueChanged += new System.EventHandler(this.oneDice_ValueChanged);
             // 
             // negDicePush
             // 
-            this.negDicePush.Location = new System.Drawing.Point(1188, 240);
-            this.negDicePush.Margin = new System.Windows.Forms.Padding(4);
+            this.negDicePush.Location = new System.Drawing.Point(891, 195);
             this.negDicePush.Name = "negDicePush";
-            this.negDicePush.Size = new System.Drawing.Size(47, 22);
+            this.negDicePush.Size = new System.Drawing.Size(35, 20);
             this.negDicePush.TabIndex = 46;
             this.negDicePush.ValueChanged += new System.EventHandler(this.negDice_ValueChanged);
             // 
             // threeDiceSkull
             // 
-            this.threeDiceSkull.Location = new System.Drawing.Point(1077, 358);
-            this.threeDiceSkull.Margin = new System.Windows.Forms.Padding(4);
+            this.threeDiceSkull.Location = new System.Drawing.Point(808, 291);
             this.threeDiceSkull.Name = "threeDiceSkull";
-            this.threeDiceSkull.Size = new System.Drawing.Size(47, 22);
+            this.threeDiceSkull.Size = new System.Drawing.Size(35, 20);
             this.threeDiceSkull.TabIndex = 45;
             this.threeDiceSkull.ValueChanged += new System.EventHandler(this.threeDice_ValueChanged);
             // 
             // twoDiceSkull
             // 
-            this.twoDiceSkull.Location = new System.Drawing.Point(1077, 326);
-            this.twoDiceSkull.Margin = new System.Windows.Forms.Padding(4);
+            this.twoDiceSkull.Location = new System.Drawing.Point(808, 265);
             this.twoDiceSkull.Name = "twoDiceSkull";
-            this.twoDiceSkull.Size = new System.Drawing.Size(47, 22);
+            this.twoDiceSkull.Size = new System.Drawing.Size(35, 20);
             this.twoDiceSkull.TabIndex = 44;
             this.twoDiceSkull.ValueChanged += new System.EventHandler(this.twoDice_ValueChanged);
             // 
             // oneDiceSkull
             // 
-            this.oneDiceSkull.Location = new System.Drawing.Point(1077, 297);
-            this.oneDiceSkull.Margin = new System.Windows.Forms.Padding(4);
+            this.oneDiceSkull.Location = new System.Drawing.Point(808, 241);
             this.oneDiceSkull.Name = "oneDiceSkull";
-            this.oneDiceSkull.Size = new System.Drawing.Size(47, 22);
+            this.oneDiceSkull.Size = new System.Drawing.Size(35, 20);
             this.oneDiceSkull.TabIndex = 43;
             this.oneDiceSkull.ValueChanged += new System.EventHandler(this.oneDice_ValueChanged);
             // 
             // negDiceSkull
             // 
-            this.negDiceSkull.Location = new System.Drawing.Point(1077, 240);
-            this.negDiceSkull.Margin = new System.Windows.Forms.Padding(4);
+            this.negDiceSkull.Location = new System.Drawing.Point(808, 195);
             this.negDiceSkull.Name = "negDiceSkull";
-            this.negDiceSkull.Size = new System.Drawing.Size(47, 22);
+            this.negDiceSkull.Size = new System.Drawing.Size(35, 20);
             this.negDiceSkull.TabIndex = 42;
             this.negDiceSkull.ValueChanged += new System.EventHandler(this.negDice_ValueChanged);
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(1033, 362);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(775, 294);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 16);
+            this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 41;
             this.label6.Text = "3D:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(1033, 335);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(775, 272);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 16);
+            this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "2D:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1208,10 +1125,9 @@
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Brown;
-            this.label3.Location = new System.Drawing.Point(92, 123);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(69, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 62);
+            this.label3.Size = new System.Drawing.Size(57, 50);
             this.label3.TabIndex = 5;
             this.label3.Text = "B";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1220,10 +1136,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Brown;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1155, 236);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(866, 192);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 27);
+            this.button1.Size = new System.Drawing.Size(23, 22);
             this.button1.TabIndex = 140;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -1232,10 +1147,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Brown;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1155, 294);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(866, 239);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(31, 27);
+            this.button2.Size = new System.Drawing.Size(23, 22);
             this.button2.TabIndex = 141;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -1244,10 +1158,9 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Brown;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1155, 324);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(866, 263);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 27);
+            this.button3.Size = new System.Drawing.Size(23, 22);
             this.button3.TabIndex = 142;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -1256,10 +1169,9 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Brown;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(1155, 356);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(866, 289);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(31, 27);
+            this.button4.Size = new System.Drawing.Size(23, 22);
             this.button4.TabIndex = 143;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -1268,10 +1180,9 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Brown;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(1267, 356);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Location = new System.Drawing.Point(950, 289);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(31, 27);
+            this.button5.Size = new System.Drawing.Size(23, 22);
             this.button5.TabIndex = 147;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -1280,10 +1191,9 @@
             // 
             this.button6.BackColor = System.Drawing.Color.Brown;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(1267, 324);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Location = new System.Drawing.Point(950, 263);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(31, 27);
+            this.button6.Size = new System.Drawing.Size(23, 22);
             this.button6.TabIndex = 146;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -1292,10 +1202,9 @@
             // 
             this.button7.BackColor = System.Drawing.Color.Brown;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(1267, 294);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Location = new System.Drawing.Point(950, 239);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(31, 27);
+            this.button7.Size = new System.Drawing.Size(23, 22);
             this.button7.TabIndex = 145;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -1304,10 +1213,9 @@
             // 
             this.button8.BackColor = System.Drawing.Color.Brown;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(1267, 238);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Location = new System.Drawing.Point(950, 193);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(31, 27);
+            this.button8.Size = new System.Drawing.Size(23, 22);
             this.button8.TabIndex = 144;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -1316,10 +1224,9 @@
             // 
             this.button9.BackColor = System.Drawing.Color.ForestGreen;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(1665, 356);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
+            this.button9.Location = new System.Drawing.Point(1249, 289);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(31, 27);
+            this.button9.Size = new System.Drawing.Size(23, 22);
             this.button9.TabIndex = 151;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -1328,10 +1235,9 @@
             // 
             this.button10.BackColor = System.Drawing.Color.ForestGreen;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(1665, 324);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
+            this.button10.Location = new System.Drawing.Point(1249, 263);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(31, 27);
+            this.button10.Size = new System.Drawing.Size(23, 22);
             this.button10.TabIndex = 150;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
@@ -1340,10 +1246,9 @@
             // 
             this.button11.BackColor = System.Drawing.Color.ForestGreen;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(1665, 294);
-            this.button11.Margin = new System.Windows.Forms.Padding(4);
+            this.button11.Location = new System.Drawing.Point(1249, 239);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(31, 27);
+            this.button11.Size = new System.Drawing.Size(23, 22);
             this.button11.TabIndex = 149;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
@@ -1352,10 +1257,9 @@
             // 
             this.button12.BackColor = System.Drawing.Color.ForestGreen;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(1665, 238);
-            this.button12.Margin = new System.Windows.Forms.Padding(4);
+            this.button12.Location = new System.Drawing.Point(1249, 193);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(31, 27);
+            this.button12.Size = new System.Drawing.Size(23, 22);
             this.button12.TabIndex = 148;
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
@@ -1364,10 +1268,9 @@
             // 
             this.button13.BackColor = System.Drawing.Color.Brown;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Location = new System.Drawing.Point(1379, 356);
-            this.button13.Margin = new System.Windows.Forms.Padding(4);
+            this.button13.Location = new System.Drawing.Point(1034, 289);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(31, 27);
+            this.button13.Size = new System.Drawing.Size(23, 22);
             this.button13.TabIndex = 155;
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
@@ -1376,10 +1279,9 @@
             // 
             this.button14.BackColor = System.Drawing.Color.Brown;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Location = new System.Drawing.Point(1379, 324);
-            this.button14.Margin = new System.Windows.Forms.Padding(4);
+            this.button14.Location = new System.Drawing.Point(1034, 263);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(31, 27);
+            this.button14.Size = new System.Drawing.Size(23, 22);
             this.button14.TabIndex = 154;
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
@@ -1388,10 +1290,9 @@
             // 
             this.button15.BackColor = System.Drawing.Color.Brown;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Location = new System.Drawing.Point(1379, 294);
-            this.button15.Margin = new System.Windows.Forms.Padding(4);
+            this.button15.Location = new System.Drawing.Point(1034, 239);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(31, 27);
+            this.button15.Size = new System.Drawing.Size(23, 22);
             this.button15.TabIndex = 153;
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
@@ -1400,10 +1301,9 @@
             // 
             this.button16.BackColor = System.Drawing.Color.Brown;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Location = new System.Drawing.Point(1379, 238);
-            this.button16.Margin = new System.Windows.Forms.Padding(4);
+            this.button16.Location = new System.Drawing.Point(1034, 193);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(31, 27);
+            this.button16.Size = new System.Drawing.Size(23, 22);
             this.button16.TabIndex = 152;
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
@@ -1412,10 +1312,9 @@
             // 
             this.button17.BackColor = System.Drawing.Color.ForestGreen;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Location = new System.Drawing.Point(1409, 356);
-            this.button17.Margin = new System.Windows.Forms.Padding(4);
+            this.button17.Location = new System.Drawing.Point(1057, 289);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(31, 27);
+            this.button17.Size = new System.Drawing.Size(23, 22);
             this.button17.TabIndex = 159;
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
@@ -1424,10 +1323,9 @@
             // 
             this.button18.BackColor = System.Drawing.Color.ForestGreen;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Location = new System.Drawing.Point(1409, 324);
-            this.button18.Margin = new System.Windows.Forms.Padding(4);
+            this.button18.Location = new System.Drawing.Point(1057, 263);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(31, 27);
+            this.button18.Size = new System.Drawing.Size(23, 22);
             this.button18.TabIndex = 158;
             this.button18.UseVisualStyleBackColor = false;
             this.button18.Click += new System.EventHandler(this.button18_Click);
@@ -1436,10 +1334,9 @@
             // 
             this.button19.BackColor = System.Drawing.Color.ForestGreen;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Location = new System.Drawing.Point(1409, 294);
-            this.button19.Margin = new System.Windows.Forms.Padding(4);
+            this.button19.Location = new System.Drawing.Point(1057, 239);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(31, 27);
+            this.button19.Size = new System.Drawing.Size(23, 22);
             this.button19.TabIndex = 157;
             this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.button19_Click);
@@ -1448,10 +1345,9 @@
             // 
             this.button20.BackColor = System.Drawing.Color.ForestGreen;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Location = new System.Drawing.Point(1409, 238);
-            this.button20.Margin = new System.Windows.Forms.Padding(4);
+            this.button20.Location = new System.Drawing.Point(1057, 193);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(31, 27);
+            this.button20.Size = new System.Drawing.Size(23, 22);
             this.button20.TabIndex = 156;
             this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
@@ -1460,10 +1356,9 @@
             // 
             this.button21.BackColor = System.Drawing.Color.ForestGreen;
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Location = new System.Drawing.Point(1552, 356);
-            this.button21.Margin = new System.Windows.Forms.Padding(4);
+            this.button21.Location = new System.Drawing.Point(1164, 289);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(31, 27);
+            this.button21.Size = new System.Drawing.Size(23, 22);
             this.button21.TabIndex = 167;
             this.button21.UseVisualStyleBackColor = false;
             this.button21.Click += new System.EventHandler(this.button21_Click);
@@ -1472,10 +1367,9 @@
             // 
             this.button22.BackColor = System.Drawing.Color.ForestGreen;
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.Location = new System.Drawing.Point(1552, 324);
-            this.button22.Margin = new System.Windows.Forms.Padding(4);
+            this.button22.Location = new System.Drawing.Point(1164, 263);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(31, 27);
+            this.button22.Size = new System.Drawing.Size(23, 22);
             this.button22.TabIndex = 166;
             this.button22.UseVisualStyleBackColor = false;
             this.button22.Click += new System.EventHandler(this.button22_Click);
@@ -1484,10 +1378,9 @@
             // 
             this.button23.BackColor = System.Drawing.Color.ForestGreen;
             this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Location = new System.Drawing.Point(1552, 294);
-            this.button23.Margin = new System.Windows.Forms.Padding(4);
+            this.button23.Location = new System.Drawing.Point(1164, 239);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(31, 27);
+            this.button23.Size = new System.Drawing.Size(23, 22);
             this.button23.TabIndex = 165;
             this.button23.UseVisualStyleBackColor = false;
             this.button23.Click += new System.EventHandler(this.button23_Click);
@@ -1496,10 +1389,9 @@
             // 
             this.button24.BackColor = System.Drawing.Color.ForestGreen;
             this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Location = new System.Drawing.Point(1552, 238);
-            this.button24.Margin = new System.Windows.Forms.Padding(4);
+            this.button24.Location = new System.Drawing.Point(1164, 193);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(31, 27);
+            this.button24.Size = new System.Drawing.Size(23, 22);
             this.button24.TabIndex = 164;
             this.button24.UseVisualStyleBackColor = false;
             this.button24.Click += new System.EventHandler(this.button24_Click);
@@ -1508,10 +1400,9 @@
             // 
             this.button25.BackColor = System.Drawing.Color.Brown;
             this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Location = new System.Drawing.Point(1521, 356);
-            this.button25.Margin = new System.Windows.Forms.Padding(4);
+            this.button25.Location = new System.Drawing.Point(1141, 289);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(31, 27);
+            this.button25.Size = new System.Drawing.Size(23, 22);
             this.button25.TabIndex = 163;
             this.button25.UseVisualStyleBackColor = false;
             this.button25.Click += new System.EventHandler(this.button25_Click);
@@ -1520,10 +1411,9 @@
             // 
             this.button26.BackColor = System.Drawing.Color.Brown;
             this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Location = new System.Drawing.Point(1521, 324);
-            this.button26.Margin = new System.Windows.Forms.Padding(4);
+            this.button26.Location = new System.Drawing.Point(1141, 263);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(31, 27);
+            this.button26.Size = new System.Drawing.Size(23, 22);
             this.button26.TabIndex = 162;
             this.button26.UseVisualStyleBackColor = false;
             this.button26.Click += new System.EventHandler(this.button26_Click);
@@ -1532,10 +1422,9 @@
             // 
             this.button27.BackColor = System.Drawing.Color.Brown;
             this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Location = new System.Drawing.Point(1521, 294);
-            this.button27.Margin = new System.Windows.Forms.Padding(4);
+            this.button27.Location = new System.Drawing.Point(1141, 239);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(31, 27);
+            this.button27.Size = new System.Drawing.Size(23, 22);
             this.button27.TabIndex = 161;
             this.button27.UseVisualStyleBackColor = false;
             this.button27.Click += new System.EventHandler(this.button27_Click);
@@ -1544,10 +1433,9 @@
             // 
             this.button28.BackColor = System.Drawing.Color.Brown;
             this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button28.Location = new System.Drawing.Point(1521, 238);
-            this.button28.Margin = new System.Windows.Forms.Padding(4);
+            this.button28.Location = new System.Drawing.Point(1141, 193);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(31, 27);
+            this.button28.Size = new System.Drawing.Size(23, 22);
             this.button28.TabIndex = 160;
             this.button28.UseVisualStyleBackColor = false;
             this.button28.Click += new System.EventHandler(this.button28_Click);
@@ -1556,10 +1444,9 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(92, 204);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(69, 166);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 62);
+            this.label1.Size = new System.Drawing.Size(57, 50);
             this.label1.TabIndex = 168;
             this.label1.Text = "A";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1568,10 +1455,9 @@
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(92, 286);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(69, 232);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 62);
+            this.label2.Size = new System.Drawing.Size(57, 50);
             this.label2.TabIndex = 169;
             this.label2.Text = "B";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1580,10 +1466,9 @@
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(33, 434);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(25, 353);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 62);
+            this.label4.Size = new System.Drawing.Size(101, 50);
             this.label4.TabIndex = 170;
             this.label4.Text = "TOTAL";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1592,10 +1477,9 @@
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(192, 28);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(144, 23);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 66);
+            this.label7.Size = new System.Drawing.Size(57, 54);
             this.label7.TabIndex = 171;
             this.label7.Text = "K";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1604,10 +1488,9 @@
             // 
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label17.Location = new System.Drawing.Point(368, 28);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(276, 23);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(76, 66);
+            this.label17.Size = new System.Drawing.Size(57, 54);
             this.label17.TabIndex = 172;
             this.label17.Text = "J";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1616,10 +1499,9 @@
             // 
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label18.Location = new System.Drawing.Point(455, 28);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(341, 23);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(76, 66);
+            this.label18.Size = new System.Drawing.Size(57, 54);
             this.label18.TabIndex = 173;
             this.label18.Text = "M";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1628,10 +1510,9 @@
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Location = new System.Drawing.Point(280, 28);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(210, 23);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 66);
+            this.label19.Size = new System.Drawing.Size(57, 54);
             this.label19.TabIndex = 174;
             this.label19.Text = "N";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1640,10 +1521,9 @@
             // 
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label20.Location = new System.Drawing.Point(542, 28);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(406, 23);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(76, 66);
+            this.label20.Size = new System.Drawing.Size(57, 54);
             this.label20.TabIndex = 175;
             this.label20.Text = "L";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1652,10 +1532,9 @@
             // 
             this.negDiceSkullLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.negDiceSkullLabel.ForeColor = System.Drawing.Color.White;
-            this.negDiceSkullLabel.Location = new System.Drawing.Point(192, 114);
-            this.negDiceSkullLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.negDiceSkullLabel.Location = new System.Drawing.Point(144, 93);
             this.negDiceSkullLabel.Name = "negDiceSkullLabel";
-            this.negDiceSkullLabel.Size = new System.Drawing.Size(76, 62);
+            this.negDiceSkullLabel.Size = new System.Drawing.Size(57, 50);
             this.negDiceSkullLabel.TabIndex = 176;
             this.negDiceSkullLabel.Text = "0";
             this.negDiceSkullLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1663,10 +1542,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-15, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(-7, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(809, 875);
+            this.pictureBox1.Size = new System.Drawing.Size(613, 736);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 177;
             this.pictureBox1.TabStop = false;
@@ -1675,10 +1553,9 @@
             // 
             this.oneDiceSkullLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneDiceSkullLabel.ForeColor = System.Drawing.Color.White;
-            this.oneDiceSkullLabel.Location = new System.Drawing.Point(192, 196);
-            this.oneDiceSkullLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.oneDiceSkullLabel.Location = new System.Drawing.Point(144, 159);
             this.oneDiceSkullLabel.Name = "oneDiceSkullLabel";
-            this.oneDiceSkullLabel.Size = new System.Drawing.Size(76, 62);
+            this.oneDiceSkullLabel.Size = new System.Drawing.Size(57, 50);
             this.oneDiceSkullLabel.TabIndex = 178;
             this.oneDiceSkullLabel.Text = "0";
             this.oneDiceSkullLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1687,10 +1564,9 @@
             // 
             this.twoDiceSkullLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoDiceSkullLabel.ForeColor = System.Drawing.Color.White;
-            this.twoDiceSkullLabel.Location = new System.Drawing.Point(192, 277);
-            this.twoDiceSkullLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.twoDiceSkullLabel.Location = new System.Drawing.Point(144, 225);
             this.twoDiceSkullLabel.Name = "twoDiceSkullLabel";
-            this.twoDiceSkullLabel.Size = new System.Drawing.Size(76, 62);
+            this.twoDiceSkullLabel.Size = new System.Drawing.Size(57, 50);
             this.twoDiceSkullLabel.TabIndex = 179;
             this.twoDiceSkullLabel.Text = "0";
             this.twoDiceSkullLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1699,10 +1575,9 @@
             // 
             this.totalDiceSkullLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDiceSkullLabel.ForeColor = System.Drawing.Color.White;
-            this.totalDiceSkullLabel.Location = new System.Drawing.Point(192, 434);
-            this.totalDiceSkullLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalDiceSkullLabel.Location = new System.Drawing.Point(144, 353);
             this.totalDiceSkullLabel.Name = "totalDiceSkullLabel";
-            this.totalDiceSkullLabel.Size = new System.Drawing.Size(76, 62);
+            this.totalDiceSkullLabel.Size = new System.Drawing.Size(57, 50);
             this.totalDiceSkullLabel.TabIndex = 180;
             this.totalDiceSkullLabel.Text = "0";
             this.totalDiceSkullLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1711,10 +1586,9 @@
             // 
             this.totalDicePushLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDicePushLabel.ForeColor = System.Drawing.Color.White;
-            this.totalDicePushLabel.Location = new System.Drawing.Point(368, 434);
-            this.totalDicePushLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalDicePushLabel.Location = new System.Drawing.Point(276, 353);
             this.totalDicePushLabel.Name = "totalDicePushLabel";
-            this.totalDicePushLabel.Size = new System.Drawing.Size(76, 62);
+            this.totalDicePushLabel.Size = new System.Drawing.Size(57, 50);
             this.totalDicePushLabel.TabIndex = 184;
             this.totalDicePushLabel.Text = "0";
             this.totalDicePushLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1723,10 +1597,9 @@
             // 
             this.twoDicePushLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoDicePushLabel.ForeColor = System.Drawing.Color.White;
-            this.twoDicePushLabel.Location = new System.Drawing.Point(368, 277);
-            this.twoDicePushLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.twoDicePushLabel.Location = new System.Drawing.Point(276, 225);
             this.twoDicePushLabel.Name = "twoDicePushLabel";
-            this.twoDicePushLabel.Size = new System.Drawing.Size(76, 62);
+            this.twoDicePushLabel.Size = new System.Drawing.Size(57, 50);
             this.twoDicePushLabel.TabIndex = 183;
             this.twoDicePushLabel.Text = "0";
             this.twoDicePushLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1735,10 +1608,9 @@
             // 
             this.oneDicePushLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneDicePushLabel.ForeColor = System.Drawing.Color.White;
-            this.oneDicePushLabel.Location = new System.Drawing.Point(368, 196);
-            this.oneDicePushLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.oneDicePushLabel.Location = new System.Drawing.Point(276, 159);
             this.oneDicePushLabel.Name = "oneDicePushLabel";
-            this.oneDicePushLabel.Size = new System.Drawing.Size(76, 62);
+            this.oneDicePushLabel.Size = new System.Drawing.Size(57, 50);
             this.oneDicePushLabel.TabIndex = 182;
             this.oneDicePushLabel.Text = "0";
             this.oneDicePushLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1747,10 +1619,9 @@
             // 
             this.negDicePushLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.negDicePushLabel.ForeColor = System.Drawing.Color.White;
-            this.negDicePushLabel.Location = new System.Drawing.Point(368, 114);
-            this.negDicePushLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.negDicePushLabel.Location = new System.Drawing.Point(276, 93);
             this.negDicePushLabel.Name = "negDicePushLabel";
-            this.negDicePushLabel.Size = new System.Drawing.Size(76, 62);
+            this.negDicePushLabel.Size = new System.Drawing.Size(57, 50);
             this.negDicePushLabel.TabIndex = 181;
             this.negDicePushLabel.Text = "0";
             this.negDicePushLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1759,10 +1630,9 @@
             // 
             this.totalDiceDodgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDiceDodgeLabel.ForeColor = System.Drawing.Color.White;
-            this.totalDiceDodgeLabel.Location = new System.Drawing.Point(455, 434);
-            this.totalDiceDodgeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalDiceDodgeLabel.Location = new System.Drawing.Point(341, 353);
             this.totalDiceDodgeLabel.Name = "totalDiceDodgeLabel";
-            this.totalDiceDodgeLabel.Size = new System.Drawing.Size(76, 62);
+            this.totalDiceDodgeLabel.Size = new System.Drawing.Size(57, 50);
             this.totalDiceDodgeLabel.TabIndex = 188;
             this.totalDiceDodgeLabel.Text = "0";
             this.totalDiceDodgeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1771,10 +1641,9 @@
             // 
             this.twoDiceDodgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoDiceDodgeLabel.ForeColor = System.Drawing.Color.White;
-            this.twoDiceDodgeLabel.Location = new System.Drawing.Point(455, 277);
-            this.twoDiceDodgeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.twoDiceDodgeLabel.Location = new System.Drawing.Point(341, 225);
             this.twoDiceDodgeLabel.Name = "twoDiceDodgeLabel";
-            this.twoDiceDodgeLabel.Size = new System.Drawing.Size(76, 62);
+            this.twoDiceDodgeLabel.Size = new System.Drawing.Size(57, 50);
             this.twoDiceDodgeLabel.TabIndex = 187;
             this.twoDiceDodgeLabel.Text = "0";
             this.twoDiceDodgeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1783,10 +1652,9 @@
             // 
             this.oneDiceDodgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneDiceDodgeLabel.ForeColor = System.Drawing.Color.White;
-            this.oneDiceDodgeLabel.Location = new System.Drawing.Point(455, 196);
-            this.oneDiceDodgeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.oneDiceDodgeLabel.Location = new System.Drawing.Point(341, 159);
             this.oneDiceDodgeLabel.Name = "oneDiceDodgeLabel";
-            this.oneDiceDodgeLabel.Size = new System.Drawing.Size(76, 62);
+            this.oneDiceDodgeLabel.Size = new System.Drawing.Size(57, 50);
             this.oneDiceDodgeLabel.TabIndex = 186;
             this.oneDiceDodgeLabel.Text = "0";
             this.oneDiceDodgeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1795,10 +1663,9 @@
             // 
             this.negDiceDodgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.negDiceDodgeLabel.ForeColor = System.Drawing.Color.White;
-            this.negDiceDodgeLabel.Location = new System.Drawing.Point(455, 114);
-            this.negDiceDodgeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.negDiceDodgeLabel.Location = new System.Drawing.Point(341, 93);
             this.negDiceDodgeLabel.Name = "negDiceDodgeLabel";
-            this.negDiceDodgeLabel.Size = new System.Drawing.Size(76, 62);
+            this.negDiceDodgeLabel.Size = new System.Drawing.Size(57, 50);
             this.negDiceDodgeLabel.TabIndex = 185;
             this.negDiceDodgeLabel.Text = "0";
             this.negDiceDodgeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1807,10 +1674,9 @@
             // 
             this.totalDiceBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDiceBlockLabel.ForeColor = System.Drawing.Color.White;
-            this.totalDiceBlockLabel.Location = new System.Drawing.Point(280, 434);
-            this.totalDiceBlockLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalDiceBlockLabel.Location = new System.Drawing.Point(210, 353);
             this.totalDiceBlockLabel.Name = "totalDiceBlockLabel";
-            this.totalDiceBlockLabel.Size = new System.Drawing.Size(76, 62);
+            this.totalDiceBlockLabel.Size = new System.Drawing.Size(57, 50);
             this.totalDiceBlockLabel.TabIndex = 192;
             this.totalDiceBlockLabel.Text = "0";
             this.totalDiceBlockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1819,10 +1685,9 @@
             // 
             this.twoDiceBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoDiceBlockLabel.ForeColor = System.Drawing.Color.White;
-            this.twoDiceBlockLabel.Location = new System.Drawing.Point(280, 277);
-            this.twoDiceBlockLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.twoDiceBlockLabel.Location = new System.Drawing.Point(210, 225);
             this.twoDiceBlockLabel.Name = "twoDiceBlockLabel";
-            this.twoDiceBlockLabel.Size = new System.Drawing.Size(76, 62);
+            this.twoDiceBlockLabel.Size = new System.Drawing.Size(57, 50);
             this.twoDiceBlockLabel.TabIndex = 191;
             this.twoDiceBlockLabel.Text = "0";
             this.twoDiceBlockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1831,10 +1696,9 @@
             // 
             this.oneDiceBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneDiceBlockLabel.ForeColor = System.Drawing.Color.White;
-            this.oneDiceBlockLabel.Location = new System.Drawing.Point(280, 196);
-            this.oneDiceBlockLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.oneDiceBlockLabel.Location = new System.Drawing.Point(210, 159);
             this.oneDiceBlockLabel.Name = "oneDiceBlockLabel";
-            this.oneDiceBlockLabel.Size = new System.Drawing.Size(76, 62);
+            this.oneDiceBlockLabel.Size = new System.Drawing.Size(57, 50);
             this.oneDiceBlockLabel.TabIndex = 190;
             this.oneDiceBlockLabel.Text = "0";
             this.oneDiceBlockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1843,10 +1707,9 @@
             // 
             this.negDiceBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.negDiceBlockLabel.ForeColor = System.Drawing.Color.White;
-            this.negDiceBlockLabel.Location = new System.Drawing.Point(280, 114);
-            this.negDiceBlockLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.negDiceBlockLabel.Location = new System.Drawing.Point(210, 93);
             this.negDiceBlockLabel.Name = "negDiceBlockLabel";
-            this.negDiceBlockLabel.Size = new System.Drawing.Size(76, 62);
+            this.negDiceBlockLabel.Size = new System.Drawing.Size(57, 50);
             this.negDiceBlockLabel.TabIndex = 189;
             this.negDiceBlockLabel.Text = "0";
             this.negDiceBlockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1855,10 +1718,9 @@
             // 
             this.totalDicePowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDicePowLabel.ForeColor = System.Drawing.Color.White;
-            this.totalDicePowLabel.Location = new System.Drawing.Point(539, 434);
-            this.totalDicePowLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalDicePowLabel.Location = new System.Drawing.Point(404, 353);
             this.totalDicePowLabel.Name = "totalDicePowLabel";
-            this.totalDicePowLabel.Size = new System.Drawing.Size(76, 62);
+            this.totalDicePowLabel.Size = new System.Drawing.Size(57, 50);
             this.totalDicePowLabel.TabIndex = 196;
             this.totalDicePowLabel.Text = "0";
             this.totalDicePowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1867,10 +1729,9 @@
             // 
             this.twoDicePowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoDicePowLabel.ForeColor = System.Drawing.Color.White;
-            this.twoDicePowLabel.Location = new System.Drawing.Point(542, 277);
-            this.twoDicePowLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.twoDicePowLabel.Location = new System.Drawing.Point(406, 225);
             this.twoDicePowLabel.Name = "twoDicePowLabel";
-            this.twoDicePowLabel.Size = new System.Drawing.Size(76, 62);
+            this.twoDicePowLabel.Size = new System.Drawing.Size(57, 50);
             this.twoDicePowLabel.TabIndex = 195;
             this.twoDicePowLabel.Text = "0";
             this.twoDicePowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1879,10 +1740,9 @@
             // 
             this.oneDicePowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneDicePowLabel.ForeColor = System.Drawing.Color.White;
-            this.oneDicePowLabel.Location = new System.Drawing.Point(542, 196);
-            this.oneDicePowLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.oneDicePowLabel.Location = new System.Drawing.Point(406, 159);
             this.oneDicePowLabel.Name = "oneDicePowLabel";
-            this.oneDicePowLabel.Size = new System.Drawing.Size(76, 62);
+            this.oneDicePowLabel.Size = new System.Drawing.Size(57, 50);
             this.oneDicePowLabel.TabIndex = 194;
             this.oneDicePowLabel.Text = "0";
             this.oneDicePowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1891,10 +1751,9 @@
             // 
             this.negDicePowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.negDicePowLabel.ForeColor = System.Drawing.Color.White;
-            this.negDicePowLabel.Location = new System.Drawing.Point(542, 114);
-            this.negDicePowLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.negDicePowLabel.Location = new System.Drawing.Point(406, 93);
             this.negDicePowLabel.Name = "negDicePowLabel";
-            this.negDicePowLabel.Size = new System.Drawing.Size(76, 62);
+            this.negDicePowLabel.Size = new System.Drawing.Size(57, 50);
             this.negDicePowLabel.TabIndex = 193;
             this.negDicePowLabel.Text = "0";
             this.negDicePowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1903,10 +1762,9 @@
             // 
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label41.Location = new System.Drawing.Point(623, 28);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Location = new System.Drawing.Point(467, 23);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(132, 66);
+            this.label41.Size = new System.Drawing.Size(99, 54);
             this.label41.TabIndex = 197;
             this.label41.Text = "TOTAL";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1915,22 +1773,20 @@
             // 
             this.totalDiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDiceLabel.ForeColor = System.Drawing.Color.White;
-            this.totalDiceLabel.Location = new System.Drawing.Point(611, 434);
-            this.totalDiceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalDiceLabel.Location = new System.Drawing.Point(458, 353);
             this.totalDiceLabel.Name = "totalDiceLabel";
-            this.totalDiceLabel.Size = new System.Drawing.Size(217, 62);
+            this.totalDiceLabel.Size = new System.Drawing.Size(148, 50);
             this.totalDiceLabel.TabIndex = 201;
-            this.totalDiceLabel.Text = "0 / 0";
+            this.totalDiceLabel.Text = "00 / 00";
             this.totalDiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // twoDiceLabel
             // 
             this.twoDiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoDiceLabel.ForeColor = System.Drawing.Color.White;
-            this.twoDiceLabel.Location = new System.Drawing.Point(629, 277);
-            this.twoDiceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.twoDiceLabel.Location = new System.Drawing.Point(472, 225);
             this.twoDiceLabel.Name = "twoDiceLabel";
-            this.twoDiceLabel.Size = new System.Drawing.Size(125, 62);
+            this.twoDiceLabel.Size = new System.Drawing.Size(94, 50);
             this.twoDiceLabel.TabIndex = 200;
             this.twoDiceLabel.Text = "0";
             this.twoDiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1939,10 +1795,9 @@
             // 
             this.oneDiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneDiceLabel.ForeColor = System.Drawing.Color.White;
-            this.oneDiceLabel.Location = new System.Drawing.Point(629, 196);
-            this.oneDiceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.oneDiceLabel.Location = new System.Drawing.Point(472, 159);
             this.oneDiceLabel.Name = "oneDiceLabel";
-            this.oneDiceLabel.Size = new System.Drawing.Size(125, 62);
+            this.oneDiceLabel.Size = new System.Drawing.Size(94, 50);
             this.oneDiceLabel.TabIndex = 199;
             this.oneDiceLabel.Text = "0";
             this.oneDiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1951,10 +1806,9 @@
             // 
             this.negDiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.negDiceLabel.ForeColor = System.Drawing.Color.White;
-            this.negDiceLabel.Location = new System.Drawing.Point(629, 114);
-            this.negDiceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.negDiceLabel.Location = new System.Drawing.Point(472, 93);
             this.negDiceLabel.Name = "negDiceLabel";
-            this.negDiceLabel.Size = new System.Drawing.Size(125, 62);
+            this.negDiceLabel.Size = new System.Drawing.Size(94, 50);
             this.negDiceLabel.TabIndex = 198;
             this.negDiceLabel.Text = "0";
             this.negDiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1963,10 +1817,9 @@
             // 
             this.threeDiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeDiceLabel.ForeColor = System.Drawing.Color.White;
-            this.threeDiceLabel.Location = new System.Drawing.Point(629, 354);
-            this.threeDiceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.threeDiceLabel.Location = new System.Drawing.Point(472, 288);
             this.threeDiceLabel.Name = "threeDiceLabel";
-            this.threeDiceLabel.Size = new System.Drawing.Size(125, 62);
+            this.threeDiceLabel.Size = new System.Drawing.Size(94, 50);
             this.threeDiceLabel.TabIndex = 208;
             this.threeDiceLabel.Text = "0";
             this.threeDiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1975,10 +1828,9 @@
             // 
             this.threeDicePowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeDicePowLabel.ForeColor = System.Drawing.Color.White;
-            this.threeDicePowLabel.Location = new System.Drawing.Point(542, 354);
-            this.threeDicePowLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.threeDicePowLabel.Location = new System.Drawing.Point(406, 288);
             this.threeDicePowLabel.Name = "threeDicePowLabel";
-            this.threeDicePowLabel.Size = new System.Drawing.Size(76, 62);
+            this.threeDicePowLabel.Size = new System.Drawing.Size(57, 50);
             this.threeDicePowLabel.TabIndex = 207;
             this.threeDicePowLabel.Text = "0";
             this.threeDicePowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1987,10 +1839,9 @@
             // 
             this.threeDiceBlockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeDiceBlockLabel.ForeColor = System.Drawing.Color.White;
-            this.threeDiceBlockLabel.Location = new System.Drawing.Point(280, 354);
-            this.threeDiceBlockLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.threeDiceBlockLabel.Location = new System.Drawing.Point(210, 288);
             this.threeDiceBlockLabel.Name = "threeDiceBlockLabel";
-            this.threeDiceBlockLabel.Size = new System.Drawing.Size(76, 62);
+            this.threeDiceBlockLabel.Size = new System.Drawing.Size(57, 50);
             this.threeDiceBlockLabel.TabIndex = 206;
             this.threeDiceBlockLabel.Text = "0";
             this.threeDiceBlockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1999,10 +1850,9 @@
             // 
             this.threeDiceDodgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeDiceDodgeLabel.ForeColor = System.Drawing.Color.White;
-            this.threeDiceDodgeLabel.Location = new System.Drawing.Point(455, 354);
-            this.threeDiceDodgeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.threeDiceDodgeLabel.Location = new System.Drawing.Point(341, 288);
             this.threeDiceDodgeLabel.Name = "threeDiceDodgeLabel";
-            this.threeDiceDodgeLabel.Size = new System.Drawing.Size(76, 62);
+            this.threeDiceDodgeLabel.Size = new System.Drawing.Size(57, 50);
             this.threeDiceDodgeLabel.TabIndex = 205;
             this.threeDiceDodgeLabel.Text = "0";
             this.threeDiceDodgeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2011,10 +1861,9 @@
             // 
             this.threeDicePushLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeDicePushLabel.ForeColor = System.Drawing.Color.White;
-            this.threeDicePushLabel.Location = new System.Drawing.Point(368, 354);
-            this.threeDicePushLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.threeDicePushLabel.Location = new System.Drawing.Point(276, 288);
             this.threeDicePushLabel.Name = "threeDicePushLabel";
-            this.threeDicePushLabel.Size = new System.Drawing.Size(76, 62);
+            this.threeDicePushLabel.Size = new System.Drawing.Size(57, 50);
             this.threeDicePushLabel.TabIndex = 204;
             this.threeDicePushLabel.Text = "0";
             this.threeDicePushLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2023,10 +1872,9 @@
             // 
             this.threeDiceSkullLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeDiceSkullLabel.ForeColor = System.Drawing.Color.White;
-            this.threeDiceSkullLabel.Location = new System.Drawing.Point(192, 354);
-            this.threeDiceSkullLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.threeDiceSkullLabel.Location = new System.Drawing.Point(144, 288);
             this.threeDiceSkullLabel.Name = "threeDiceSkullLabel";
-            this.threeDiceSkullLabel.Size = new System.Drawing.Size(76, 62);
+            this.threeDiceSkullLabel.Size = new System.Drawing.Size(57, 50);
             this.threeDiceSkullLabel.TabIndex = 203;
             this.threeDiceSkullLabel.Text = "0";
             this.threeDiceSkullLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2035,10 +1883,9 @@
             // 
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.White;
-            this.label50.Location = new System.Drawing.Point(92, 363);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Location = new System.Drawing.Point(69, 295);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(76, 62);
+            this.label50.Size = new System.Drawing.Size(57, 50);
             this.label50.TabIndex = 202;
             this.label50.Text = "C";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2047,10 +1894,9 @@
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(84, 686);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(77, 561);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox2.Size = new System.Drawing.Size(49, 53);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 209;
             this.pictureBox2.TabStop = false;
@@ -2059,10 +1905,9 @@
             // 
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(16, 527);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(12, 415);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(152, 62);
+            this.label21.Size = new System.Drawing.Size(114, 50);
             this.label21.TabIndex = 210;
             this.label21.Text = "BREAKS";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2071,10 +1916,9 @@
             // 
             this.kosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kosLabel.ForeColor = System.Drawing.Color.White;
-            this.kosLabel.Location = new System.Drawing.Point(171, 691);
-            this.kosLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.kosLabel.Location = new System.Drawing.Point(144, 561);
             this.kosLabel.Name = "kosLabel";
-            this.kosLabel.Size = new System.Drawing.Size(124, 55);
+            this.kosLabel.Size = new System.Drawing.Size(93, 45);
             this.kosLabel.TabIndex = 213;
             this.kosLabel.Text = "0";
             this.kosLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2083,10 +1927,9 @@
             // 
             this.injuryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.injuryLabel.ForeColor = System.Drawing.Color.White;
-            this.injuryLabel.Location = new System.Drawing.Point(171, 776);
-            this.injuryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.injuryLabel.Location = new System.Drawing.Point(144, 630);
             this.injuryLabel.Name = "injuryLabel";
-            this.injuryLabel.Size = new System.Drawing.Size(124, 55);
+            this.injuryLabel.Size = new System.Drawing.Size(93, 45);
             this.injuryLabel.TabIndex = 212;
             this.injuryLabel.Text = "0";
             this.injuryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2095,10 +1938,9 @@
             // 
             this.stunsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stunsLabel.ForeColor = System.Drawing.Color.White;
-            this.stunsLabel.Location = new System.Drawing.Point(171, 608);
-            this.stunsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.stunsLabel.Location = new System.Drawing.Point(144, 494);
             this.stunsLabel.Name = "stunsLabel";
-            this.stunsLabel.Size = new System.Drawing.Size(124, 55);
+            this.stunsLabel.Size = new System.Drawing.Size(93, 45);
             this.stunsLabel.TabIndex = 211;
             this.stunsLabel.Text = "0";
             this.stunsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2107,10 +1949,9 @@
             // 
             this.breaks.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.breaks.ForeColor = System.Drawing.Color.White;
-            this.breaks.Location = new System.Drawing.Point(192, 527);
-            this.breaks.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.breaks.Location = new System.Drawing.Point(144, 415);
             this.breaks.Name = "breaks";
-            this.breaks.Size = new System.Drawing.Size(216, 62);
+            this.breaks.Size = new System.Drawing.Size(162, 50);
             this.breaks.TabIndex = 214;
             this.breaks.Text = "0 / 0";
             this.breaks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2119,10 +1960,9 @@
             // 
             this.dodgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dodgeLabel.ForeColor = System.Drawing.Color.White;
-            this.dodgeLabel.Location = new System.Drawing.Point(464, 592);
-            this.dodgeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dodgeLabel.Location = new System.Drawing.Point(348, 472);
             this.dodgeLabel.Name = "dodgeLabel";
-            this.dodgeLabel.Size = new System.Drawing.Size(167, 55);
+            this.dodgeLabel.Size = new System.Drawing.Size(201, 45);
             this.dodgeLabel.TabIndex = 215;
             this.dodgeLabel.Text = "0 / 0";
             this.dodgeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2131,10 +1971,9 @@
             // 
             this.catchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catchLabel.ForeColor = System.Drawing.Color.White;
-            this.catchLabel.Location = new System.Drawing.Point(464, 655);
-            this.catchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.catchLabel.Location = new System.Drawing.Point(348, 568);
             this.catchLabel.Name = "catchLabel";
-            this.catchLabel.Size = new System.Drawing.Size(167, 55);
+            this.catchLabel.Size = new System.Drawing.Size(201, 45);
             this.catchLabel.TabIndex = 216;
             this.catchLabel.Text = "0 / 0";
             this.catchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2143,10 +1982,9 @@
             // 
             this.apLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apLabel.ForeColor = System.Drawing.Color.White;
-            this.apLabel.Location = new System.Drawing.Point(464, 781);
-            this.apLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.apLabel.Location = new System.Drawing.Point(348, 664);
             this.apLabel.Name = "apLabel";
-            this.apLabel.Size = new System.Drawing.Size(167, 55);
+            this.apLabel.Size = new System.Drawing.Size(201, 45);
             this.apLabel.TabIndex = 217;
             this.apLabel.Text = "0 / 0";
             this.apLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2160,10 +1998,9 @@
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(374, 718);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(310, 616);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox3.Size = new System.Drawing.Size(42, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 218;
             this.pictureBox3.TabStop = false;
@@ -2172,10 +2009,9 @@
             // 
             this.passLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passLabel.ForeColor = System.Drawing.Color.White;
-            this.passLabel.Location = new System.Drawing.Point(464, 718);
-            this.passLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.passLabel.Location = new System.Drawing.Point(348, 520);
             this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(167, 55);
+            this.passLabel.Size = new System.Drawing.Size(201, 45);
             this.passLabel.TabIndex = 219;
             this.passLabel.Text = "0 / 0";
             this.passLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2183,49 +2019,109 @@
             // percentPass
             // 
             this.percentPass.BackColor = System.Drawing.Color.White;
-            this.percentPass.Location = new System.Drawing.Point(1317, 633);
-            this.percentPass.Margin = new System.Windows.Forms.Padding(4);
+            this.percentPass.Location = new System.Drawing.Point(988, 514);
             this.percentPass.Name = "percentPass";
             this.percentPass.ReadOnly = true;
-            this.percentPass.Size = new System.Drawing.Size(55, 22);
+            this.percentPass.Size = new System.Drawing.Size(42, 20);
             this.percentPass.TabIndex = 224;
             this.percentPass.Text = "0";
             // 
             // totalPass
             // 
             this.totalPass.BackColor = System.Drawing.Color.White;
-            this.totalPass.Location = new System.Drawing.Point(1255, 633);
-            this.totalPass.Margin = new System.Windows.Forms.Padding(4);
+            this.totalPass.Location = new System.Drawing.Point(941, 514);
             this.totalPass.Name = "totalPass";
             this.totalPass.ReadOnly = true;
-            this.totalPass.Size = new System.Drawing.Size(51, 22);
+            this.totalPass.Size = new System.Drawing.Size(39, 20);
             this.totalPass.TabIndex = 223;
             this.totalPass.Text = "0";
             // 
             // okPass
             // 
-            this.okPass.Location = new System.Drawing.Point(1183, 634);
-            this.okPass.Margin = new System.Windows.Forms.Padding(4);
+            this.okPass.Location = new System.Drawing.Point(887, 515);
             this.okPass.Name = "okPass";
-            this.okPass.Size = new System.Drawing.Size(64, 22);
+            this.okPass.Size = new System.Drawing.Size(48, 20);
             this.okPass.TabIndex = 222;
             this.okPass.ValueChanged += new System.EventHandler(this.pass_ValueChanged);
             // 
             // failPass
             // 
-            this.failPass.Location = new System.Drawing.Point(1111, 634);
-            this.failPass.Margin = new System.Windows.Forms.Padding(4);
+            this.failPass.Location = new System.Drawing.Point(833, 515);
             this.failPass.Name = "failPass";
-            this.failPass.Size = new System.Drawing.Size(64, 22);
+            this.failPass.Size = new System.Drawing.Size(48, 20);
             this.failPass.TabIndex = 221;
             this.failPass.ValueChanged += new System.EventHandler(this.pass_ValueChanged);
             // 
+            // pickUpLabel
+            // 
+            this.pickUpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pickUpLabel.ForeColor = System.Drawing.Color.White;
+            this.pickUpLabel.Location = new System.Drawing.Point(348, 616);
+            this.pickUpLabel.Name = "pickUpLabel";
+            this.pickUpLabel.Size = new System.Drawing.Size(201, 45);
+            this.pickUpLabel.TabIndex = 226;
+            this.pickUpLabel.Text = "0 / 0";
+            this.pickUpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(309, 568);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(42, 45);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 225;
+            this.pictureBox4.TabStop = false;
+            // 
+            // percentPickUp
+            // 
+            this.percentPickUp.BackColor = System.Drawing.Color.White;
+            this.percentPickUp.Location = new System.Drawing.Point(973, 560);
+            this.percentPickUp.Name = "percentPickUp";
+            this.percentPickUp.ReadOnly = true;
+            this.percentPickUp.Size = new System.Drawing.Size(42, 20);
+            this.percentPickUp.TabIndex = 230;
+            this.percentPickUp.Text = "0";
+            // 
+            // totalPickUp
+            // 
+            this.totalPickUp.BackColor = System.Drawing.Color.White;
+            this.totalPickUp.Location = new System.Drawing.Point(927, 560);
+            this.totalPickUp.Name = "totalPickUp";
+            this.totalPickUp.ReadOnly = true;
+            this.totalPickUp.Size = new System.Drawing.Size(39, 20);
+            this.totalPickUp.TabIndex = 229;
+            this.totalPickUp.Text = "0";
+            // 
+            // okPickUp
+            // 
+            this.okPickUp.Location = new System.Drawing.Point(873, 561);
+            this.okPickUp.Name = "okPickUp";
+            this.okPickUp.Size = new System.Drawing.Size(48, 20);
+            this.okPickUp.TabIndex = 228;
+            this.okPickUp.ValueChanged += new System.EventHandler(this.pickUp_ValueChanged);
+            // 
+            // failPickUp
+            // 
+            this.failPickUp.Location = new System.Drawing.Point(819, 561);
+            this.failPickUp.Name = "failPickUp";
+            this.failPickUp.Size = new System.Drawing.Size(48, 20);
+            this.failPickUp.TabIndex = 227;
+            this.failPickUp.ValueChanged += new System.EventHandler(this.pickup_ValueChanged);
+            // 
             // OverlayTeam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(792, 869);
+            this.ClientSize = new System.Drawing.Size(607, 728);
+            this.Controls.Add(this.percentPickUp);
+            this.Controls.Add(this.totalPickUp);
+            this.Controls.Add(this.okPickUp);
+            this.Controls.Add(this.failPickUp);
+            this.Controls.Add(this.pickUpLabel);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.percentPass);
             this.Controls.Add(this.totalPass);
             this.Controls.Add(this.okPass);
@@ -2407,7 +2303,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(-620, 150);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "OverlayTeam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -2453,6 +2348,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.failPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.okPickUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.failPickUp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2637,6 +2535,12 @@
         public System.Windows.Forms.TextBox totalPass;
         public System.Windows.Forms.NumericUpDown okPass;
         public System.Windows.Forms.NumericUpDown failPass;
+        private System.Windows.Forms.Label pickUpLabel;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.TextBox percentPickUp;
+        public System.Windows.Forms.TextBox totalPickUp;
+        public System.Windows.Forms.NumericUpDown okPickUp;
+        public System.Windows.Forms.NumericUpDown failPickUp;
     }
 }
 

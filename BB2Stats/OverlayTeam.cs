@@ -59,6 +59,7 @@ namespace BB2Stats
             public SkillResult catch_skill = new SkillResult();
             public SkillResult ap_skill = new SkillResult();
             public SkillResult pass_skill = new SkillResult();
+            public SkillResult pickup_skill = new SkillResult();
         }
 
         Data data = new Data();
@@ -170,6 +171,7 @@ namespace BB2Stats
             setupLabel(catchLabel, pfc.Families[0], 25);
             setupLabel(apLabel, pfc.Families[0], 25);
             setupLabel(passLabel, pfc.Families[0], 25);
+            setupLabel(pickUpLabel, pfc.Families[0], 25);
 
         }
 
@@ -337,6 +339,8 @@ namespace BB2Stats
             okAp.Value = data.ap_skill.ok_count;
             failPass.Value = data.pass_skill.fail_count;
             okPass.Value = data.pass_skill.ok_count;
+            failPickUp.Value = data.pickup_skill.fail_count;
+            okPickUp.Value = data.pickup_skill.ok_count;
             stun.Value = data.nstuns;
             ko.Value = data.nkos;
             injury.Value = data.ninjuries;
@@ -387,6 +391,7 @@ namespace BB2Stats
             catchLabel.Text = okCatch.Value.ToString() + " / " + totalCatch.Text;
             passLabel.Text = okPass.Value.ToString() + " / " + totalPass.Text;
             apLabel.Text = okAp.Value.ToString() + " / " + totalAp.Text;
+            pickUpLabel.Text = okPickUp.Value.ToString() + " / " + totalPickUp.Text;
         }
 
         private void updateTotalDices()
@@ -590,6 +595,24 @@ namespace BB2Stats
             {
                 percentPass.Text = (((int)okPass.Value * 100) / total_pass).ToString();
             }
+        }
+
+        private void pickUp_ValueChanged(object sender, EventArgs e)
+        {
+            data.pickup_skill.fail_count = (int)(failPickUp.Value);
+            data.pickup_skill.ok_count = (int)(okPickUp.Value);
+            int total_pickup = (int)(failPickUp.Value + okPickUp.Value);
+            totalPickUp.Text = total_pickup.ToString();
+            if (total_pickup > 0)
+            {
+                percentPickUp.Text = (((int)okPickUp.Value * 100) / total_pickup).ToString();
+            }
+        }
+
+
+        private void pickup_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void catch_ValueChanged(object sender, EventArgs e)

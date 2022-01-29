@@ -45,13 +45,13 @@ namespace BB2Stats
         int bad_frames = 0;
         int header_length = 0;
         int body_length = 0;
+        //int file_count = 0;
         string zipped = "no";
         List<MemoryStream> frame_list = new List<MemoryStream>();
         Mutex mutex = new Mutex();
         SnifferListener listener = null;
         List<String> eth_names = new List<String>();
         Dictionary<String, LivePacketDevice> eth_map = new Dictionary<String, LivePacketDevice>();
-        int file_count = 0;
         private PacketCommunicator communicator;
         bool is_running = false;
         class DataPacket
@@ -305,7 +305,7 @@ namespace BB2Stats
             string body_str = utf8.GetString(utfBytes, 0, utfBytes.Length);
             //string path = ".\\full_" + file_count++ + ".xml";
             //File.WriteAllText(path, body_str);
-            //System.Console.WriteLine(" " + body_length + "/" + body_str.Length + " => " + body_str.Substring(body_str.Length - 10));
+            System.Console.WriteLine(" " + body_length + "/" + body_str.Length + " => " + body_str.Substring(body_str.Length - 10));
             XmlReader reader = XmlTextReader.Create(new System.IO.StringReader(body_str));
             if (body_str.StartsWith("<RulesEventFullState>"))
             {
@@ -390,8 +390,8 @@ namespace BB2Stats
                         }
                         else
                         {                            
-                            string path = ".\\" + msg.Name + "_" + file_count++ + ".xml";
-                            System.Console.WriteLine("Unknown event received, saving to " + path + "...");
+                            //string path = ".\\" + msg.Name + "_" + file_count++ + ".xml";
+                            //System.Console.WriteLine("Unknown event received, saving to " + path + "...");
                             //File.WriteAllText(path, msg.MessageData);
                         }
                     }
