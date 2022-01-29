@@ -18,13 +18,13 @@ Just press "TAB" button while playing to show the game stats.
 NOTE: NPCAP package is required to be installed in the computer, as BB2Stats sniffs incoming packets while playing a game to generate game stats.
 Get and install NPCAP from repo: https://github.com/nmap/npcap
 
+### Automatic stats
+
+To use automatic stats go to settings and activate "Sniff" option, select the ethernet device you are using for internet connection and "Apply". To check that sniffer is working the frame counter located at the right side of the panel must increase. The person filling the stats must PUBLISH and the caster that reads it must be SUBSCRIBER. 
+
 ### Manual stats
 
 Use the main stats panel to add manually stats to the application. This can be only done if there is a background person monitorinzing the game and adding the stats. Then caster can get the stats in real time by connecting to the same "Session" (check settings).
-
-## Automatic stats
-
-To use automatic stats go to settings and activate "Sniff" option, select the ethernet device you are using for internet connection and "Apply". To check that sniffer is working the frame counter located at the right side of the panel must increase. The person filling the stats must PUBLISH and the caster that reads it must be SUBSCRIBER. 
 
 ## Settings
 
