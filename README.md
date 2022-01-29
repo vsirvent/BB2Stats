@@ -9,7 +9,7 @@ Just get repository and compile it using Visual Studio (tested on 2022) version.
 
 You can get a compiled stand-alone version here: 
 
-* [BB2Stats v1.0.0.2](https://github.com/vsirvent/BB2Stats/blob/main/BB2Stats/releases/BB2Stats_1_0_0_2.zip)
+* [BB2Stats v1.0.0.2](https://github.com/vsirvent/BB2Stats/releases/download/BB2Stats_v1.0.0.2/BB2Stats_1_0_0_2.zip)
 
 ## Usage
 
